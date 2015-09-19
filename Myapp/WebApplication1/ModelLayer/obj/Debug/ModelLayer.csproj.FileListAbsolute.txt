@@ -1,0 +1,11 @@
+E:\TestProjects\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.dll
+E:\TestProjects\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.pdb
+E:\TestProjects\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.dll
+E:\TestProjects\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.pdb
+I:\KDU\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.dll
+I:\KDU\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.pdb
+I:\KDU\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.dll
+I:\KDU\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.pdb
+I:\KDU\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
+I:\KDU\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.dll
+I:\KDU\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.xml

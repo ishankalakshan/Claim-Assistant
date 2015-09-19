@@ -1,0 +1,15 @@
+F:\VS\WebApplication1\MVCS_Service\bin\MVCS_Service.dll
+F:\VS\WebApplication1\MVCS_Service\bin\MVCS_Service.pdb
+F:\VS\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.dll
+F:\VS\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.pdb
+F:\VS\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.csprojResolveAssemblyReference.cache
+E:\TestProjects\Myapp\WebApplication1\MVCS_Service\bin\MVCS_Service.dll
+E:\TestProjects\Myapp\WebApplication1\MVCS_Service\bin\MVCS_Service.pdb
+E:\TestProjects\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.csprojResolveAssemblyReference.cache
+E:\TestProjects\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.dll
+E:\TestProjects\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.pdb
+I:\KDU\Myapp\WebApplication1\MVCS_Service\bin\MVCS_Service.dll
+I:\KDU\Myapp\WebApplication1\MVCS_Service\bin\MVCS_Service.pdb
+I:\KDU\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.csprojResolveAssemblyReference.cache
+I:\KDU\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.dll
+I:\KDU\Myapp\WebApplication1\MVCS_Service\obj\Debug\MVCS_Service.pdb

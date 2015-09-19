@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<%@ Register Assembly="DevExpress.Web.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title>Online Claim Manager</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link rel="stylesheet" type="text/css" href="Skins/MyCustomSkin/Tile.MyCustomSkin.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/sb-admin.css" rel="stylesheet"/>
+    <link href="css/customStyles.css" rel="stylesheet" />
+   
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/sb-admin.js"></script>
+
+ 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function validateLength(oSrc, args) {
+            args.IsValid = (args.Value.length >= 8);
+            alert("ok");
+        }
+        function OnNameValidation(s, e) {
+            var name = e.value;
+            if (name == null)
+                return;
+            if (name.length < 2)
+                e.isValid = false;
+        }
+    </script>
+    <style>
+      /* body {
+    background-image:url(tiles/2.png);
+    background-repeat: repeat;
+    
+            }*/
+    </style>
+</head>
+
+<body>
+    <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="true" />
+    
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand fa fa-2x" href="#">Online Claiming Assistant
+                    <!--<img alt="Brand" src="tiles/brand.png"/>-->
+                    <i class="fa fa-cog fa-spin"></i>
+                </a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+             <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search..."/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-home fa-fw"></i>Home<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Home.aspx">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">New Insurance</a>
+                                </li>
+                                <li>
+                                    <a href="#">View Insurance Records</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tow Truck & garages</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vehicles & Spare Parts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Claims</a>
+                                </li>
+                                <li>
+                                    <a href="#">Reports</a>
+                                </li>
+                                <li>
+                                    <a href="#">Administration</a>
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                            </ul>
+                        </li>    
+                        <li>
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <telerik:RadCalendar runat="server" EnableMultiSelect="False" EnableWeekends="True" FastNavigationNextText="&amp;lt;&amp;lt;" SelectedDate="">
+                                    <SpecialDays>
+                                        <telerik:RadCalendarDay Repeatable="Today" Date=""  ItemStyle-CssClass="rcToday">
+                                        </telerik:RadCalendarDay>
+                                    </SpecialDays>
+                                </telerik:RadCalendar>                                                                                            
+                              </div>
+                            </div>
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    <div id="page-wrapper">
+            <!--<div class="row">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Library</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                </div>
+            </div>-->
+    
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header">
+                        <asp:ContentPlaceHolder ID="cpPageContaintName" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <%--Basic Form Elements--%>
+                            <asp:ContentPlaceHolder ID="cpFprmContaintName" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form id="form1" runat="server">
+                                        <asp:ContentPlaceHolder ID="cpForm" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
