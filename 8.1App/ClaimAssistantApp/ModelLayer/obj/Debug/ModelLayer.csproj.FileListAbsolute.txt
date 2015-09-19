@@ -1,0 +1,17 @@
+F:\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll
+F:\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.pdb
+F:\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.pri
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.dll
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.pdb
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\priconfig.xml
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\priconfig.xml.intermediate
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\layout.resfiles
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\layout.resfiles.intermediate
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\resources.resfiles
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\resources.resfiles.intermediate
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\pri.resfiles
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\pri.resfiles.intermediate
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt.intermediate
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache

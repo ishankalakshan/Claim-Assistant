@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ISHANKA</Machine>
+    <WindowsUser>!3uddY</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>7d242fa7-222a-405c-b157-93452bce2ce4</PackageIdentityName>
+    <IntermediateOutputPath>F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
+      <PackagePath>ClaimAssistantApp.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
+      <PackagePath>ModelLayer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\claims.png">
+      <PackagePath>Image\claims.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\Garage.png">
+      <PackagePath>Image\Garage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\pcodkMecE.png">
+      <PackagePath>Image\pcodkMecE.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\profile.png">
+      <PackagePath>Image\profile.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\TowTruck-icon.png">
+      <PackagePath>Image\TowTruck-icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\towtruck.png">
+      <PackagePath>Image\towtruck.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm1.xbf">
+      <PackagePath>Views\claimForm1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm2.xbf">
+      <PackagePath>Views\claimForm2.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
+      <PackagePath>Views\claimForm3.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
+      <PackagePath>Views\claimInformation.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimSuccess.xbf">
+      <PackagePath>Views\claimSuccess.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\Garages.xbf">
+      <PackagePath>Views\Garages.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\MainMenu.xbf">
+      <PackagePath>Views\MainMenu.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
+      <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

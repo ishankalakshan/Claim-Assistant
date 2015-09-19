@@ -1,0 +1,201 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="ClaimAssistantApp.Views.claimForm1"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClaimAssistantApp.Views"
+    xmlns:common="using:ClaimAssistantApp.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">New Claim</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="620" Margin="40,5,20,10">
+                <TextBlock Text="Cause of Damage" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10" ></TextBlock>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Location"                                           
+                                           FontSize="16"                                       
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txtLocation" 
+                                         HorizontalAlignment="Stretch"                                          
+                                         FontSize="16"
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Reason" 
+                                           FontSize="16"
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <ComboBox Name="cmbReason"                                           
+                                          FontSize="16" 
+                                          HorizontalAlignment="Stretch"
+                                          IsEnabled="True"                                        
+                                          Background="Transparent"
+                                          Foreground="Gray"
+                                          FontFamily="Segoe UI Light" SelectionChanged="cmbReason_SelectionChanged" 
+                                          >
+                    <x:String>Going over cliff</x:String>
+                    <x:String>Hit and Run</x:String>
+                    <x:String>Fire</x:String>
+                    <x:String>Other</x:String>
+                </ComboBox>
+                <TextBox Name="txtReason" 
+                                         HorizontalAlignment="Stretch"                                          
+                                         FontSize="20" 
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         PlaceholderText="Custom"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"
+                                         Margin="0,10,0,0"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Knocked On" 
+                                           FontSize="16"
+                                           FontFamily="Segoe UI Light"                                          
+                                           TextWrapping="Wrap"/>
+                <ComboBox Name="cmbKnockedOn"                                           
+                                          FontSize="16" 
+                                          HorizontalAlignment="Stretch"
+                                          IsEnabled="True"
+                                          Background="Transparent"
+                                         Foreground="Gray"
+                                          FontFamily="Segoe UI Light" SelectionChanged="cmbKnockedOn_SelectionChanged">
+                    <x:String>A tree</x:String>
+                    <x:String>Vehicle</x:String>
+                    <x:String>House</x:String>
+                    <x:String>Shop</x:String>
+                    <x:String>Other</x:String>
+                </ComboBox>
+                <TextBox Name="txtKnockedOn" 
+                                         HorizontalAlignment="Stretch"                                          
+                                         FontSize="16" 
+                                         PlaceholderText="Custom"
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         Margin="0,10,0,0"
+                                         TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="630">
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="3rd party vehicle details"  
+                                     FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Vehicle No"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txt3rdVehicleNo" 
+                                         HorizontalAlignment="Stretch" 
+                                         FontSize="16" 
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Owner Name"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txt3rdOwnerName" 
+                                         HorizontalAlignment="Stretch"  
+                                         FontSize="16" 
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Address"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txt3rdAddress" 
+                                         HorizontalAlignment="Stretch" 
+                                         FontSize="16" 
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Contact No"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txt3rdContactno" 
+                                         HorizontalAlignment="Stretch" 
+                                         FontSize="16" 
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"
+                                        InputScope="TelephoneNumber"/>
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Renewal Date"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <DatePicker Name="txt3rdRenewalDate"
+                                        HorizontalAlignment="Stretch"
+                                        FontSize="16"
+                                        Background="Transparent"
+                                         Foreground="Gray"
+                                        FontFamily="Segoe UI Light"
+                                                />
+                <TextBlock HorizontalAlignment="Left" 
+                                           Text="Special Notes"                                           
+                                           FontSize="16"                                                                                    
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                <TextBox Name="txtNotes" 
+                                         HorizontalAlignment="Stretch"    
+                                         FontSize="16" 
+                                         Height="100"
+                                         Background="Transparent"
+                                         Foreground="Gray"
+                                         FontFamily="Segoe UI Light"
+                                         TextWrapping="Wrap"/>
+                <Button Name="btnNextStep2" HorizontalAlignment="Right" Margin="0,150" Width="150" Click="btnNextStep2_Click">Next</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
