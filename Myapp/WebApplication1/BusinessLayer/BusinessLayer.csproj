@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Claim_BL.cs" />
     <Compile Include="GarageView_BL.cs" />
     <Compile Include="GetPolicyDetails_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

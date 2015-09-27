@@ -18,3 +18,14 @@ I:\KDU\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.dll
 I:\KDU\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.pdb
 I:\KDU\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft.Json.dll
 I:\KDU\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.dll
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\BusinessLayer.dll
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\BusinessLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\DataLayer.dll
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\ModelLayer.dll
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\DataLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\ModelLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft.Json.xml

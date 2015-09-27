@@ -190,6 +190,7 @@
     <Content Include="Views\frmNew3wheelStepV.aspx" />
     <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
+    <Content Include="Views\TestPage.aspx" />
     <Content Include="vsMenu.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -314,6 +315,13 @@
     </Compile>
     <Compile Include="Views\Garages.aspx.designer.cs">
       <DependentUpon>Garages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="vsMenu.aspx.cs">
       <DependentUpon>vsMenu.aspx</DependentUpon>

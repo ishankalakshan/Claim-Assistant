@@ -41,6 +41,7 @@
     <TargetPlatform Include="Windows, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Claim_ML.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Garage_ML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

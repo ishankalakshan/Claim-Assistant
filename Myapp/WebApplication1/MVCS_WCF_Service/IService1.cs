@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data;
+using ModelLayer;
+using BusinessLayer;
 
 namespace MVCS_WCF_Service
 {
@@ -23,6 +25,9 @@ namespace MVCS_WCF_Service
 
         [OperationContract]
         string GetGarageInfo(string location);
+
+        [OperationContract]
+        bool InsertClaim(Claim_ML claim);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -34,6 +34,11 @@ namespace MVCS_WCF_Service
         {
             return new GarageView_BL().GetGarageInfo(new GarageView_ML() { GarageLocation = location });
         }
+
+        public bool InsertClaim(Claim_ML claim)
+        {
+            return false;
+        }
         
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {

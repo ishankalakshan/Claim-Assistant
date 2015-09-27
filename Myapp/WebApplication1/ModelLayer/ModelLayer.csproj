@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Claim_ML.cs" />
     <Compile Include="GarageView_ML.cs" />
     <Compile Include="GetPolicyDetails_ML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sparePart_ML.cs" />
     <Compile Include="UserLogin_ML.cs" />
     <Compile Include="VehicleManufac_ML.cs" />
     <Compile Include="VehicleType_ML.cs" />
