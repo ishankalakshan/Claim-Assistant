@@ -19,7 +19,7 @@ namespace WebApplication1.Views
         protected void btnTest_Click(object sender, EventArgs e)
         {     
             Claim_ML ml = new Claim_ML();
-
+            ml.spareParts = new sparePart_ML[1];
              /*for (int i = 0; i < 4; i++)
 			{
 			    sparePart_ML sparepart = new sparePart_ML();
@@ -34,7 +34,6 @@ namespace WebApplication1.Views
                  sparepart.sparePartQty = 2;
                  sparepart.sparePartCost = 1000;
                         
-
                     ml.policyId = 1;
                     ml.location = "Badulla";
                     ml.reason = "Fell asleep";
@@ -60,7 +59,7 @@ namespace WebApplication1.Views
                     ml.VehicleUsedFor = "Private";
                     ml.rentCompanyName = "";
                     ml.rentAmount = "";
-                    //ml.spareParts[0] = sparepart;
+                    ml.spareParts[0] = sparepart;
                     ml.garageCosts = 324234.324f;
                     ml.otherCosts = 324.43f;
 

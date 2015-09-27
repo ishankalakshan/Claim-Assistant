@@ -21,6 +21,7 @@ namespace DataLayer
 
                cmd = new SqlCommand("sp_InsertClaim", con) { CommandType = CommandType.StoredProcedure };
                cmd.Parameters.AddWithValue("@policyId", ml.policyId);
+               cmd.Parameters.AddWithValue("@location", ml.location);
                cmd.Parameters.AddWithValue("@reason", ml.reason);
                cmd.Parameters.AddWithValue("@knockedOn", ml.knockedON);
                cmd.Parameters.AddWithValue("@thirdPartyDeatilId", _3rdpartyId);
@@ -30,7 +31,7 @@ namespace DataLayer
                cmd.Parameters.AddWithValue("@vehicleUsage", ml.VehicleUsedFor);
                cmd.Parameters.AddWithValue("@rentCompany", ml.rentCompanyName);
                cmd.Parameters.AddWithValue("@rentAmount", ml.rentAmount);
-
+               cmd.ExecuteNonQuery();
                return true;
            }
            catch (SqlException ex)
@@ -91,6 +92,7 @@ namespace DataLayer
                         cmd.Parameters.AddWithValue("@sparePartId", spare.sparePartId);
                         cmd.Parameters.AddWithValue("@sprePartQty", spare.sparePartQty);
                         cmd.Parameters.AddWithValue("@sparePartCost", spare.sparePartCost);
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }
