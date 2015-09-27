@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    class Claim_ML
+    public class Claim_ML
     {
         public int claimId;
         public string location;
@@ -21,7 +21,7 @@ namespace ModelLayer
         public string _3rdSpecialNotes;
 
         public string _3rdVictimName;
-        public string _3rdAddress;
+        public string _3rdVictimAddress;
         public string _3rdDamageNature;
         public DateTime _3rdClaimant;
         public string _3rdAmountClaimed;

@@ -1,2 +1,2 @@
-F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\ClaimAssistantApp.csproj;neutral
-F:\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\ClaimAssistantApp.csproj;neutral
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral

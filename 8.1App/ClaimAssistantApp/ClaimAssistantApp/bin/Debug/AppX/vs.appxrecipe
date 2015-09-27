@@ -7,7 +7,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>7d242fa7-222a-405c-b157-93452bce2ce4</PackageIdentityName>
-    <IntermediateOutputPath>F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\obj\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>2270FDE98B5C894C356B11D44495B791FB8D50F3380EDCB1E9826AD2792006CA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>7d242fa7-222a-405c-b157-93452bce2ce4_1.0.0.0_neutral__2r0yw0pfxmdst</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>7d242fa7-222a-405c-b157-93452bce2ce4_2r0yw0pfxmdst!App</RegisteredUserModeAppID>
@@ -17,112 +17,112 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-08-29T16:57:11.660</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
-      <Modified>2015-09-13T14:11:59.316</Modified>
+      <Modified>2015-09-27T18:00:20.142</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
       <PackagePath>ModelLayer.dll</PackagePath>
-      <Modified>2015-09-13T14:11:54.341</Modified>
+      <Modified>2015-09-27T17:53:43.951</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2015-08-10T12:37:12.735</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-31T02:31:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-31T02:31:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-31T02:31:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-31T02:31:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\claims.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\claims.png">
       <PackagePath>Image\claims.png</PackagePath>
       <Modified>2015-08-10T12:55:08.729</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\Garage.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\Garage.png">
       <PackagePath>Image\Garage.png</PackagePath>
       <Modified>2015-08-10T12:55:08.732</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\pcodkMecE.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\pcodkMecE.png">
       <PackagePath>Image\pcodkMecE.png</PackagePath>
       <Modified>2015-08-28T01:19:52.492</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\profile.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\profile.png">
       <PackagePath>Image\profile.png</PackagePath>
       <Modified>2015-08-10T12:55:08.740</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\TowTruck-icon.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\TowTruck-icon.png">
       <PackagePath>Image\TowTruck-icon.png</PackagePath>
       <Modified>2015-08-10T12:55:08.726</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\towtruck.png">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\Image\towtruck.png">
       <PackagePath>Image\towtruck.png</PackagePath>
       <Modified>2015-08-10T12:55:08.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2015-08-12T13:11:04.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
       <Modified>2015-08-23T15:27:57.465</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm1.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm1.xbf">
       <PackagePath>Views\claimForm1.xbf</PackagePath>
       <Modified>2015-08-30T14:12:00.687</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm2.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm2.xbf">
       <PackagePath>Views\claimForm2.xbf</PackagePath>
-      <Modified>2015-08-30T14:12:00.687</Modified>
+      <Modified>2015-09-27T17:49:48.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
       <PackagePath>Views\claimForm3.xbf</PackagePath>
       <Modified>2015-08-23T14:05:14.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
       <PackagePath>Views\claimInformation.xbf</PackagePath>
       <Modified>2015-08-28T01:30:25.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimSuccess.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimSuccess.xbf">
       <PackagePath>Views\claimSuccess.xbf</PackagePath>
       <Modified>2015-08-28T01:34:53.716</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\Garages.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\Garages.xbf">
       <PackagePath>Views\Garages.xbf</PackagePath>
       <Modified>2015-08-28T01:43:29.362</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\MainMenu.xbf">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
       <Modified>2015-08-28T01:30:25.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
-      <Modified>2015-08-30T13:56:23.379</Modified>
+      <Modified>2015-09-27T17:49:48.358</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-08-29T16:57:11.219</Modified>
+      <Modified>2015-09-27T16:58:55.814</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

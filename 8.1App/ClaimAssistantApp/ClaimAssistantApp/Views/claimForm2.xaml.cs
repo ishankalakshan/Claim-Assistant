@@ -73,6 +73,37 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep3_Click(object sender, RoutedEventArgs e)
         {
+            if (rdbYes.IsChecked==true)
+            {
+                (App.Current as App).isDriverOwner = "Yes";
+            }else if(rdbNo.IsChecked==true){
+                (App.Current as App).isDriverOwner = "No";
+            }
+            
+            (App.Current as App).drivername = txtDrivername.Text;
+            (App.Current as App).driverLicense = txtLicense.Text;
+            (App.Current as App).driverCategories = txtCategories.Text;
+
+             DateTimeOffset ex = dpExpireDate.Date;
+            (App.Current as App).driverLicenseExpire = ex.Date;
+
+            (App.Current as App).driverNIC = txtNic.Text;
+            
+
+            DateTimeOffset pd = dpPurchaseDate.Date;
+            (App.Current as App).dateOfPrchase = pd.Date;
+
+            (App.Current as App).vehicleUsage = cmbVehiclePurpose.SelectedValue.ToString();
+            //(App.Current as App).rentName = txtRentcarCompany.Text;
+            //(App.Current as App).rentAmount = Convert.ToSingle(txtRentAmount.Text);
+            
+            (App.Current as App).victimName = txtVictimName.Text;
+            (App.Current as App).victimAddress = txtVictimAddress.Text;
+            (App.Current as App).damageNature = txtdamageNature.Text;
+
+            (App.Current as App)._3rdClaimant = txt3rdPartyClaimant.Text;
+            (App.Current as App)._3rdClaimAmount = Convert.ToSingle(txt3rdAmountClaimed.Text);
+
             this.Frame.Navigate(typeof(claimForm3));
         }
 

@@ -66,12 +66,25 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep2_Click(object sender, RoutedEventArgs e)
         {
+            (App.Current as App).location = txtLocation.Text;
+            (App.Current as App).reason = txtReason.Text;
+            (App.Current as App).knockedOn = txtKnockedOn.Text;
+            (App.Current as App)._3rdVehicleRegno = txt3rdVehicleNo.Text;
+            (App.Current as App)._3rdOwnerName = txt3rdOwnerName.Text;
+            (App.Current as App)._3rdAddress = txt3rdAddress.Text;
+            (App.Current as App)._3rdContact = txt3rdContactno.Text;
+
+            DateTimeOffset st = txt3rdRenewalDate.Date;
+            (App.Current as App)._3rdRenewalDate = st.Date;
+
+            (App.Current as App)._3rdSpecialNotes = txtNotes.Text;
             this.Frame.Navigate(typeof(claimForm2));
         }
 
         private void cmbReason_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedOption = cmbReason.SelectedValue.ToString();
+            txtReason.Text = selectedOption;
             if (selectedOption=="Other")
             {
                 txtReason.IsEnabled = true;
@@ -86,6 +99,7 @@ namespace ClaimAssistantApp.Views
         private void cmbKnockedOn_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedOption = cmbKnockedOn.SelectedValue.ToString();
+            txtKnockedOn.Text = selectedOption;
             if (selectedOption == "Other")
             {
                 txtKnockedOn.IsEnabled = true;
