@@ -57,16 +57,34 @@
                 <Button x:Name="PhotoButton" Content="Choose Image" Height="44" Width="147"/>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" Width="630">
-                <TextBlock HorizontalAlignment="Left" 
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Width="650" HorizontalAlignment="Left" Margin="12,0,0,0">
+                <StackPanel Orientation="Vertical" Width="630">
+
+                    <TextBlock HorizontalAlignment="Left" 
                                            Text="Payments"  
                                      FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"/>
-                <TextBlock HorizontalAlignment="Left" 
-                                           Text="Spare Part" 
+                    <TextBlock HorizontalAlignment="Left" 
+                                           Text="Sparepart Category" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                <ComboBox Name="cmbSparePart"                                           
+                    <ComboBox x:ConnectionId='1' Name="cmbSparePartCategory"                                           
+                                          FontSize="16" 
+                                          HorizontalAlignment="Stretch"
+                                          IsEnabled="True"
+                                          Background="Transparent"
+                                          Foreground="Gray"
+                                          FontFamily="Segoe UI Light"
+                                                                                                  
+                                          DisplayMemberPath="spareCatergory"
+                                          SelectedValuePath="spareId">
+                    </ComboBox>
+                    <TextBlock HorizontalAlignment="Left" 
+                                           Text="Manufacturer" 
+                                           FontSize="16"
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                    <ComboBox Name="cmbSparePartManufacturer"                                           
                                           FontSize="16" 
                                           HorizontalAlignment="Stretch"
                                           IsEnabled="True"
@@ -74,29 +92,54 @@
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
                                           >
-                    <x:String>Front buffer</x:String>
-                    <x:String>Rear Buffer</x:String>
-                    <x:String>Door</x:String>
-                    <x:String>Side Mirrors</x:String>
-                </ComboBox>
-                <Button Name="btnAddPart"
-                                    HorizontalAlignment="Right"
-                                    Content="Add"
-                                    />
-                <Button Name="btnDone"
-                                    HorizontalAlignment="Right"
-                                    Content="Done"
-                                    />
-                <StackPanel Name="sparelist">
-
-                </StackPanel>
-                <StackPanel Name="stckFinalcost" Margin="0,15,0,0">
+                        <x:String>Front buffer</x:String>
+                        <x:String>Rear Buffer</x:String>
+                        <x:String>Door</x:String>
+                        <x:String>Side Mirrors</x:String>
+                    </ComboBox>
                     <TextBlock HorizontalAlignment="Left" 
+                                           Text="Sparepart" 
+                                           FontSize="16"
+                                           FontFamily="Segoe UI Light"
+                                           TextWrapping="Wrap"/>
+                    <ComboBox Name="cmbSparePart"                                           
+                                          FontSize="16" 
+                                          HorizontalAlignment="Stretch"
+                                          IsEnabled="True"
+                                          Background="Transparent"
+                                          Foreground="Gray"
+                                          FontFamily="Segoe UI Light" 
+                                          >
+                        <x:String>Front buffer</x:String>
+                        <x:String>Rear Buffer</x:String>
+                        <x:String>Door</x:String>
+                        <x:String>Side Mirrors</x:String>
+                    </ComboBox>
+                    <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,15,0,0">                  
+                        <Button x:ConnectionId='3' Name="btnAddPart"
+                                HorizontalAlignment="Right"
+                                Content="Add" 
+                                                        />
+                        <Button x:ConnectionId='4' x:Name="btnRemove"
+                        	      HorizontalAlignment="Right"
+                        	      Content="Remove" 
+                                                         />
+                    </StackPanel>               
+                    <StackPanel Name="sparelist">
+                        <ListBox Name="lstboxSparelist" 
+                                 Background="Transparent"
+                                 FontSize="16"
+                                 FontFamily="Segoe UI Light"
+                                 Foreground="White">
+                        </ListBox>
+                    </StackPanel>
+                    <StackPanel Name="stckFinalcost" Margin="0,15,0,0">
+                        <TextBlock HorizontalAlignment="Left" 
                                            Text="Spare parts total cost" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <TextBox Name="txtSparecost" 
+                        <TextBox Name="txtSparecost" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                         IsEnabled="False"
@@ -105,45 +148,48 @@
                                          Foreground="Gray"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
-                    <TextBlock HorizontalAlignment="Left" 
+                        <TextBlock HorizontalAlignment="Left" 
                                            Text="Garage Costs" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <TextBox Name="txtgarageCost" 
+                        <TextBox Name="txtgarageCost" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                          Background="Transparent"
                                          Foreground="Gray"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
-                    <TextBlock HorizontalAlignment="Left" 
+                        <TextBlock HorizontalAlignment="Left" 
                                            Text="Any Other Costs" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <TextBox Name="txtAnyOtherReason" 
+                        <TextBox Name="txtAnyOtherReason" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                          Background="Transparent"
                                          Foreground="Gray"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
-                    <TextBlock HorizontalAlignment="Left" 
+                        <TextBlock HorizontalAlignment="Left" 
                                            Text="Amount Payable" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <TextBox Name="txtAmountPayable" 
-                                         HorizontalAlignment="Stretch" 
-                                     Text="30 000"
-                                     IsEnabled="False"
-                                         FontSize="16"
-                                         FontFamily="Segoe UI Light"
-                                         TextWrapping="Wrap"/>
+                        <TextBox Name="txtAmountPayable" 
+                                 HorizontalAlignment="Stretch" 
+                                 Text="30 000"
+                                 IsEnabled="False"
+                                 FontSize="16"
+                                 FontFamily="Segoe UI Light"
+                                 TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <Button x:ConnectionId='2' Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150"                        >Submit</Button>
                 </StackPanel>
-                <Button x:ConnectionId='1' Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150"                        >Submit</Button>
-            </StackPanel>
+            </ScrollViewer>
+
+
 
         </StackPanel>
     </Grid>

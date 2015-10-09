@@ -26,11 +26,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
-      <Modified>2015-09-27T18:00:20.142</Modified>
+      <Modified>2015-10-06T16:05:21.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
       <PackagePath>ModelLayer.dll</PackagePath>
-      <Modified>2015-09-27T17:53:43.951</Modified>
+      <Modified>2015-10-06T14:54:05.242</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -98,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
       <PackagePath>Views\claimForm3.xbf</PackagePath>
-      <Modified>2015-08-23T14:05:14.733</Modified>
+      <Modified>2015-10-06T16:05:20.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
       <PackagePath>Views\claimInformation.xbf</PackagePath>
@@ -118,11 +118,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
-      <Modified>2015-09-27T17:49:48.358</Modified>
+      <Modified>2015-10-06T16:05:20.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-09-27T16:58:55.814</Modified>
+      <Modified>2015-10-06T14:54:12.568</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

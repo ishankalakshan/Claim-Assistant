@@ -23,10 +23,10 @@ namespace ModelLayer
         public string _3rdVictimName;
         public string _3rdVictimAddress;
         public string _3rdDamageNature;
-        public DateTime _3rdClaimant;
-        public string _3rdAmountClaimed;
+        public string _3rdClaimant;
+        public float _3rdAmountClaimed;
 
-        public bool isDriverOwner;
+        public string isDriverOwner;
         public string driverName;
         public string driverLicense;
         public string licenseCat;
@@ -35,7 +35,7 @@ namespace ModelLayer
         public DateTime purchaseDate;
         public string VehicleUsedFor;
         public string rentCompanyName;
-        public string rentAmount;
+        public float rentAmount;
 
         public string spareParts;
         public double garageCosts;

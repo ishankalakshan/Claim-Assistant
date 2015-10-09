@@ -93,7 +93,11 @@ namespace ClaimAssistantApp.Views
             DateTimeOffset pd = dpPurchaseDate.Date;
             (App.Current as App).dateOfPrchase = pd.Date;
 
-            (App.Current as App).vehicleUsage = cmbVehiclePurpose.SelectedValue.ToString();
+             if(cmbVehiclePurpose.SelectedValue != null)
+	            {
+                    (App.Current as App).vehicleUsage = cmbVehiclePurpose.SelectedValue.ToString();
+	            }
+                
             //(App.Current as App).rentName = txtRentcarCompany.Text;
             //(App.Current as App).rentAmount = Convert.ToSingle(txtRentAmount.Text);
             
@@ -102,7 +106,11 @@ namespace ClaimAssistantApp.Views
             (App.Current as App).damageNature = txtdamageNature.Text;
 
             (App.Current as App)._3rdClaimant = txt3rdPartyClaimant.Text;
-            (App.Current as App)._3rdClaimAmount = Convert.ToSingle(txt3rdAmountClaimed.Text);
+
+            if (txt3rdAmountClaimed.Text != null || txt3rdAmountClaimed.Text != "")
+            {
+                (App.Current as App)._3rdClaimAmount = Convert.ToSingle(txt3rdAmountClaimed.Text);
+            }
 
             this.Frame.Navigate(typeof(claimForm3));
         }
