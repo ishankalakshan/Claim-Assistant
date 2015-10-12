@@ -40,6 +40,7 @@ namespace ClaimAssistantApp.Views
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
             loadSparepartCatogoriesToCombo();
+            loadSparepartManufacturersToCombo();
         }
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
@@ -109,7 +110,7 @@ namespace ClaimAssistantApp.Views
 
         private List<SparepartCategory_ML> GetSparepartCatogories()
         {
-             List<SparepartCategory_ML> spareList = new List<SparepartCategory_ML>();
+            List<SparepartCategory_ML> spareList = new List<SparepartCategory_ML>();
             spareList.Add(new SparepartCategory_ML() { spareId=1, spareCatergory="Lamps"});
             spareList.Add(new SparepartCategory_ML() { spareId = 2, spareCatergory = "Tires" });
             spareList.Add(new SparepartCategory_ML() { spareId = 3, spareCatergory = "Mirrors" });
@@ -117,12 +118,21 @@ namespace ClaimAssistantApp.Views
             return spareList;
         }
 
+        private List<SparepartManufacturer_ML> GetSparepartManufacturers()
+        {
+            List<SparepartManufacturer_ML> spareManufacturerList = new List<SparepartManufacturer_ML>();
+            spareManufacturerList.Add(new SparepartManufacturer_ML() { manufacturerId=1, manufacturerName="Toyota"});
+            spareManufacturerList.Add(new SparepartManufacturer_ML() { manufacturerId = 2, manufacturerName = "DSI" });
+
+            return spareManufacturerList;
+        }
+
         private List<Sparepart_ML> GetSpareparts()
         {
             List<Sparepart_ML> sparepartList = new List<Sparepart_ML>();
-            sparepartList.Add(new Sparepart_ML() {sparepartId=1,sparepartName="Xenon Head Lamps", sparepartCategory=1,spareManufacturer="Toyota",spareManufacYear="2015",spareUnitCost=25000});
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 2, sparepartName = "Side Mirror", sparepartCategory = 3, spareManufacturer = "Toyota", spareManufacYear = "2015", spareUnitCost = 25000 });
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 3, sparepartName = "23' Tire", sparepartCategory = 2, spareManufacturer = "DSI", spareManufacYear = "2015", spareUnitCost = 25000 });
+            sparepartList.Add(new Sparepart_ML() {sparepartId=1,sparepartName="Xenon Head Lamps", sparepartCategory=1,spareManufacturer=1,spareManufacYear="2015",spareUnitCost=25000});
+            sparepartList.Add(new Sparepart_ML() { sparepartId = 2, sparepartName = "Side Mirror", sparepartCategory = 3, spareManufacturer = 1, spareManufacYear = "2015", spareUnitCost = 25000 });
+            sparepartList.Add(new Sparepart_ML() { sparepartId = 3, sparepartName = "23' Tire", sparepartCategory = 2, spareManufacturer = 2, spareManufacYear = "2015", spareUnitCost = 25000 });
 
             return sparepartList;
         }
@@ -132,25 +142,40 @@ namespace ClaimAssistantApp.Views
           cmbSparePartCategory.ItemsSource=GetSparepartCatogories();
         }
 
-        private void loadSparepartManufacturersToCombo(int manufacturerId){
+        private void loadSparepartManufacturersToCombo(){
 
-            List<SparepartManufacturer_ML> list = GetSparepartManufacturers();
-            List<SparepartManufacturer_ML> manufacturerList = new List<SparepartManufacturer_ML>();
+            var manufacturerList = GetSparepartManufacturers();        
+            cmbSparepartManufacturer.ItemsSource = manufacturerList;
+        }
+
+        private void loadSparepartsToCombo(int manufactureId,int categoryId) {
+            var list = GetSpareparts();
+            var sparepartList = new List<Sparepart_ML>();
             foreach (var item in list)
             {
-                if (item.manufacturerId==manufacturerId)
+                if (item.sparepartCategory == categoryId|item.spareManufacturer==manufactureId)
                 {
-                    manufacturerList.Add(item);
+                    sparepartList.Add(item);
                 }
-                
+
             }
-            cmbSparepartManufacturer.ItemsSource = manufacturerList;
+            cmbSparepart.ItemsSource = sparepartList;
         }
 
         private void cmbSparePartCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            txtSparecost.Text = cmbSparePartCategory.SelectedValue.ToString();
-            loadSparepartManufacturersToCombo(Convert.ToInt32(txtSparecost.Text));
+            var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue); 
+            var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
+            txtgarageCost.Text = catID.ToString();
+            loadSparepartsToCombo(ManId,catID);
+        }
+
+        private void cmbSparepartManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue);
+            var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
+
+            loadSparepartsToCombo(ManId, catID);
         }
     }
 }

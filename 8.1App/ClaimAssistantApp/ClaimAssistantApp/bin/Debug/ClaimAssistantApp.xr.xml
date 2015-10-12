@@ -4,6 +4,8 @@
     <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="spareCatergory" />
+    <RootPropertyPathName Name="spareId" />
     <RootPropertyPathName Name="GarageTP" />
     <RootPropertyPathName Name="GarageLocation" />
     <RootPropertyPathName Name="GarageName" />
@@ -71,6 +73,8 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="TextTrimming" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
@@ -128,8 +132,9 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
-      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="SelectedValuePath" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="DisplayMemberPath" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
@@ -163,6 +168,9 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Foreground" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -192,9 +200,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
       <RootProperty Name="ItemTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="ClaimAssistantApp.Views.Garages" />
     <RootType FullName="Windows.UI.Xaml.Controls.AppBar">

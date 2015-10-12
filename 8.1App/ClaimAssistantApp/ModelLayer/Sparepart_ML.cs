@@ -11,7 +11,7 @@ namespace ModelLayer
       public int sparepartId {get;set;}
       public string sparepartName { get; set; }
       public int sparepartCategory { get; set; }
-      public string spareManufacturer { get; set; }
+      public int spareManufacturer { get; set; }
       public float spareUnitCost { get; set; }
       public string spareManufacYear { get; set; }
     }

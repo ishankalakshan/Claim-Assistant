@@ -76,51 +76,61 @@
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light"
                                                                                                   
-                                          DisplayMemberPath="spareCatergory"
                                           SelectedValuePath="spareId">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding spareId}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" FontSize="15" TextTrimming="CharacterEllipsis" Foreground="Black" />
+                                    <TextBlock Text="{Binding spareCatergory}" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="20"  Foreground="Black"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
                     </ComboBox>
                     <TextBlock HorizontalAlignment="Left" 
                                            Text="Manufacturer" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <ComboBox Name="cmbSparePartManufacturer"                                           
+                    <ComboBox x:ConnectionId='2' Name="cmbSparepartManufacturer"                                           
                                           FontSize="16" 
                                           HorizontalAlignment="Stretch"
                                           IsEnabled="True"
                                           Background="Transparent"
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
-                                          >
-                        <x:String>Front buffer</x:String>
-                        <x:String>Rear Buffer</x:String>
-                        <x:String>Door</x:String>
-                        <x:String>Side Mirrors</x:String>
+                                          DisplayMemberPath="manufacturerName"
+                                          SelectedValuePath="manufacturerId"
+                                                                                                      >
                     </ComboBox>
                     <TextBlock HorizontalAlignment="Left" 
                                            Text="Sparepart" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                    <ComboBox Name="cmbSparePart"                                           
+                    <ComboBox Name="cmbSparepart"                                           
                                           FontSize="16" 
                                           HorizontalAlignment="Stretch"
                                           IsEnabled="True"
                                           Background="Transparent"
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
-                                          >
+                                          DisplayMemberPath="sparepartName"
+                                          SelectedValuePath="sparepartId">
                         <x:String>Front buffer</x:String>
                         <x:String>Rear Buffer</x:String>
                         <x:String>Door</x:String>
                         <x:String>Side Mirrors</x:String>
                     </ComboBox>
                     <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,15,0,0">                  
-                        <Button x:ConnectionId='3' Name="btnAddPart"
+                        <Button x:ConnectionId='4' Name="btnAddPart"
                                 HorizontalAlignment="Right"
                                 Content="Add" 
                                                         />
-                        <Button x:ConnectionId='4' x:Name="btnRemove"
+                        <Button x:ConnectionId='5' x:Name="btnRemove"
                         	      HorizontalAlignment="Right"
                         	      Content="Remove" 
                                                          />
@@ -185,7 +195,7 @@
                                  FontFamily="Segoe UI Light"
                                  TextWrapping="Wrap"/>
                     </StackPanel>
-                    <Button x:ConnectionId='2' Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150"                        >Submit</Button>
+                    <Button x:ConnectionId='3' Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150"                        >Submit</Button>
                 </StackPanel>
             </ScrollViewer>
 

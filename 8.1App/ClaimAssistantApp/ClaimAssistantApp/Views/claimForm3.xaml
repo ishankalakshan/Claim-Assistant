@@ -76,8 +76,19 @@
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light"
                                           SelectionChanged="cmbSparePartCategory_SelectionChanged"
-                                          DisplayMemberPath="spareCatergory"
                                           SelectedValuePath="spareId">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding spareId}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" FontSize="15" TextTrimming="CharacterEllipsis" Foreground="Black" />
+                                    <TextBlock Text="{Binding spareCatergory}" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="20"  Foreground="Black"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
                     </ComboBox>
                     <TextBlock HorizontalAlignment="Left" 
                                            Text="Manufacturer" 
@@ -91,11 +102,9 @@
                                           Background="Transparent"
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
-                                          >
-                        <x:String>Front buffer</x:String>
-                        <x:String>Rear Buffer</x:String>
-                        <x:String>Door</x:String>
-                        <x:String>Side Mirrors</x:String>
+                                          DisplayMemberPath="manufacturerName"
+                                          SelectedValuePath="manufacturerId"
+                                          SelectionChanged="cmbSparepartManufacturer_SelectionChanged">
                     </ComboBox>
                     <TextBlock HorizontalAlignment="Left" 
                                            Text="Sparepart" 
@@ -109,7 +118,8 @@
                                           Background="Transparent"
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
-                                          >
+                                          DisplayMemberPath="sparepartName"
+                                          SelectedValuePath="sparepartId">
                         <x:String>Front buffer</x:String>
                         <x:String>Rear Buffer</x:String>
                         <x:String>Door</x:String>
