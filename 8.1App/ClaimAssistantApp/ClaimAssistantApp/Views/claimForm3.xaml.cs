@@ -130,9 +130,9 @@ namespace ClaimAssistantApp.Views
         private List<Sparepart_ML> GetSpareparts()
         {
             List<Sparepart_ML> sparepartList = new List<Sparepart_ML>();
-            sparepartList.Add(new Sparepart_ML() {sparepartId=1,sparepartName="Xenon Head Lamps", sparepartCategory=1,spareManufacturer=1,spareManufacYear="2015",spareUnitCost=25000});
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 2, sparepartName = "Side Mirror", sparepartCategory = 3, spareManufacturer = 1, spareManufacYear = "2015", spareUnitCost = 25000 });
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 3, sparepartName = "23' Tire", sparepartCategory = 2, spareManufacturer = 2, spareManufacYear = "2015", spareUnitCost = 25000 });
+            sparepartList.Add(new Sparepart_ML() {sparepartId=1,sparepartName="Xenon Head Lamps", sparepartCategory=1,spareManufacturer=1,spareManufacYear="2015",spareUnitCost=25000.00f});
+            sparepartList.Add(new Sparepart_ML() { sparepartId = 2, sparepartName = "Side Mirror", sparepartCategory = 3, spareManufacturer = 1, spareManufacYear = "2015", spareUnitCost = 25000.00f });
+            sparepartList.Add(new Sparepart_ML() { sparepartId = 3, sparepartName = "23' Tire", sparepartCategory = 2, spareManufacturer = 2, spareManufacYear = "2015", spareUnitCost = 24500.00f });
 
             return sparepartList;
         }

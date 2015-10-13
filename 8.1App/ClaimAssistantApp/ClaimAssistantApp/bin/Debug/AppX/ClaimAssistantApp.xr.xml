@@ -4,6 +4,9 @@
     <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="spareUnitCost" />
+    <RootPropertyPathName Name="spareManufacYear" />
+    <RootPropertyPathName Name="sparepartName" />
     <RootPropertyPathName Name="spareCatergory" />
     <RootPropertyPathName Name="spareId" />
     <RootPropertyPathName Name="GarageTP" />
@@ -73,8 +76,9 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
@@ -170,6 +174,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />

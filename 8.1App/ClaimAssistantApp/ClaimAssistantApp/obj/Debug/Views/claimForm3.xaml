@@ -110,7 +110,8 @@
                                            Text="Sparepart" 
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
-                                           TextWrapping="Wrap"/>
+                                           TextWrapping="Wrap"
+                                            Foreground="Gray"/>                                         
                     <ComboBox Name="cmbSparepart"                                           
                                           FontSize="16" 
                                           HorizontalAlignment="Stretch"
@@ -118,12 +119,44 @@
                                           Background="Transparent"
                                           Foreground="Gray"
                                           FontFamily="Segoe UI Light" 
-                                          DisplayMemberPath="sparepartName"
                                           SelectedValuePath="sparepartId">
-                        <x:String>Front buffer</x:String>
-                        <x:String>Rear Buffer</x:String>
-                        <x:String>Door</x:String>
-                        <x:String>Side Mirrors</x:String>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="200"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding sparepartName}"  
+                                               HorizontalAlignment="Center" 
+                                               VerticalAlignment="Center" 
+                                               Grid.Column="0" 
+                                               FontSize="16" 
+                                               Foreground="Black" >                                   
+                                    </TextBlock>
+                                    <TextBlock  
+                                               Grid.Column="1" 
+                                               VerticalAlignment="Center"  
+                                               HorizontalAlignment="Center" 
+                                               FontSize="16"  
+                                               Foreground="Black">
+                                    <Run Text="Year : "></Run>
+                                    <Run Text="{Binding spareManufacYear}"></Run>
+                                    </TextBlock>
+                                    <TextBlock   
+                                               Grid.Column="2" 
+                                               VerticalAlignment="Center"  
+                                               HorizontalAlignment="Center" 
+                                               FontSize="16"  
+                                               Foreground="Black">
+                                    <Run Text="Rs "></Run>
+                                    <Run Text="{Binding spareUnitCost}"></Run>
+                                    <Run Text="/="></Run>
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
                     </ComboBox>
                     <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,15,0,0">                  
                         <Button x:ConnectionId='4' Name="btnAddPart"

@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
-      <Modified>2015-10-13T09:50:58.364</Modified>
+      <Modified>2015-10-13T12:02:28.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
       <PackagePath>ModelLayer.dll</PackagePath>
@@ -98,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
       <PackagePath>Views\claimForm3.xbf</PackagePath>
-      <Modified>2015-10-13T09:50:34.639</Modified>
+      <Modified>2015-10-13T12:02:28.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
       <PackagePath>Views\claimInformation.xbf</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
-      <Modified>2015-10-13T09:14:29.256</Modified>
+      <Modified>2015-10-13T12:01:56.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\121\Claim\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
