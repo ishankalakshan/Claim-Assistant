@@ -7,8 +7,6 @@
     <RootPropertyPathName Name="spareUnitCost" />
     <RootPropertyPathName Name="spareManufacYear" />
     <RootPropertyPathName Name="sparepartName" />
-    <RootPropertyPathName Name="spareCatergory" />
-    <RootPropertyPathName Name="spareId" />
     <RootPropertyPathName Name="GarageTP" />
     <RootPropertyPathName Name="GarageLocation" />
     <RootPropertyPathName Name="GarageName" />
@@ -78,7 +76,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
@@ -136,9 +133,9 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
+      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="DisplayMemberPath" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
