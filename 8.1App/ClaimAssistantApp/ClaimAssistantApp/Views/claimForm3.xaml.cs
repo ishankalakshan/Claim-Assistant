@@ -47,36 +47,6 @@ namespace ClaimAssistantApp.Views
             this.navigationHelper.SaveState += navigationHelper_SaveState;
             loadSparepartCatogoriesToCombo();
             loadSparepartManufacturersToCombo();
-
-            var ml = new Claim_ML
-            {
-                location = (App.Current as App).location,
-                reason = (App.Current as App).reason,
-                knockedON = (App.Current as App).knockedOn,
-                _3rdVehicleNo = (App.Current as App)._3rdVehicleRegno,
-                _3rdOwnerName = (App.Current as App)._3rdOwnerName,
-                _3rdAddress = (App.Current as App)._3rdAddress,
-                _3rdContactNo = (App.Current as App)._3rdContact,
-                _3rdRenewalDate = (App.Current as App)._3rdRenewalDate,
-                _3rdSpecialNotes = (App.Current as App)._3rdSpecialNotes,
-                _3rdVictimName = (App.Current as App).victimName,
-                _3rdVictimAddress = (App.Current as App).victimAddress,
-                _3rdDamageNature = (App.Current as App).damageNature,
-                _3rdClaimant = (App.Current as App)._3rdClaimant,
-                _3rdAmountClaimed = (App.Current as App)._3rdClaimAmount,
-                isDriverOwner = (App.Current as App).isDriverOwner,
-                driverName = (App.Current as App).drivername,
-                driverLicense = (App.Current as App).driverLicense,
-                licenseCat = (App.Current as App).driverCategories,
-                licenseExpreDate = (App.Current as App).driverLicenseExpire,
-                driverNIC = (App.Current as App).driverNIC,
-                purchaseDate = (App.Current as App).dateOfPrchase,
-                VehicleUsedFor = (App.Current as App).vehicleUsage,
-                rentCompanyName = (App.Current as App).rentName,
-                rentAmount = (App.Current as App).rentAmount,
-                garageCosts = Convert.ToSingle(txtgarageCost.Text),
-                otherCosts = Convert.ToSingle(txtgarageCost.Text)
-            };
         }
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
@@ -100,8 +70,44 @@ namespace ClaimAssistantApp.Views
         #endregion
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {           
-            txtgarageCost.Text = ml.location;
+        {
+            var ml = new Claim_ML
+            {
+                location = (App.Current as App).location,
+                reason = (App.Current as App).reason,
+                knockedON = (App.Current as App).knockedOn,
+                _3rdVehicleNo = (App.Current as App)._3rdVehicleRegno,
+                _3rdOwnerName = (App.Current as App)._3rdOwnerName,
+                _3rdAddress = (App.Current as App)._3rdAddress,
+                _3rdContactNo = (App.Current as App)._3rdContact,
+                _3rdRenewalDate = Convert.ToDateTime((App.Current as App)._3rdRenewalDate),
+                _3rdSpecialNotes = (App.Current as App)._3rdSpecialNotes,
+                _3rdVictimName = (App.Current as App).victimName,
+                _3rdVictimAddress = (App.Current as App).victimAddress,
+                _3rdDamageNature = (App.Current as App).damageNature,
+                _3rdClaimant = (App.Current as App)._3rdClaimant,
+                _3rdAmountClaimed = Convert.ToSingle((App.Current as App)._3rdClaimAmount),
+                isDriverOwner = (App.Current as App).isDriverOwner,
+                driverName = (App.Current as App).drivername,
+                driverLicense = (App.Current as App).driverLicense,
+                licenseCat = (App.Current as App).driverCategories,
+                licenseExpreDate = Convert.ToDateTime((App.Current as App).driverLicenseExpire),
+                driverNIC = (App.Current as App).driverNIC,
+                purchaseDate = Convert.ToDateTime((App.Current as App).dateOfPrchase),
+                VehicleUsedFor = (App.Current as App).vehicleUsage,
+                rentCompanyName = (App.Current as App).rentName,
+                rentAmount = Convert.ToSingle((App.Current as App).rentAmount),
+                garageCosts = Convert.ToSingle(txtgarageCost.Text),
+                otherCosts = Convert.ToSingle(txtgarageCost.Text)
+            };
+
+            ml.spareParts = new int[SparepartList.Count];
+
+            for (var i = 0; i < SparepartList.Count; i++)
+            {
+                ml.spareParts[i] = SparepartList[i];
+            }
+
             //Frame.Navigate(typeof(Views.claimSuccess));
         }
 

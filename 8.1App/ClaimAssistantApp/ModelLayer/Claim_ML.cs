@@ -37,7 +37,7 @@ namespace ModelLayer
         public string rentCompanyName;
         public float rentAmount;
 
-        public Sparepart_ML [] spareParts;
+        public int [] spareParts;
         public double garageCosts;
         public double otherCosts;
 
