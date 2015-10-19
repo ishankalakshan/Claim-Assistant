@@ -1,0 +1,65 @@
+#newsfdbody {
+	clear: both;
+	float: left;
+	width: 900px;
+	
+	color: #666666;
+}
+
+#tabwrapper {
+	width: 950px;
+	margin-top: 20px;
+	clear: both;
+	float: left;
+	}
+
+.accordionButton {
+	width: 875px;
+	float: left;
+	_float: none;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
+	color: #333;
+	background-color: #EEEEEE;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	-webkit-border-radius: 0px 10px 10px 0px;
+	-moz-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
+	margin-top: 3px;
+	}
+.nwsrdmore {
+	float: right;
+	margin-right: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 11px;
+	font-weight: bold;
+	color: #4095FD;
+}
+
+	
+.accordionContent {
+	width: 860px;
+	float: left;
+	_float: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 15px;
+	}
+	
+/***********************************************************************************************************************
+ EXTRA STYLES ADDED FOR MOUSEOVER / ACTIVE EVENTS
+************************************************************************************************************************/
+
+.on {
+	background-color: #C1DAFF;
+	}
+	
+.over {
+	background-color: #DADADA;
+	}.nwstxt {
+	float: left;
+	width: 725px;
+}

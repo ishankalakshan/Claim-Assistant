@@ -1,0 +1,98 @@
+#carousel .item {
+	float: left;
+}
+#carousel .item > div {
+	width: 390px;
+	height: 100px;
+	padding: 0px;
+	overflow: hidden;
+	margin: 0px;
+}
+#testrdmore {
+	float: left;
+}
+
+
+#carousel .item img {
+	float: left;
+	height: 81px;
+	width: 83px;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+#carousel .item div.text {
+	width: 270px;
+	height: 80px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	font-family: droidregular;
+	font-size: 12px;
+	font-weight: normal;
+	color: #F7F7F7;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+#product {
+	font-family: 'Homenaje', sans-serif;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+	margin-top: 2px;
+}
+
+#testimons {
+	font-family: 'Homenaje', sans-serif;		
+	font-size: 12px;
+	float: left;
+	clear: both;
+	text-align: left;
+}
+#testnameholder {
+	clear: both;
+	float: left;
+	width: 262px;
+	margin-top: 5px;
+}
+#rdmoreryt {
+	float: right;
+}
+
+
+#testname {
+	font-family: 'Homenaje', sans-serif;;
+	float: left;
+	;
+	font-size: 11px;
+	color: #5BBDFF;
+	font-weight: bold;
+}
+#testrdmore a{
+	font-family: 'Homenaje', sans-serif;
+	float: right;
+	text-decoration: none;
+	;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+}
+#testrdmore a:hover{
+	text-decoration: underline;
+}
+
+
+#carousel .item div.text:after {
+	content: " ";
+	border: 10px solid transparent;
+	border-right-color: #fff;
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -20px;
+	top: 50%;
+}

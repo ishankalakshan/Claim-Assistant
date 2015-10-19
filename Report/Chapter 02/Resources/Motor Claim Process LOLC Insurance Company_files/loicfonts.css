@@ -1,0 +1,40 @@
+
+/*@font-face {
+	
+	src: url('../fonts/DroidSans.eot');
+			src: local('newtype1'),
+			url('../fonts/DroidSans.svg') format('svg'),
+			 url('../fonts/DroidSans.woff') format('woff'),
+			 url('../fonts/DroidSans.ttf') format('truetype');
+			 
+
+}*/
+@font-face {
+	
+	letter-spacing: -2px;	
+
+}
+@font-face {
+	font-family: 'droidserifitalic';
+	src: url('../fonts/DroidSerif-Italic.eot');
+			src: local('newtype2'),
+			 url('../fonts/DroidSerif-Italic.svg') format('svg'),
+			 url('../fonts/DroidSerif-Italic.ttf') format('truetype'),
+			 url('../fonts/DroidSerif-Italic.woff') format('woff');
+}
+@font-face {
+	font-family: 'droidregular';
+	src: url('../fonts/DroidSerif-Regular.eot');
+			src: local('newtype3'),
+			 url('../fonts/DroidSerif-Regular.svg') format('svg'),
+			 url('../fonts/DroidSerif-Regular.ttf') format('truetype'),
+			 url('../fonts/DroidSerif-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'navfonts';
+	src: url('../fonts/yanonekaffeesatzregular.eot');
+			src: local('newtype4'),
+			 url('../fonts/yanonekaffeesatzregular.svg') format('svg'),
+			 url('../fonts/yanonekaffeesatzregular.ttf') format('truetype'),
+			 url('../fonts/yanonekaffeesatzregular.woff') format('woff');
+}

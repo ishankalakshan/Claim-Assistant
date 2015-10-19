@@ -1,0 +1,191 @@
+#navbarholder {
+	float: right;
+	
+}
+.navbar {
+	width: 950px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #dcdcdc;
+	border-right-color: #dcdcdc;
+	border-bottom-color: #dcdcdc;
+	border-left-color: #dcdcdc;	
+}
+
+
+#headnavboxbk {
+	/*	background-color: #005DB0;*/
+	height: 76px;
+	width: 100%;
+	background-color: #FFF;	/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);*/
+	/*overflow: hidden;*/
+}
+
+
+
+
+ul#menu {
+
+	clear: both;
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+.middlebody {
+	width: 1190px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ul#menu li {
+	float:left;
+	position:relative;
+	list-style-image: none;
+	list-style-type: none;
+}
+ul#menu li a { background: font-size:14px;
+	color: #333333;
+	float: left;
+	text-decoration: none;
+	font-family: navfonts;
+	font-size: 18px;
+	padding-top: 30px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+ul#menu li a:hover {
+	background: font-size:14px;
+	background-color: #333;
+	color: #FFF;
+}
+
+
+
+
+.mega-menu {
+	display: none;
+	width: 100%;
+	height: 0px;
+	clear: both;
+	background-color: #3B3B3B;
+	margin-bottom: 2px;
+}
+#menuimagebox {
+	float: left;
+	height: 195px;
+	width: 225px;
+	background-color: #464646;
+	padding: 6px;
+	margin: 15px;
+}
+#aboutusbox {
+	float: left;
+	width: 250px;
+	margin-top: 15px;
+	margin-left: 30px;
+	margin-right: 50px;
+}
+#aboutustexthd {
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #8CC9FF;
+	clear: both;
+	float: left;
+	margin-top: 8px;
+	text-transform: uppercase;
+}
+#aboutustextcontent {
+	;
+	font-size: 13px;
+	font-weight: lighter;
+	color: #E1E1E1;
+	clear: both;
+	float: left;
+	margin-top: 15px;
+	text-align: justify;
+}
+#relatedbox {
+		font-family: 'Homenaje', sans-serif;;
+	float: right;
+	width: 160px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+#relatedtexthd {
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #8CC9FF;
+	clear: both;
+	float: left;
+	height: 30px;
+	width: 200px;
+	margin-top: 8px;
+	text-transform: uppercase;
+}
+#relatedtextcontent {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: lighter;
+	color: #E4E4E4;
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	
+}
+#relatedtextcontentmenulink {
+		font-family: 'Homenaje', sans-serif;
+	margin: 0px;
+	height: 35px;
+	
+}
+#menuimgboxtextc a{
+	margin: 0px;
+	color: #E9E9E9;
+	font-size: 13px;
+	;
+	text-decoration: none !important;
+	border-top-style: none !important;
+	border-right-style: none !important;
+	border-bottom-style: none !important;
+	border-left-style: none !important;
+}
+
+
+#menuimgboxtextc a:hover{
+	
+	text-decoration: underline !important;
+}
+#relatedboxsep {
+	float: right;
+	height: 150px;
+	width: 2px;
+	background-color: #404040;
+}
+
+#relatedlinkimg {
+	float: left;
+	height: 35px;
+	width: 35px;
+	padding: 3px;
+	border: 1px solid #373737;
+	overflow: hidden;
+}
+#menuimgboxtextholder {
+	float: left;
+}
+#menuimgboxtext {
+	clear: both;
+	float: left;
+	margin-top: 5px;
+	margin-left: 0px;
+	text-decoration: underline;
+}

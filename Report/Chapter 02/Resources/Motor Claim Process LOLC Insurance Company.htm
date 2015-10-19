@@ -1,0 +1,866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)http://www.lolcinsurance.com/motorclaimprocess.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script async="" src="./Motor Claim Process LOLC Insurance Company_files/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQQPUFBQGwADUFFVAQQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){return u?u-=1:r("err",[s||new UncaughtException(t,e,n)]),"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(d);if(f&&(r.rxSize=f),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var f=0;u>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===c.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",f="attachEvent",c=(""+location).split("?")[0],p=e.exports={offset:i(),origin:c,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),d=this,f=r&&r(a,d)||{}}catch(c){i([c,"",[a,d,s],f])}o(e+"start",[a,d,s],f);try{return n=t.apply(d,a)}catch(p){throw o(e+"err",[a,d,p],f),p}finally{o(e+"end",[a,d,n],f)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,d="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,d?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+<title>Motor Claim Process|LOLC Insurance Company</title>
+<meta name="description" content="Motor Claim Process LOLC Insurance Company">
+<meta name="keywords" content="Motor Claim Process,LOLC Insurance Company">
+<link href="http://www.lolcinsurance.com/imgs/favicon.png" rel="shortcut icon" type="image/png">
+<link rel="stylesheet" type="text/css" href="./Motor Claim Process LOLC Insurance Company_files/loicfonts.css" media="all">
+<!-- Dropdown slider menu CSS -->
+<link rel="stylesheet" type="text/css" href="./Motor Claim Process LOLC Insurance Company_files/loic_menuslider_style.css" media="all">
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/loic_slidermenu_jquery-1.js"></script>
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/loic_slidermenu_mega.js"></script>
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/loic_slidermenu_jquery_003.js"></script>
+<!-- Dropdown slider menu CSS End -->
+<link href="./Motor Claim Process LOLC Insurance Company_files/format.css" rel="stylesheet" type="text/css">
+
+<!-- rest -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33749419-7', 'lolcinsurance.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- Search JS/CSS -->
+<link rel="stylesheet" href="http://www.lolcinsurance.com/css/loic_search_style.css">
+<script src="./Motor Claim Process LOLC Insurance Company_files/loic_jquery.min.js"></script>
+<script src="./Motor Claim Process LOLC Insurance Company_files/loic_search_color.js"></script>
+<script src="./Motor Claim Process LOLC Insurance Company_files/loic_search_script.js"></script>
+<!-- Search JS/CSS End -->
+<!-- Slideshow Start end-->
+<link rel="stylesheet" href="./Motor Claim Process LOLC Insurance Company_files/accordion.core.css" type="text/css" charset="utf-8">
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/jquery-1.4.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/jquery.accordion.2.0.js" charset="utf-8"></script>
+
+<!-- slider -->
+<!-- Tab Navigation Menu -->
+<link href="./Motor Claim Process LOLC Insurance Company_files/tabsnav.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/jquery.scrollTo.js"></script>
+<script>
+var $ = jQuery.noConflict();
+$(document).ready(function() {	
+ 	
+
+	//Get the height of the first item
+	$('#mask').css({'height':$('#panel-1').height()});	
+	
+	//Calculate the total width - sum of all sub-panels width
+	//Width is generated according to the width of #mask * total of sub-panels
+	$('#panel').width(parseInt($('#mask').width() * $('#panel div').length));
+	
+	//Set the sub-panel width according to the #mask width (width of #mask and sub-panel must be same)
+	$('#panel div').width($('#mask').width());
+	
+	//Get all the links with rel as panel
+	$('a[rel=panel]').click(function () {
+	
+		//Get the height of the sub-panel
+		var panelheight = $($(this).attr('href')).height();
+		
+		//Set class for the selected item
+		$('a[rel=panel]').removeClass('selected');
+		$(this).addClass('selected');
+		
+		//Resize the height
+		$('#mask').animate({'height':panelheight},{queue:false, duration:500});			
+		
+		//Scroll to the correct panel, the panel id is grabbed from the href attribute of the anchor
+		$('#mask').scrollTo($(this).attr('href'), 800);		
+		
+		//Discard the link default behavior
+		return false;
+	});
+	
+});
+</script>
+<!-- Tab Navigation Menu End -->
+<!-- For testi Slider -->
+<link href="./Motor Claim Process LOLC Insurance Company_files/testicss.css" rel="stylesheet" type="text/css">
+<script src="./Motor Claim Process LOLC Insurance Company_files/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script type="text/javascript">
+				 var $ = jQuery.noConflict();
+			$(function() {
+				$('#carousel').carouFredSel({
+					width: 900,
+					height: '100%',
+					direction: 'up',
+					items: 1,
+					scroll: {
+						duration: 600,
+						onBefore: function( data ) {
+							data.items.visible.children().css( 'opacity', 0 ).delay( 200 ).fadeTo( 400, 1 );
+							data.items.old.children().fadeTo( 400, 0 );
+						}
+					}
+				});
+			});
+		</script>
+
+<!-- For testi Slider end -->
+<!-- Tab Navigation Menu -->
+<link href="./Motor Claim Process LOLC Insurance Company_files/tabsnav.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/jquery.scrollTo.js"></script>
+<script>
+var $ = jQuery.noConflict();
+$(document).ready(function() {	
+ 	
+
+	//Get the height of the first item
+	$('#mask').css({'height':$('#panel-1').height()});	
+	
+	//Calculate the total width - sum of all sub-panels width
+	//Width is generated according to the width of #mask * total of sub-panels
+	$('#panel').width(parseInt($('#mask').width() * $('#panel div').length));
+	
+	//Set the sub-panel width according to the #mask width (width of #mask and sub-panel must be same)
+	$('#panel div').width($('#mask').width());
+	
+	//Get all the links with rel as panel
+	$('a[rel=panel]').click(function () {
+	
+		//Get the height of the sub-panel
+		var panelheight = $($(this).attr('href')).height();
+		
+		//Set class for the selected item
+		$('a[rel=panel]').removeClass('selected');
+		$(this).addClass('selected');
+		
+		//Resize the height
+		$('#mask').animate({'height':panelheight},{queue:false, duration:500});			
+		
+		//Scroll to the correct panel, the panel id is grabbed from the href attribute of the anchor
+		$('#mask').scrollTo($(this).attr('href'), 800);		
+		
+		//Discard the link default behavior
+		return false;
+	});
+	
+});
+</script>
+<!-- Tab Navigation Menu End -->
+
+<link href="./Motor Claim Process LOLC Insurance Company_files/loic_style.css" rel="stylesheet" type="text/css">
+<link href="./Motor Claim Process LOLC Insurance Company_files/bottomitems.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="ysp_wrapper"> 
+  <!--<div id="topblueline"></div>--> 
+  
+  <!-- Header with Navigation -->
+  
+
+<link href="./Motor Claim Process LOLC Insurance Company_files/css" rel="stylesheet" type="text/css">
+
+<div id="headnavboxbk">
+
+    <div id="headnavbox"> 
+
+    
+
+    <!-- Search Box -->
+
+      <div id="searchboxmain" style="display:none">
+
+        <form id="searchForm">
+
+          <fieldset>
+
+            <div class="input">
+
+              <input type="text" name="s" id="s" value="Enter your search...">
+
+            </div>
+
+            <input type="submit" id="searchSubmit" value="">
+
+          </fieldset>
+
+        </form>
+
+      </div>
+
+      <!-- Search End --> 
+
+      <!-- Logo Start -->
+
+      <div id="ysp_logo"><a href="http://www.lolcinsurance.com/"><img src="./Motor Claim Process LOLC Insurance Company_files/ysplogo.png" border="0"></a></div>
+
+      <!-- Logo End --> 
+
+      
+
+      <!-- Slider dropdown Menu -->
+
+      <div id="navbarholder">
+
+        <div class="navbar">
+
+          <ul id="menu">
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/" rel="1">Home</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/aboutus.html" rel="2">About Us</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/financialinformation.html" rel="3">Financial Information</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/news&highlights.html" rel="4">News &amp; Highlights</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/generalinsurance.html" rel="5">Our Solutions</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/branchnetwork.html" rel="16">Branch Network</a> </li>
+
+              
+
+                <li class="mega"> <a href="http://www.lolcinsurance.com/contactus.html" rel="6">Contact Us</a> </li>
+
+            
+<!--            <li class="mega"> <a href="#" rel="2">about us</a> </li>
+
+            <li class="mega"> <a href="#" rel="3">Financial Information</a> </li>
+
+            <li class="mega"> <a href="#" rel="4">News Highlights</a> </li>
+
+            <li class="mega"> <a href="#" rel="5">Our Solutions</a> </li>
+
+            <li class="mega"> <a href="#" rel="6">Contact Us</a> </li>-->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- End of main menu --> 
+
+    </div>
+
+  </div>
+
+  <!-- Header with Navigation End --> 
+
+  <!-- Main Drop Down Menu -->
+
+  
+
+  <div style="display: none; height: 0px;" class="mega-menu"> 
+
+    
+
+    <!-- *************************************************************** First Menu *********************************************************************** -->
+
+    
+    <div class="cat-menu" id="cat-2-menu" style="height: 235px; display: none;">
+
+      <div class="middlebody">
+
+        <div id="menuimagebox"><img src="./Motor Claim Process LOLC Insurance Company_files/1362031747menu3.jpg" border="0"></div>
+
+        <!-- Column -->
+
+        <div id="aboutusbox">
+
+          <div id="aboutustexthd">About Us</div>
+
+          <div id="aboutustextcontent">
+
+          LOLC Insurance Company Limited is a subsidiary of the LOLC Group, the largest non-banking financial conglomerate in Sri Lanka. Our underwriting philosophy, strong capital base and support of the leading reinsurers help us to create value  for shareholders and deliver superior experiences to ... 
+          </div>
+
+          <div id="tplinkrdmore"><a href="http://www.lolcinsurance.com/aboutus.html">Read more</a></div>
+
+        </div>
+
+        <!-- Column -->
+
+        
+
+        
+        <div id="relatedbox" style="float:left !important;">
+
+            <div id="relatedtexthd">Related Links</div>
+
+            <div id="relatedtextcontent"> 
+
+                <div id="relatedtextcontentmenulink">
+
+                    <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+                    <div id="menuimgboxtextholder">
+
+                      <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/ourboardofdirectors.html">Our Board of Directors</a> </div>
+
+                    </div>
+
+                  </div>
+
+            </div>
+
+        </div>
+
+                
+        
+
+        
+
+         
+
+        
+
+        
+
+      </div>
+
+    </div>
+
+    
+    <div class="cat-menu" id="cat-5-menu" style="height: 235px; display: none;">
+
+      <div class="middlebody">
+
+        <div id="menuimagebox"><img src="./Motor Claim Process LOLC Insurance Company_files/menu2.jpg" border="0"></div>
+
+        <!-- Column -->
+
+        <div id="aboutusbox">
+
+          <div id="aboutustexthd">Our Solutions</div>
+
+            <div id="aboutustextcontent">
+
+                We offer an extensive range of insurance products to help both individuals and businesses prepare for the unexpected. Our life and general insurance policies offer customers peace of mind and the comfort knowing that a certain measure of protection is offered against hefty obligations.
+            </div>
+
+          <!--<div id="tplinkrdmore"><a href="#">Read more</a></div>-->
+
+        </div>
+
+        <!-- Column -->
+
+        
+        <div id="relatedbox">
+
+          <div id="relatedtexthd">General Insurance</div>
+
+          <div id="relatedtextcontent"> 
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/miscellaneousinsurance.html">Miscellaneous Insurance</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/lolcmarineinsurance.html">LOLC Marine Insurance</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/motorinsurance.html">Motor Insurance</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/engineeringinsurance.html">Engineering Insurance</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            <div id="tplinkrdmore"><a href="http://www.lolcinsurance.com/generalinsurance.html" style="color:#ADD8E6; text-decoration: none;">view all</a></div>
+                    
+
+            
+          </div>
+
+          <div id="relatedboxsep"></div>
+
+        </div>
+
+        
+        <div id="relatedbox">
+
+          <div id="relatedtexthd">Life Insurance</div>
+
+          <div id="relatedtextcontent"> 
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/lolcinsurancelifeprotect.html">LOLC Insurance Life Protect</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/lolcinsurancelifeprotectplus.html">LOLC Insurance Life Protect Plus</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/lolcinsurancepensionplan.html">LOLC Insurance Pension Plan</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            
+            <!-- Sub menu Column -->
+
+            <div id="relatedtextcontentmenulink">
+
+              <!--<div id="relatedlinkimg"><img src="ysp_img/menu/submenu1.jpg" border="0"/></div>-->
+
+              <div id="menuimgboxtextholder">
+
+                <div id="menuimgboxtextc"> <a href="http://www.lolcinsurance.com/lolcinsurancechildplan.html">LOLC Insurance Child Plan</a></div>
+
+              </div>
+
+            </div>
+
+            <!-- Sub menu end --> 
+
+            
+
+            <div id="tplinkrdmore"><a href="http://www.lolcinsurance.com/lifeinsurance.html" style="color:#ADD8E6; text-decoration: none;">view all</a></div>
+                    
+
+            
+          </div>
+
+          <div id="relatedboxsep"></div>
+
+        </div>
+
+        
+        
+
+        <!---------- **************  ----------->
+
+        
+
+        <!---------- **************  -----------> 
+
+         
+
+      </div>
+
+    </div>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div> 
+  <!-- Header with Navigation End --> 
+  
+<div id="bdyslideshow2">
+<div id="scroller-body">
+      
+        
+          
+          <div id="tabbdyarea">
+          
+           <div id="tbleftmenu">
+           <div id="leftslideimg"><img src="./Motor Claim Process LOLC Insurance Company_files/1367476452accident.jpg"></div>
+                      
+            <div id="cntimage"><img src="./Motor Claim Process LOLC Insurance Company_files/contact_us.png"></div>
+           <div id="quickinc">Hotline&nbsp;&nbsp;:<b>&nbsp;+94 11 500 8080</b><br>
+               General&nbsp;:<b>&nbsp;+94 11 550 0880</b></div>
+           
+           </div>
+           <div id="tblbody">
+            <div id="tblbreadcrum">You are here&nbsp;:&nbsp;<span style="font-size:12px; font-weight:normal;"><a href="http://www.lolcinsurance.com/">Home</a>&nbsp;&gt;&nbsp;Motor Claim Process</span></div>
+           <div id="tblbodycatheading">Motor Claim Process</div>
+           <div id="tblbodycatheadingsub"></div>
+            <div id="tblbodytxt">
+                        <div id="newsfdbody">
+           <p>&nbsp;</p>
+<div class="lineholder">
+<div class="fig">Step One</div>
+<div class="cln">:</div>
+<div class="linedetails">Call 011 5008080 (Insurance Care Centre) and inform the accident to us.</div>
+</div>
+<div class="lineholder">
+<div class="fig">Step Two</div>
+<div class="cln">:</div>
+<div class="linedetails">If the visiting Assessor or the Care   Centre agent has requested you to report the accident to the police,   please do so. (According to the Motor Traffic Act of Sri Lanka it is   mandatory that all motor vehicle accidents are reported to the nearest   Police Station).</div>
+</div>
+<div class="lineholder">
+<div class="fig">Step Three</div>
+<div class="cln">:</div>
+<div class="linedetails">If the visiting Assessor has offered an onsite offer please ensure that the Claim Form   which is handed over to you by the Assessor is duly signed in order for   the payment to be processed.</div>
+</div>
+<div class="lineholder">
+<div class="fig">Step Four</div>
+<div class="cln">:</div>
+<div class="linedetails">If   no onsite offer is made by the Assessor, please obtain an estimate for   the repairs and fax the estimate to 0112559407. (Confirm the receipt of   fax by calling the Engineering unit on 0115500860, 0115500863 or   0115500933).</div>
+</div>
+<div class="lineholder">
+<div class="fig">Step Five</div>
+<div class="cln">:</div>
+<div class="linedetails">The approval for   the repair will be given by The Engineering unit or the Assessor who   will be visiting the garage/location convenient to you.</div>
+</div>
+<div class="lineholder">
+<div class="fig">Step Six</div>
+<div class="cln">:</div>
+<div class="linedetails">After completion of repairs, please submit   the following documents to the nearest LOLC Branch, CLC (Commercial   Leasing) Branch or LOLC Insurance Head Office located at 440, Havelock   Road, Colombo 06;</div>
+</div>
+<div class="innerpara">a. Duly completed Claim Form with your signature<br> b. Copy of the Driver’s License<br> c. All bills (final bills) related to the claim/accident.<br> d. If the payment is to be drawn in favor of the garage - please advise this in writing to us.</div>
+<p>&nbsp;</p>
+<div class="lineholder">
+<div class="fig">Step Seven</div>
+<div class="cln">:</div>
+<div class="linedetails">On requisition please provide the   vehicle for an After Repair Inspection. All salvage items should be in   the custody of the insured until the claim is finalized. If requested,   these items should be handed over to the company (LOLC Insurance Co   Ltd). All invoices inclusive of VAT should be addressed to LOLC   Insurance Co Ltd.</div>
+</div>
+<p>&nbsp;</p>
+<div class="forinq">For enquiries, please contact Insurance Care Centre on 011 5008080.</div>            </div>
+ 
+                
+</div>
+             </div>
+             </div>
+            
+          
+     
+    
+    </div>  </div>
+                
+ 
+  <!-- Slideshow end --> 
+</div>
+
+<!-- Footer Area -->
+<div id="footerclass">
+  <div id="footermainbox">
+    <div id="ftbox1">
+      <div id="abtusimgicon"><img src="./Motor Claim Process LOLC Insurance Company_files/abtus.png" width="50" height="60"></div>
+      <div id="abtustext">
+          LOLC Insurance Company Limited is a subsidiary of the LOLC Group, the largest non-banking financial conglomerate in Sri Lanka. Our underwriting ...         <div id="abtusrdmore"><a href="http://www.lolcinsurance.com/aboutus.html">Read More</a></div>
+      </div>
+    </div>
+    <div id="ftbox2">
+     
+      
+      <div id="abtustext"> 
+<!--        <script>
+		$(function() {
+		
+			$("#slideshow > div:gt(0)").hide();
+	
+			setInterval(function() { 
+			  $('#slideshow > div:first')
+			    .fadeOut(1000)
+			    .next()
+			    .fadeIn(1000)
+			    .end()
+			    .appendTo('#slideshow');
+			},  5000);
+			
+		});
+	</script>-->
+        <div id="slideshow">
+          <!----- ********************  ----->
+          <div id="item">
+          	<div id="abtusimgicon2" style="margin-left:25px;"><img src="./Motor Claim Process LOLC Insurance Company_files/contacusphone.png" width="50" height="60"></div>
+            <div id="chngholder">
+            <div id="gencnt">General :<font size="4">+94 11 550 0880</font></div>
+            <div id="gencnt">Fax :<font size="4">+94 11 255 9407</font></div>
+          	</div>
+          </div>
+            <!----- ********************  ----->
+          <!----- ********************  ----->
+          <!--<div id="item">
+         <a href="home.php?id=5">
+          <div id="handicon"></div>
+         
+          <div id="chngholder2">
+            <div id="websolutions">Online Products & Services</div>
+        <div id="websolutionssm">We cater to your needs</div>
+          </div>
+
+          </div>-->
+            <!----- *********  	 	  ***********  ----->
+        </div>
+      </div>
+    </div>
+    <div id="ftbox3">
+      <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 900px; height: 102px; margin: 0px; overflow: hidden;"><div id="carousel" style="text-align: left; float: none; position: absolute; top: 1px; right: auto; bottom: auto; left: 0px; margin: 0px; height: 502px; width: 390px; z-index: auto;">
+         
+          
+        
+          
+        
+          
+      <div class="item" style="margin-bottom: 1px;">
+          <div style="opacity: 1;"> <img src="./Motor Claim Process LOLC Insurance Company_files/13684417301368005072default.png" border="0" width="83" height="81">
+            <div class="text">
+              <div id="product">Life Insurance</div>
+              <div id="testimons">
+                  "On behalf of my late wife, A. Nandani, I would like to thank ...               </div>
+              <div id="testnameholder">
+                <div id="testname">G. Gunawardena</div>
+                <div id="rdmoreryt">
+                  <div id="testrdmore"><a href="http://www.lolcinsurance.com/testimonials.html">Read more</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><div class="item" style="margin-bottom: 0px;">
+          <div style="opacity: 0;"> <img src="./Motor Claim Process LOLC Insurance Company_files/13684417591368005072default.png" border="0" width="83" height="81">
+            <div class="text">
+              <div id="product">Life Insurance</div>
+              <div id="testimons">
+                  "First of all, my heartfelt thanks goes out to LOLC Insurance ...               </div>
+              <div id="testnameholder">
+                <div id="testname">Pradeep Piyathilake</div>
+                <div id="rdmoreryt">
+                  <div id="testrdmore"><a href="http://www.lolcinsurance.com/testimonials.html">Read more</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div></div>
+    </div>
+  </div>  
+  <div id="footermainbox">
+    <div id="ftbox4">
+      <div id="contactinfo">Contact Info</div>
+      <div id="contactinfoaddbox">
+        <div id="cntadd"><b>LOLC Insurance Company Ltd</b><br>
+       <b>Registered Address:</b><br>
+        No. 100/1<br>
+Sri Jayewardenepura Mawatha,<br>
+Rajagiriya  
+        </div>
+        <div id="cntadd" style="float:right; margin-right:5px; width:150px;">
+        <b>Business Address:</b><br>
+             No. 440, <br>Havelock Road,<br> Colombo 06   
+        </div>  
+        <div id="cnttelfax">Tel: +94 11 550 0880<br>
+          Fax: +94 11 255 9407<br>
+          <div id="emaillink"><a href="mailto:enquiry@lolcinsurance.com">enquiry@lolcinsurance.com</a></div></div>
+      </div>
+    </div>
+    <div id="ftbox5">
+      <div id="contactinfo">General Links</div>
+      <div id="contactinfoaddbox2"> 
+        <!-- **************** -->
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolcinsurance.com/csr%E2%80%93lolccare.html">CSR – LOLC CARE</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolcinsurance.com/careers.html">Careers</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolc.com/reports_details.php" target="_blank">Annual Reports</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolcinsurance.com/ourboardofdirectors.html">Our Board of Directors</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolcinsurance.com/testimonials.html">Testimonials</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolcinsurance.com/sitemap.html">Site Map</a>
+                        </div>
+        </div>
+                <div id="holdboxgreen">
+          <div id="himgholder">
+              <img src="./Motor Claim Process LOLC Insurance Company_files/icon_clock_green.png" border="0">
+          </div>
+          <div id="htxtholder">
+                            	<a href="http://www.lolc.com/content.php?main=16" target="_blank">Privacy Policy</a>
+                        </div>
+        </div>
+                <!-- **************** --> 
+        
+      </div>
+    </div>
+    <div id="ftbox6">
+    
+    
+      <div id="ftholder">
+        <div id="frmicon"><img src="./Motor Claim Process LOLC Insurance Company_files/forms-icon.png" width="75px" height="75px"></div>
+        <div id="frmtxt"><div id="frmtxtlink"><a href="http://www.lolcinsurance.com/downloadforms.html">Download Forms</a></div></div>
+      </div>
+      
+      
+     <div id="ftholder">
+		<div id="frmicon" style="padding-left:20px; float:right;"><img width="75px" height="75px" src="./Motor Claim Process LOLC Insurance Company_files/findanagenticon.png"></div> 
+        <div id="frmtxt" style="float:right;"><div id="frmtxtlink"><a href="./Motor Claim Process LOLC Insurance Company_files/Motor Claim Process LOLC Insurance Company.htm">Motor Claim Process</a></div></div>
+      </div> 
+      
+     <div id="ftholder">
+        <div id="frmicon"><img src="./Motor Claim Process LOLC Insurance Company_files/agent.png" width="75px" height="75px"></div>
+        <div id="frmtxt"><div id="frmtxtlink"><a href="http://www.lolcinsurance.com/findanagent.html">Find an Agent</a></div></div>
+      </div>
+	  
+	  <div id="ftholder">
+		<div id="frmicon" style="float:right;"><img src="./Motor Claim Process LOLC Insurance Company_files/quotation.png" width="75px" height="75px"></div>
+        <div id="frmtxt" style="margin-right:10px; float:right;"><div id="frmtxtlink"><a href="https://illustrate.lolcinsurance.com/" target="_blank">Generate Life Quotation</a></div></div>		
+      </div>
+      
+      
+      
+      <div id="socialmediaic">
+<!--        <div class="fbic"><a target="_blank" href=""></a></div>
+        <div class="twic"><a target="_blank" href=""></a></div>-->
+      </div>
+    </div>
+  </div>
+  <!-- ****************** Footer Second Area End ----------------------------------------------> 
+  
+  <!-- ****************** Footer Second Area End ---------------------------------------------->
+ <!-- <div id="gapper"></div>-->
+  <div id="footermainboxline">
+    <div id="footercopyright"> Copyright © &nbsp;2014 LOLC Insurance Company Ltd. All Rights Reserved. Site by <a target="_blank" href="http://www.3cs.lk/">3CS</a> </div>
+  </div>
+  </div>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","licenseKey":"459e132d9e","applicationID":"3340765","transactionName":"NlYBMhQDCBFUUBALXQ8cNhQPTQ4NWFZKEloR","queueTime":0,"applicationTime":33,"ttGuid":"","agentToken":"","atts":"GhECRFwZGx8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-411.min.js"}</script>
+<script src="./Motor Claim Process LOLC Insurance Company_files/nr-411.min.js"></script><script type="text/javascript" src="./Motor Claim Process LOLC Insurance Company_files/459e132d9e"></script></body></html>
