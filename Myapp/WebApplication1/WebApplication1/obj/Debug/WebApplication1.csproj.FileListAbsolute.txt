@@ -72,3 +72,4 @@ I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\WebApplication1\obj\De
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll.licenses
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
