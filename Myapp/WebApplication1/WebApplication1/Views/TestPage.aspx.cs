@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ModelLayer;
+using ModelLayer.Spareparts;
 using BusinessLayer;
+using BusinessLayer.Spareparts;
 
 namespace WebApplication1.Views
 {
@@ -16,28 +18,25 @@ namespace WebApplication1.Views
 
         }
 
-        protected void btnTest_Click(object sender, EventArgs e)
+        protected void ASPxButton1_Click(object sender, EventArgs e)
         {     
             Claim_ML ml = new Claim_ML();
-            ml.spareParts = new sparePart_ML[1];
-             /*for (int i = 0; i < 4; i++)
-			{
-			    sparePart_ML sparepart = new sparePart_ML();
-                 sparepart.sparePartId = i;
-                 sparepart.sparePartQty = ++i;
-                 sparepart.sparePartCost = 1000+i;
-                 ml.spareParts[i]=sparepart;
-			}  */
+            ml.spareParts = new List<SparepartPayment_ML>();
 
-            sparePart_ML sparepart = new sparePart_ML();
-                 sparepart.sparePartId = 5;
-                 sparepart.sparePartQty = 2;
-                 sparepart.sparePartCost = 1000;
-                        
-                    ml.policyId = 1;
+            for (int i = 0; i < 3; i++)
+            {
+                ml.spareParts.Add(new SparepartPayment_ML()
+                {
+                    sparePartId = i,
+                    sparePartQty = 2,
+                    sparePartCost = 1000
+                });
+            }
+        
+                    ml.policyId = 4;
                     ml.location = "Badulla";
                     ml.reason = "Fell asleep";
-                    ml.knockedON = "tree";
+                    ml.knockedOn = "tree";
                     ml._3rdVehicleNo = "253-3402";
                     ml._3rdOwnerName = "Ishanka";
                     ml._3rdAddress = "199/4, Keppetipola Road,Badulla";
@@ -48,7 +47,7 @@ namespace WebApplication1.Views
                     ml._3rdVictimAddress = "";
                     ml._3rdDamageNature = "rear buffer";
                     ml._3rdClaimant = "Ceylinco";
-                    ml._3rdAmountClaimed = "";
+                    ml._3rdAmountClaimed = 0;
                     ml.isDriverOwner = "No";
                     ml.driverName = "Lakshan";
                     ml.driverLicense ="asdasdasd";
@@ -58,14 +57,20 @@ namespace WebApplication1.Views
                     ml.purchaseDate = DateTime.Now;
                     ml.VehicleUsedFor = "Private";
                     ml.rentCompanyName = "";
-                    ml.rentAmount = "";
-                    ml.spareParts[0] = sparepart;
+                    ml.rentAmount = 0;
                     ml.garageCosts = 324234.324f;
                     ml.otherCosts = 324.43f;
 
             Claim_BL bl = new Claim_BL();
             bool returValue = bl.insertClaim(ml);
-           txtTest.Text = returValue.ToString();
+            ASPxTextBox1.Text = returValue.ToString();
         }
+
+        /*protected void ASPxButton1_Click(object sender, EventArgs e)
+        {
+            var bm = new SparepartCategory_BL().GetSparepartCategories();
+            var cm = new SparepartManufacturer_BL().GetSparepartManufacturers();
+            var dm = new Sparepart_BL().GetSpareparts();
+        }*/
     }
 }

@@ -9,12 +9,10 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        
-    </div>
-        <dx:ASPxTextBox ID="txtTest" runat="server" Width="170px"></dx:ASPxTextBox>
-        <dx:ASPxButton ID="btnTest" runat="server" OnClick="btnTest_Click" Text="ASPxButton"></dx:ASPxButton>
+    
+    <form id="form2" runat="server">
+        <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="170px"></dx:ASPxTextBox>
+        <dx:ASPxButton ID="ASPxButton1" runat="server" OnClick="ASPxButton1_Click" Text="ASPxButton"></dx:ASPxButton>
     </form>
 </body>
 </html>

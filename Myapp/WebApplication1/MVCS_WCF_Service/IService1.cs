@@ -27,7 +27,16 @@ namespace MVCS_WCF_Service
         string GetGarageInfo(string location);
 
         [OperationContract]
-        bool InsertClaim(Claim_ML claim);
+        bool InsertClaim(string claim);
+
+        [OperationContract]
+        string GetSparepartCategories();
+
+        [OperationContract]
+        string GetSparepartManufacturers();
+
+        [OperationContract]
+        string GetSpareparts();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

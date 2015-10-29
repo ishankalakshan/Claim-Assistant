@@ -31,6 +31,30 @@
   <wsdl:message name="IService1_GetGarageInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetGarageInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_InsertClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClaim" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSparepartCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSparepartCategories" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSparepartCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSparepartCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSparepartManufacturers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSparepartManufacturers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSparepartManufacturers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSparepartManufacturersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSpareparts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpareparts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSpareparts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSparepartsResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -53,6 +77,22 @@
     <wsdl:operation name="GetGarageInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGarageInfo" message="tns:IService1_GetGarageInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGarageInfoResponse" message="tns:IService1_GetGarageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertClaim" message="tns:IService1_InsertClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertClaimResponse" message="tns:IService1_InsertClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSparepartCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSparepartCategories" message="tns:IService1_GetSparepartCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSparepartCategoriesResponse" message="tns:IService1_GetSparepartCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSparepartManufacturers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSparepartManufacturers" message="tns:IService1_GetSparepartManufacturers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSparepartManufacturersResponse" message="tns:IService1_GetSparepartManufacturers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpareparts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSpareparts" message="tns:IService1_GetSpareparts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSparepartsResponse" message="tns:IService1_GetSpareparts_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -90,6 +130,42 @@
     </wsdl:operation>
     <wsdl:operation name="GetGarageInfo">
       <soap:operation soapAction="http://tempuri.org/IService1/GetGarageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertClaim">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSparepartCategories">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSparepartCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSparepartManufacturers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSparepartManufacturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpareparts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSpareparts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

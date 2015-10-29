@@ -15,7 +15,6 @@ F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt
 F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt.intermediate
 F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
-I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
 I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.dll
 I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.pdb
 I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll
@@ -49,3 +48,6 @@ C:\121\Claim\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\pri.resfiles.intermed
 C:\121\Claim\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt
 C:\121\Claim\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\qualifiers.txt.intermediate
 C:\121\Claim\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\Newtonsoft.Json.dll
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\Newtonsoft.Json.xml
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache

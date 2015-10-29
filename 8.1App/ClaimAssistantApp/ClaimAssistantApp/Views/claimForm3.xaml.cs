@@ -26,101 +26,144 @@ namespace ClaimAssistantApp.Views
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        List<int> SparepartList = new List<int>();
+
+        List<SparepartPayment_ML> SparepartList = new List<SparepartPayment_ML>();
         private double _totalcost = 0;
-
-        public ObservableDictionary DefaultViewModel
-        {
-            get { return this.defaultViewModel; }
-        }
-        public NavigationHelper NavigationHelper
-        {
-            get { return this.navigationHelper; }
-        }
-
+        List<SparepartCategory_ML> LocalSparepartCatogoryList = new List<SparepartCategory_ML>();
+        List<SparepartManufacturer_ML> LocalSparepartmanufacturerList = new List<SparepartManufacturer_ML>();
+        List<Sparepart_ML> LocalSparepartsList = new List<Sparepart_ML>();
 
         public claimForm3()
         {
+            
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+
+            LoadSparepartCategories();
+            LoadSparepartManufacturers();
+            LoadSpareparts();
+
             loadSparepartCatogoriesToCombo();
             loadSparepartManufacturersToCombo();
-        }
-        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
-        {
-        }
-        private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
-        {
+            
         }
 
-        #region NavigationHelper registration
+        public async void LoadSparepartCategories()
+        {            
+            try
+            {
+                var client = new ServiceReference1.Service1Client();
+                var result = await client.GetSparepartCategoriesAsync();
+                var sprepartCategories = JArray.Parse(result);
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            navigationHelper.OnNavigatedTo(e);
+                foreach (var item in sprepartCategories)
+                {
+                    LocalSparepartCatogoryList.Add(new SparepartCategory_ML(item));
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }           
         }
 
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        public async void LoadSparepartManufacturers()
         {
-            navigationHelper.OnNavigatedFrom(e);
+            try
+            {
+                var client = new ServiceReference1.Service1Client();
+                var result = await client.GetSparepartManufacturersAsync();
+                var sprepartManufacturers = JArray.Parse(result);
+
+                foreach (var item in sprepartManufacturers)
+                {
+                    LocalSparepartmanufacturerList.Add(new SparepartManufacturer_ML(item));                
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        #endregion
+        public async void LoadSpareparts()
+        {
+            try
+            {
+                var client = new ServiceReference1.Service1Client();
+                var result = await client.GetSparepartsAsync();
+                var spareparts = JArray.Parse(result);
+
+                foreach (var item in spareparts)
+                {
+                    LocalSparepartsList.Add(new Sparepart_ML(item));
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            var ml = new Claim_ML
-            {
-                location = (App.Current as App).location,
-                reason = (App.Current as App).reason,
-                knockedON = (App.Current as App).knockedOn,
-                _3rdVehicleNo = (App.Current as App)._3rdVehicleRegno,
-                _3rdOwnerName = (App.Current as App)._3rdOwnerName,
-                _3rdAddress = (App.Current as App)._3rdAddress,
-                _3rdContactNo = (App.Current as App)._3rdContact,
-                _3rdRenewalDate = Convert.ToDateTime((App.Current as App)._3rdRenewalDate),
-                _3rdSpecialNotes = (App.Current as App)._3rdSpecialNotes,
-                _3rdVictimName = (App.Current as App).victimName,
-                _3rdVictimAddress = (App.Current as App).victimAddress,
-                _3rdDamageNature = (App.Current as App).damageNature,
-                _3rdClaimant = (App.Current as App)._3rdClaimant,
-                _3rdAmountClaimed = Convert.ToSingle((App.Current as App)._3rdClaimAmount),
-                isDriverOwner = (App.Current as App).isDriverOwner,
-                driverName = (App.Current as App).drivername,
-                driverLicense = (App.Current as App).driverLicense,
-                licenseCat = (App.Current as App).driverCategories,
-                licenseExpreDate = Convert.ToDateTime((App.Current as App).driverLicenseExpire),
-                driverNIC = (App.Current as App).driverNIC,
-                purchaseDate = Convert.ToDateTime((App.Current as App).dateOfPrchase),
-                VehicleUsedFor = (App.Current as App).vehicleUsage,
-                rentCompanyName = (App.Current as App).rentName,
-                rentAmount = Convert.ToSingle((App.Current as App).rentAmount),
-                garageCosts = Convert.ToSingle(txtgarageCost.Text),
-                otherCosts = Convert.ToSingle(txtgarageCost.Text)
-            };
-
-            ml.spareParts = new int[SparepartList.Count];
-
-            for (var i = 0; i < SparepartList.Count; i++)
-            {
-                ml.spareParts[i] = SparepartList[i];
-            }
+            var ml = new Claim_ML(
+                4,
+                (App.Current as App).location,
+                (App.Current as App).reason,
+                (App.Current as App).knockedOn,
+                (App.Current as App)._3rdVehicleRegno,
+                (App.Current as App)._3rdOwnerName,
+                (App.Current as App)._3rdAddress,
+                (App.Current as App)._3rdContact,
+                (App.Current as App)._3rdRenewalDate,
+                (App.Current as App)._3rdSpecialNotes,
+                (App.Current as App).victimName,
+                (App.Current as App).victimAddress,
+                (App.Current as App).damageNature,
+                (App.Current as App)._3rdClaimant,
+                (App.Current as App)._3rdClaimAmount,
+                (App.Current as App).isDriverOwner,
+                (App.Current as App).drivername,
+                (App.Current as App).driverLicense,
+                (App.Current as App).driverCategories,
+                (App.Current as App).driverLicenseExpire,
+                (App.Current as App).driverNIC,
+                (App.Current as App).dateOfPrchase,
+                (App.Current as App).vehicleUsage,
+                (App.Current as App).rentName,
+                (App.Current as App).rentAmount,
+                SparepartList,
+                txtgarageCost.Text,
+                txtgarageCost.Text
+                );
+            var result = JsonConvert.SerializeObject(ml);
+            var data = new ServiceReference1.Service1Client().InsertClaimAsync(result);
 
             //Frame.Navigate(typeof(Views.claimSuccess));
         }
 
         private void btnAddPart_Click(object sender, RoutedEventArgs e)
         {
-            SparepartList.Add(Convert.ToInt32(cmbSparepart.SelectedValue));
             if (cmbSparepart.SelectedItem == null) return;
 
             var jsonselected = JsonConvert.SerializeObject(cmbSparepart.SelectedItem);
             var obj = JObject.Parse(jsonselected);
             var name = (string)obj["sparepartName"];
             var price = (string)obj["spareUnitCost"];
-            lstboxSparelist.Items.Add(name+ "Rs " + price + "/=");
+            lstboxSparelist.Items.Add(name + "Rs " + price + "/=" + "Qty: "+txtQuantity.Text);
+
+            SparepartList.Add(new SparepartPayment_ML() 
+            { 
+                SparepartId= Convert.ToInt32(cmbSparepart.SelectedValue),
+                SparepartQty = Convert.ToDouble(txtQuantity.Text),
+                SparepartCost = Convert.ToDouble(price)
+            });   
         }
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
@@ -159,22 +202,21 @@ namespace ClaimAssistantApp.Views
         }
 
         private void loadSparepartCatogoriesToCombo() {
-            
-          cmbSparePartCategory.ItemsSource=GetSparepartCatogories();
+
+            cmbSparePartCategory.ItemsSource = LocalSparepartCatogoryList;
         }
 
         private void loadSparepartManufacturersToCombo(){
-
-            var manufacturerList = GetSparepartManufacturers();        
-            cmbSparepartManufacturer.ItemsSource = manufacturerList;
+            cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;
         }
 
-        private void loadSparepartsToCombo(int manufactureId,int categoryId) {
-            var list = GetSpareparts();
+        private void loadSparepartsToCombo(int categoryId, int manufacturerId)
+        {
+            var list = LocalSparepartsList;
             var sparepartList = new List<Sparepart_ML>();
             foreach (var item in list)
             {
-                if (item.sparepartCategory == categoryId|item.spareManufacturer==manufactureId)
+                if (item.sparepartCategory == categoryId || item.spareManufacturer==manufacturerId)
                 {
                     sparepartList.Add(item);
                 }
@@ -187,16 +229,48 @@ namespace ClaimAssistantApp.Views
         {
             var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue); 
             var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
-            txtgarageCost.Text = catID.ToString();
-            loadSparepartsToCombo(ManId,catID);
+            loadSparepartsToCombo(catID,ManId);
         }
 
         private void cmbSparepartManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue);
             var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
+            loadSparepartsToCombo(catID,ManId);
+        }
 
-            loadSparepartsToCombo(ManId, catID);
+
+
+        public ObservableDictionary DefaultViewModel
+        {
+            get { return this.defaultViewModel; }
+        }
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
+        }
+
+        #region NavigationHelper registration
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            navigationHelper.OnNavigatedTo(e);
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            navigationHelper.OnNavigatedFrom(e);
+        }
+
+        #endregion
+
+        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        {
+        }
+
+        private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
+        {
         }
     }
 }

@@ -23,7 +23,7 @@ namespace DataLayer
                cmd.Parameters.AddWithValue("@policyId", ml.policyId);
                cmd.Parameters.AddWithValue("@location", ml.location);
                cmd.Parameters.AddWithValue("@reason", ml.reason);
-               cmd.Parameters.AddWithValue("@knockedOn", ml.knockedON);
+               cmd.Parameters.AddWithValue("@knockedOn", ml.knockedOn);
                cmd.Parameters.AddWithValue("@thirdPartyDeatilId", _3rdpartyId);
                cmd.Parameters.AddWithValue("@driverId", driverId);
                cmd.Parameters.AddWithValue("@paymentId", paymentId);
@@ -82,12 +82,11 @@ namespace DataLayer
                 con = new SqlConnection(connectionString);
                 con.Open();
 
-                cmd = new SqlCommand("sp_InsertSparePartPayment", con) { CommandType = CommandType.StoredProcedure };
-
                 if (ml.spareParts !=null)
                 {
                     foreach (var spare in ml.spareParts)
                     {
+                        cmd = new SqlCommand("sp_InsertSparePartPayment", con) { CommandType = CommandType.StoredProcedure };
                         cmd.Parameters.AddWithValue("@PaymentID", paymentId);
                         cmd.Parameters.AddWithValue("@sparePartId", spare.sparePartId);
                         cmd.Parameters.AddWithValue("@sprePartQty", spare.sparePartQty);

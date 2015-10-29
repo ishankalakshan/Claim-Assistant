@@ -133,9 +133,10 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
-      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="Width" />
       <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="DisplayMemberPath" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">

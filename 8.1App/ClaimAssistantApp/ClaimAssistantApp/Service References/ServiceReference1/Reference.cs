@@ -76,6 +76,18 @@ namespace ClaimAssistantApp.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGarageInfo", ReplyAction="http://tempuri.org/IService1/GetGarageInfoResponse")]
         System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertClaim", ReplyAction="http://tempuri.org/IService1/InsertClaimResponse")]
+        System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSparepartCategories", ReplyAction="http://tempuri.org/IService1/GetSparepartCategoriesResponse")]
+        System.Threading.Tasks.Task<string> GetSparepartCategoriesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSparepartManufacturers", ReplyAction="http://tempuri.org/IService1/GetSparepartManufacturersResponse")]
+        System.Threading.Tasks.Task<string> GetSparepartManufacturersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSpareparts", ReplyAction="http://tempuri.org/IService1/GetSparepartsResponse")]
+        System.Threading.Tasks.Task<string> GetSparepartsAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite);
     }
@@ -137,6 +149,22 @@ namespace ClaimAssistantApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location) {
             return base.Channel.GetGarageInfoAsync(location);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim) {
+            return base.Channel.InsertClaimAsync(claim);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetSparepartCategoriesAsync() {
+            return base.Channel.GetSparepartCategoriesAsync();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetSparepartManufacturersAsync() {
+            return base.Channel.GetSparepartManufacturersAsync();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetSparepartsAsync() {
+            return base.Channel.GetSparepartsAsync();
         }
         
         public System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite) {

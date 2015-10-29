@@ -7,6 +7,8 @@ using System.Text;
 using ModelLayer;
 using BusinessLayer;
 using System.Data;
+using BusinessLayer.Spareparts;
+using Newtonsoft.Json;
 
 namespace MVCS_WCF_Service
 {
@@ -35,9 +37,11 @@ namespace MVCS_WCF_Service
             return new GarageView_BL().GetGarageInfo(new GarageView_ML() { GarageLocation = location });
         }
 
-        public bool InsertClaim(Claim_ML claim)
+        public bool InsertClaim(string claim)
         {
-            return false;
+            var call =new Claim_BL().createClaimObject(claim);
+
+            return true;
         }
         
         public CompositeType GetDataUsingDataContract(CompositeType composite)
@@ -51,6 +55,27 @@ namespace MVCS_WCF_Service
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+        public string GetSparepartCategories()
+        {
+            var result = new SparepartCategory_BL().GetSparepartCategories();
+            var resultJString = JsonConvert.SerializeObject(result);
+            return resultJString;
+        }
+
+        public string GetSparepartManufacturers()
+        {
+            var result = new SparepartManufacturer_BL().GetSparepartManufacturers();
+            var resultJString = JsonConvert.SerializeObject(result);
+            return resultJString;
+        }
+
+        public string GetSpareparts()
+        {
+            var result = new Sparepart_BL().GetSpareparts();
+            var resultJString = JsonConvert.SerializeObject(result);
+            return resultJString;
         }
     }
 }

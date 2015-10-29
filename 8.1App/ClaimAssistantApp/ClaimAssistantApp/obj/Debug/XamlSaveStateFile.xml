@@ -1,7 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="f:\8.1app\claimassistantapp\claimassistantapp\obj\debug\intermediatexaml\claimassistantapp.exe" HashGuid="a93fcb00-f24f-eff6-8b1d-067bc4947dbe" />
-    <ReferenceAssembly PathName="i:\kdu\claimassistantwebapplication\8.1app\claimassistantapp\modellayer\bin\debug\modellayer.dll" HashGuid="d6a153a1-6f76-b979-0713-2f7d73de7cf5" />
+    <LocalAssembly PathName="i:\kdu\claimassistantwebapplication\8.1app\claimassistantapp\claimassistantapp\obj\debug\intermediatexaml\claimassistantapp.exe" HashGuid="95797f9e-73af-f00b-6d60-b1edd8714e97" />
+    <ReferenceAssembly PathName="i:\kdu\claimassistantwebapplication\8.1app\claimassistantapp\modellayer\bin\debug\modellayer.dll" HashGuid="d2fc6d34-7a21-411a-5068-65d16c4d70b5" />
     <ReferenceAssembly PathName="i:\kdu\claimassistantwebapplication\8.1app\claimassistantapp\packages\newtonsoft.json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="0b4cdfc1-2257-2e75-23cf-4052e97b309e" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

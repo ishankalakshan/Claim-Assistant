@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d095dd67-07d6-4f0b-8f8d-b080d4ecb0d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9bf7dfdf-b79e-412d-9127-f194f03aff93" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="04cd4e66-508d-4c14-90eb-4b9dc0d951ec" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="83038910-3856-425d-923d-d3ef4e854e45" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="43707685-a885-41bd-9793-86da727b5e37" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" />
+    <MetadataFile FileName="MVCS_WCF_Service.xsd" MetadataType="Schema" ID="6d37eddc-c895-4f5e-9c0a-da0c72da38fe" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MVCS_WCF_Service/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

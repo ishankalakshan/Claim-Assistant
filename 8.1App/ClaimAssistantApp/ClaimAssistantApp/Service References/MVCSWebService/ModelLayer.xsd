@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ModelLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ModelLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Claim_ML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VehicleUsedFor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdAmountClaimed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdClaimant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdDamageNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdOwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdRenewalDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_3rdSpecialNotes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdVehicleNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdVictimAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_3rdVictimName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="claimId" type="xs:int" />
+      <xs:element minOccurs="0" name="driverLicense" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="driverNIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="garageCosts" type="xs:float" />
+      <xs:element minOccurs="0" name="isDriverOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="knockedON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="licenseCat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="licenseExpreDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="otherCosts" type="xs:float" />
+      <xs:element minOccurs="0" name="policyId" type="xs:int" />
+      <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rentAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rentCompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="spareParts" nillable="true" type="tns:ArrayOfsparePart_ML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Claim_ML" nillable="true" type="tns:Claim_ML" />
+  <xs:complexType name="ArrayOfsparePart_ML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sparePart_ML" nillable="true" type="tns:sparePart_ML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsparePart_ML" nillable="true" type="tns:ArrayOfsparePart_ML" />
+  <xs:complexType name="sparePart_ML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sparePartCost" type="xs:float" />
+      <xs:element minOccurs="0" name="sparePartId" type="xs:int" />
+      <xs:element minOccurs="0" name="sparePartQty" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sparePart_ML" nillable="true" type="tns:sparePart_ML" />
+</xs:schema>

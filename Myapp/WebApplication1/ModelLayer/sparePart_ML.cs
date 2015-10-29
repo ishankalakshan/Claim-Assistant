@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    public class sparePart_ML
+    public class SparepartPayment_ML
     {
         public int sparePartId;
-        public float sparePartQty;
-        public float sparePartCost;
+        public double sparePartQty;
+        public double sparePartCost;
     }
 }
