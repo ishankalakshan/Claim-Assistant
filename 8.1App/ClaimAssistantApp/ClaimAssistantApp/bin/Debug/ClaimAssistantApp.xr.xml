@@ -10,6 +10,9 @@
     <RootPropertyPathName Name="GarageTP" />
     <RootPropertyPathName Name="GarageLocation" />
     <RootPropertyPathName Name="GarageName" />
+    <RootPropertyPathName Name="tp" />
+    <RootPropertyPathName Name="location" />
+    <RootPropertyPathName Name="name" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -226,5 +229,6 @@
       <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="ClaimAssistantApp.Views.MainMenu" />
+    <RootType FullName="ClaimAssistantApp.Views.Towtrucks" />
   </Roots.RootTypes>
 </Roots>

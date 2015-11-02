@@ -110,13 +110,14 @@
                             </StackPanel>
                         </GridView>
                         <GridView IsItemClickEnabled="True" 
-                                  Name="grdvToeTruck"   
+                                  Name="grdvTowTruck"   
                                   HorizontalAlignment="Left"
                                   Margin="10,15,15,0"
                                   Height="150" 
                                   Grid.Row="2" 
                                   VerticalAlignment="Top" 
-                                  Width="150">
+                                  Width="150"
+                                  ItemClick="grdvTowTruck_ItemClick">
                             <StackPanel>
                                 <Image Source="ms-appx:///Image/towtruck.png" 
                                        Width="110" Height="110" 

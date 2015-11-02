@@ -14,14 +14,13 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Data.Json;
 using Newtonsoft.Json.Linq;
-
+using Windows.Security.Cryptography;
+using Windows.Storage.Streams;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ClaimAssistantApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -33,15 +32,28 @@ namespace ClaimAssistantApp
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            
                Frame.Navigate(typeof(Views.MainMenu));    
-           /* try
+            /*try
             {
                 
                 ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
                 var res = await client.AuthenticateAsync(txtUsername.Text, txtPassword.Password); 
-                if (res)
+                if (res!="")
 	                {
-		                Frame.Navigate(typeof(Views.MainMenu));
+                       (App.Current as App).empid = res.Split(',')[0];
+                        var type = res.Split(',')[1];
+                        if (type=="agent")
+                        {
+                            Frame.Navigate(typeof(Views.MainMenu));
+                        }
+                        else
+                        {
+                            var messageDialog = new Windows.UI.Popups.MessageDialog("You dont have permissons to login");
+                            messageDialog.Title = "Access Denied";
+                            await messageDialog.ShowAsync();
+                        }
+		                
                     }
                 else
                 {

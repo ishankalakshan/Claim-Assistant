@@ -140,7 +140,8 @@ namespace ClaimAssistantApp.Views
                 (App.Current as App).rentAmount,
                 SparepartList,
                 txtgarageCost.Text,
-                txtgarageCost.Text
+                txtgarageCost.Text,
+                (App.Current as App).empid
                 );
             var result = JsonConvert.SerializeObject(ml);
             var data = new ServiceReference1.Service1Client().InsertClaimAsync(result);

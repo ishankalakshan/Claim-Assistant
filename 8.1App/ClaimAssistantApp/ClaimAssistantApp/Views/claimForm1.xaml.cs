@@ -66,6 +66,32 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep2_Click(object sender, RoutedEventArgs e)
         {
+            if (txtLocation.Text=="")
+            {
+                showMessageBox("Location required");
+                return;
+            }
+            if (txtReason.Text == "")
+            {
+                showMessageBox("Reason required");
+                return;
+            }
+            if (txtKnockedOn.Text == "")
+            {
+                showMessageBox("Knocked On required");
+                return;
+            }
+            if (txt3rdVehicleNo.Text == "")
+            {
+                showMessageBox("3rd party vehicle number required.");
+                return;
+            }
+            if (txt3rdOwnerName.Text == "")
+            {
+                showMessageBox("Owner name required");
+                return;
+            }
+
             (App.Current as App).location = txtLocation.Text;
             (App.Current as App).reason = txtReason.Text;
             (App.Current as App).knockedOn = txtKnockedOn.Text;
@@ -81,6 +107,12 @@ namespace ClaimAssistantApp.Views
             this.Frame.Navigate(typeof(claimForm2));
         }
 
+        public async void showMessageBox(string error) {
+            var messageDialog = new Windows.UI.Popups.MessageDialog(error);
+            messageDialog.Title = "Fill the form";
+            await messageDialog.ShowAsync();
+        }
+
         private void cmbReason_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedOption = cmbReason.SelectedValue.ToString();
@@ -91,7 +123,6 @@ namespace ClaimAssistantApp.Views
             }
             else
             {
-                txtReason.Text = "";
                 txtReason.IsEnabled = false;
             }
         }
@@ -106,7 +137,6 @@ namespace ClaimAssistantApp.Views
             }
             else
             {
-                txtKnockedOn.Text = "";
                 txtKnockedOn.IsEnabled = false;
             }
         }

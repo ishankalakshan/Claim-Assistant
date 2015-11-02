@@ -28,6 +28,7 @@ namespace ClaimAssistantApp
             this.Suspending += OnSuspending;
         }
 
+        public string empid { get; set; }
         public string location { get; set; }
         public string reason { get; set; }
         public string knockedOn { get; set; }

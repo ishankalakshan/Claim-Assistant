@@ -31,6 +31,12 @@
   <wsdl:message name="IService1_GetGarageInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetGarageInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetTowTruckServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTowTruckServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTowTruckServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTowTruckServiceInfoResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_InsertClaim_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertClaim" />
   </wsdl:message>
@@ -77,6 +83,10 @@
     <wsdl:operation name="GetGarageInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGarageInfo" message="tns:IService1_GetGarageInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGarageInfoResponse" message="tns:IService1_GetGarageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTowTruckServiceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTowTruckServiceInfo" message="tns:IService1_GetTowTruckServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTowTruckServiceInfoResponse" message="tns:IService1_GetTowTruckServiceInfo_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="InsertClaim">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertClaim" message="tns:IService1_InsertClaim_InputMessage" />
@@ -130,6 +140,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetGarageInfo">
       <soap:operation soapAction="http://tempuri.org/IService1/GetGarageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTowTruckServiceInfo">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTowTruckServiceInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

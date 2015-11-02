@@ -1,0 +1,9 @@
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\BusinessLayer.dll
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\BusinessLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\ModelLayer.dll
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\ModelLayer.pdb
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\obj\Debug\BusinessLayer.dll
+I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -26,7 +26,7 @@
   <xs:element name="AuthenticateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AuthenticateResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AuthenticateResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -55,6 +55,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="GetGarageInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTowTruckServiceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTowTruckServiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTowTruckServiceInfoResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

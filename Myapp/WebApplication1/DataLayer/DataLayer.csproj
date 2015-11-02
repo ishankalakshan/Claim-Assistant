@@ -65,6 +65,9 @@
     <Compile Include="Spareparts\SparePartCategory_DL.cs" />
     <Compile Include="Spareparts\SparepartManufacturer_DL.cs" />
     <Compile Include="Spareparts\Sparepart_DL.cs" />
+    <Compile Include="TowTruckService_DL.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="userLogin.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

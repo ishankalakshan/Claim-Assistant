@@ -20,46 +20,48 @@ namespace ModelLayer
         public string _3rdAddress;
         public string _3rdContactNo;
         public DateTime _3rdRenewalDate;
-        public string _3rdSpecialNotes;
 
+        public string _3rdSpecialNotes;
         public string _3rdVictimName;
         public string _3rdVictimAddress;
         public string _3rdDamageNature;
         public string _3rdClaimant;
-        public double _3rdAmountClaimed;
 
+        public double _3rdAmountClaimed;
         public string isDriverOwner;
         public string driverName;
         public string driverLicense;
         public string licenseCat;
+
         public DateTime licenseExpreDate;
         public string driverNIC;
         public DateTime purchaseDate;
         public string VehicleUsedFor;
         public string rentCompanyName;
-        public double rentAmount;
 
+        public double rentAmount;
         public List<SparepartPayment_ML> spareParts;
         public double garageCosts;
         public double otherCosts;
+        public int empid;
 
         public Claim_ML()
         {
 
         }
 
-        public Claim_ML(int pclaimId, string plocation, string preason, string pknockedOn, string p_3rdVehicleNo,
+        public Claim_ML(int ppolicyId,string plocation, string preason, string pknockedOn, string p_3rdVehicleNo,
                         string p_3rdOwnerName, string p_3rdAddress, string p_3rdContactNo, DateTime p_3rdRenewalDate, string p_3rdSpecialNotes,
                         string p_3rdVictimName, string p_3rdVictimAddress, string p_3rdDamageNature, string p_3rdClaimant, double p_3rdAmountClaimed,
                         string pisDriverOwner, string pdriverName, string pdriverLicense, string plicenseCat, DateTime plicenseExpreDate,
                         string pdriverNIC, DateTime ppurchaseDate, string pVehicleUsedFor, string prentCompanyName, double prentAmount,
-                        List<SparepartPayment_ML> pspareParts, string pgarageCosts, string potherCosts)
+                        List<SparepartPayment_ML> pspareParts, string pgarageCosts, string potherCosts,string pempid)
         {
             try
             {
-                if (pclaimId != null)
+                if (ppolicyId != null)
                 {
-                    claimId = pclaimId;
+                    policyId = ppolicyId;
                 }
                 if (plocation != null)
                 {
@@ -164,6 +166,10 @@ namespace ModelLayer
                 if (potherCosts != "")
                 {
                     otherCosts = Convert.ToDouble(potherCosts);
+                }
+                if (pempid != "")
+                {
+                    empid = Convert.ToInt32(pempid);
                 }
                 if (pspareParts != null)
                 {

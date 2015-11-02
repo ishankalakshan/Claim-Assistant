@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\BusinessLayer.dll">
+      <PackagePath>BusinessLayer.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
       <PackagePath>ModelLayer.dll</PackagePath>
     </AppxPackagedFile>
@@ -85,6 +88,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\Towtrucks.xbf">
+      <PackagePath>Views\Towtrucks.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>

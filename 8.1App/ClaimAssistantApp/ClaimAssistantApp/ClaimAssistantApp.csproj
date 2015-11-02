@@ -149,6 +149,9 @@
     <Compile Include="Views\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Towtrucks.xaml.cs">
+      <DependentUpon>Towtrucks.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -239,6 +242,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Towtrucks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MVCSWebService\" />
@@ -250,6 +257,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{1d4bb3f4-fb45-490c-b159-2b8164b6bfb8}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
       <Project>{e327f952-dd55-41b6-b186-adf8a584c5b6}</Project>
       <Name>ModelLayer</Name>

@@ -39,8 +39,9 @@ namespace DataLayer
 
                 if (dt.Rows.Count > 0)
                 {
-                    Session["Username"] = ml.username;    
+                    Session["Username"] = ml.username;
                     return true;
+                   
                 }
                 else
                 {
@@ -58,7 +59,7 @@ namespace DataLayer
             }
         }
 
-        public bool authenticate_app(UserLogin_ML ml)
+        public string authenticate_app(UserLogin_ML ml)
         {
 
             con = new SqlConnection(connectionString);
@@ -80,12 +81,18 @@ namespace DataLayer
 
                 if (dt.Rows.Count > 0)
                 {
-                    //Session["Username"] = ml.username;    
-                    return true;
-                }
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string id = row["employee_id"].ToString();
+                        string type = row["type"].ToString();
+
+                        return id + "," + type;
+                    }
+                    return ""; 
+                }                   
                 else
                 {
-                    return false;
+                    return "";
                 }
             }
             catch (Exception ex)

@@ -124,7 +124,7 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "ClaimAssistantApp.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -140,8 +140,9 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
             _typeNameTable[12] = "ClaimAssistantApp.Views.claimSuccess";
             _typeNameTable[13] = "ClaimAssistantApp.Views.Garages";
             _typeNameTable[14] = "ClaimAssistantApp.Views.MainMenu";
+            _typeNameTable[15] = "ClaimAssistantApp.Views.Towtrucks";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::ClaimAssistantApp.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -157,6 +158,7 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
             _typeTable[12] = typeof(global::ClaimAssistantApp.Views.claimSuccess);
             _typeTable[13] = typeof(global::ClaimAssistantApp.Views.Garages);
             _typeTable[14] = typeof(global::ClaimAssistantApp.Views.MainMenu);
+            _typeTable[15] = typeof(global::ClaimAssistantApp.Views.Towtrucks);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -200,6 +202,7 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
         private object Activate_12_claimSuccess() { return new global::ClaimAssistantApp.Views.claimSuccess(); }
         private object Activate_13_Garages() { return new global::ClaimAssistantApp.Views.Garages(); }
         private object Activate_14_MainMenu() { return new global::ClaimAssistantApp.Views.MainMenu(); }
+        private object Activate_15_Towtrucks() { return new global::ClaimAssistantApp.Views.Towtrucks(); }
         private void MapAdd_4_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -322,6 +325,15 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
+
+            case 15:   //  ClaimAssistantApp.Views.Towtrucks
+                userType = new global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_Towtrucks;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -395,6 +407,16 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
         private object get_13_MainMenu_NavigationHelper(object instance)
         {
             var that = (global::ClaimAssistantApp.Views.MainMenu)instance;
+            return that.NavigationHelper;
+        }
+        private object get_14_Towtrucks_DefaultViewModel(object instance)
+        {
+            var that = (global::ClaimAssistantApp.Views.Towtrucks)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_15_Towtrucks_NavigationHelper(object instance)
+        {
+            var that = (global::ClaimAssistantApp.Views.Towtrucks)instance;
             return that.NavigationHelper;
         }
 
@@ -487,6 +509,18 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
                 userType = (global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ClaimAssistantApp.Views.MainMenu");
                 xamlMember = new global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ClaimAssistantApp.Common.NavigationHelper");
                 xamlMember.Getter = get_13_MainMenu_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "ClaimAssistantApp.Views.Towtrucks.DefaultViewModel":
+                userType = (global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ClaimAssistantApp.Views.Towtrucks");
+                xamlMember = new global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ClaimAssistantApp.Common.ObservableDictionary");
+                xamlMember.Getter = get_14_Towtrucks_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "ClaimAssistantApp.Views.Towtrucks.NavigationHelper":
+                userType = (global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ClaimAssistantApp.Views.Towtrucks");
+                xamlMember = new global::ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ClaimAssistantApp.Common.NavigationHelper");
+                xamlMember.Getter = get_15_Towtrucks_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }
@@ -814,5 +848,6 @@ namespace ClaimAssistantApp.ClaimAssistantApp_XamlTypeInfo
         }
     }
 }
+
 
 

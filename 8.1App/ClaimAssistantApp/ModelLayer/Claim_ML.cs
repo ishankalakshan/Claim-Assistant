@@ -39,6 +39,7 @@ namespace ModelLayer
         public List<SparepartPayment_ML> spareParts;
         public double garageCosts;
         public double otherCosts;
+        public int empid;
 
         public Claim_ML()
         {
@@ -50,7 +51,7 @@ namespace ModelLayer
                         string p_3rdVictimName, string p_3rdVictimAddress, string p_3rdDamageNature, string p_3rdClaimant, double p_3rdAmountClaimed,
                         string pisDriverOwner, string pdriverName, string pdriverLicense, string plicenseCat, DateTime plicenseExpreDate,
                         string pdriverNIC, DateTime ppurchaseDate, string pVehicleUsedFor, string prentCompanyName, double prentAmount,
-                        List<SparepartPayment_ML> pspareParts, string pgarageCosts, string potherCosts)
+                        List<SparepartPayment_ML> pspareParts, string pgarageCosts, string potherCosts,string pempid)
         {
             try
             {
@@ -161,6 +162,10 @@ namespace ModelLayer
             if (potherCosts != "")
             {
                 otherCosts = Convert.ToDouble(potherCosts);
+            }
+            if (pempid != "")
+            {
+                empid = Convert.ToInt32(pempid);
             }
             if (pspareParts != null)
             {

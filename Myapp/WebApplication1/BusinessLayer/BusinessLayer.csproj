@@ -52,6 +52,7 @@
     <Compile Include="Spareparts\SparepartCategory_BL.cs" />
     <Compile Include="Spareparts\SparepartManufacturer_BL.cs" />
     <Compile Include="Spareparts\Sparepart_BL.cs" />
+    <Compile Include="TowTruckService_BL.cs" />
     <Compile Include="UserLogin_BL.cs" />
     <Compile Include="VehicleManufac_BL.cs" />
     <Compile Include="VehicleType_BL.cs" />

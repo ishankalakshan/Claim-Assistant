@@ -21,7 +21,7 @@ namespace MVCS_WCF_Service
             return string.Format("You entered: {0}", value);
         }
 
-        public bool Authenticate(string username, string password)
+        public string Authenticate(string username, string password)
         {
             return new UserLogin_BL().UserAuthentication_App(new UserLogin_ML() { username = username, password = password });
         }
@@ -35,6 +35,11 @@ namespace MVCS_WCF_Service
         public string GetGarageInfo(string location)
         {
             return new GarageView_BL().GetGarageInfo(new GarageView_ML() { GarageLocation = location });
+        }
+
+        public string GetTowTruckServiceInfo(string location)
+        {
+            return new TowTruckService_BL().GetTowTruckServiceInfo(new TowTruckService_ML() { location = location });
         }
 
         public bool InsertClaim(string claim)

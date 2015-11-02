@@ -16,6 +16,7 @@ namespace DataLayer
        {
            try
            {
+               var date = DateTime.Now;
                con = new SqlConnection(connectionString);
                con.Open();
 
@@ -31,6 +32,8 @@ namespace DataLayer
                cmd.Parameters.AddWithValue("@vehicleUsage", ml.VehicleUsedFor);
                cmd.Parameters.AddWithValue("@rentCompany", ml.rentCompanyName);
                cmd.Parameters.AddWithValue("@rentAmount", ml.rentAmount);
+               cmd.Parameters.AddWithValue("@date", date);
+               cmd.Parameters.AddWithValue("@empid", ml.empid);
                cmd.ExecuteNonQuery();
                return true;
            }

@@ -1,6 +1,7 @@
-﻿
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+
 
 namespace DataLayer
 {
@@ -29,6 +30,32 @@ namespace DataLayer
                 con.Dispose();
             }
         }
-        
+
+        public bool InsertRecord(string storedProcedureName,Dictionary<string, string> dataset)
+        {
+            try
+            {
+                con = new SqlConnection(connectionString);
+                con.Open();
+                cmd = new SqlCommand(storedProcedureName, con) { CommandType = CommandType.StoredProcedure };
+
+                foreach (var item in dataset)
+                {
+                    cmd.Parameters.AddWithValue(item.Key,item.Value);
+                }
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
     }
 }

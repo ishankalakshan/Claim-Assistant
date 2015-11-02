@@ -68,13 +68,16 @@ namespace ClaimAssistantApp.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Authenticate", ReplyAction="http://tempuri.org/IService1/AuthenticateResponse")]
-        System.Threading.Tasks.Task<bool> AuthenticateAsync(string username, string password);
+        System.Threading.Tasks.Task<string> AuthenticateAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPolicyInfo", ReplyAction="http://tempuri.org/IService1/GetPolicyInfoResponse")]
         System.Threading.Tasks.Task<string> GetPolicyInfoAsync(int policy_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGarageInfo", ReplyAction="http://tempuri.org/IService1/GetGarageInfoResponse")]
         System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTowTruckServiceInfo", ReplyAction="http://tempuri.org/IService1/GetTowTruckServiceInfoResponse")]
+        System.Threading.Tasks.Task<string> GetTowTruckServiceInfoAsync(string location);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertClaim", ReplyAction="http://tempuri.org/IService1/InsertClaimResponse")]
         System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim);
@@ -139,7 +142,7 @@ namespace ClaimAssistantApp.ServiceReference1 {
             return base.Channel.GetDataAsync(value);
         }
         
-        public System.Threading.Tasks.Task<bool> AuthenticateAsync(string username, string password) {
+        public System.Threading.Tasks.Task<string> AuthenticateAsync(string username, string password) {
             return base.Channel.AuthenticateAsync(username, password);
         }
         
@@ -149,6 +152,10 @@ namespace ClaimAssistantApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location) {
             return base.Channel.GetGarageInfoAsync(location);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetTowTruckServiceInfoAsync(string location) {
+            return base.Channel.GetTowTruckServiceInfoAsync(location);
         }
         
         public System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim) {

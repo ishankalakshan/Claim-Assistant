@@ -18,13 +18,16 @@ namespace MVCS_WCF_Service
         string GetData(int value);
 
         [OperationContract]
-        bool Authenticate(string username, string password);
+        string Authenticate(string username, string password);
 
         [OperationContract]
         string GetPolicyInfo(int policy_ID);
 
         [OperationContract]
         string GetGarageInfo(string location);
+
+        [OperationContract]
+        string GetTowTruckServiceInfo(string location);
 
         [OperationContract]
         bool InsertClaim(string claim);
