@@ -1,8 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
-
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
-
-<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <!DOCTYPE html>
 
@@ -13,11 +10,11 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
-    <link rel="stylesheet" type="text/css" href="Skins/MyCustomSkin/Tile.MyCustomSkin.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/sb-admin.css" rel="stylesheet"/>
     <link href="css/customStyles.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
    
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -41,18 +38,10 @@
                 e.isValid = false;
         }
     </script>
-    <style>
-      /* body {
-    background-image:url(tiles/2.png);
-    background-repeat: repeat;
-    
-            }*/
-    </style>
 </head>
 
 <body>
-    <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="true" />
-    
+      
     <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -99,7 +88,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-home fa-fw"></i>Home<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-home fa-fw"></i>Home<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="/Home.aspx">Home</a>
@@ -132,13 +121,7 @@
                         </li>    
                         <li>
                             <div class="panel panel-default">
-                              <div class="panel-body">
-                                <telerik:RadCalendar runat="server" EnableMultiSelect="False" EnableWeekends="True" FastNavigationNextText="&amp;lt;&amp;lt;" SelectedDate="">
-                                    <SpecialDays>
-                                        <telerik:RadCalendarDay Repeatable="Today" Date=""  ItemStyle-CssClass="rcToday">
-                                        </telerik:RadCalendarDay>
-                                    </SpecialDays>
-                                </telerik:RadCalendar>                                                                                            
+                              <div class="panel-body">                                                                                                                     
                               </div>
                             </div>
                         </li>                       

@@ -89,6 +89,7 @@
     <Content Include="css\plugins\social-buttons\social-buttons.css" />
     <Content Include="css\plugins\timeline\timeline.css" />
     <Content Include="css\sb-admin.css" />
+    <Content Include="css\Style.css" />
     <Content Include="Error.aspx" />
     <Content Include="font-awesome\css\font-awesome.css" />
     <Content Include="font-awesome\css\font-awesome.min.css" />
@@ -192,6 +193,7 @@
     <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
     <Content Include="Views\TestPage.aspx" />
+    <Content Include="Views\TowTruckService\TowTruckService.aspx" />
     <Content Include="vsMenu.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -323,6 +325,13 @@
     </Compile>
     <Compile Include="Views\TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TowTruckService\TowTruckService.aspx.cs">
+      <DependentUpon>TowTruckService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TowTruckService\TowTruckService.aspx.designer.cs">
+      <DependentUpon>TowTruckService.aspx</DependentUpon>
     </Compile>
     <Compile Include="vsMenu.aspx.cs">
       <DependentUpon>vsMenu.aspx</DependentUpon>

@@ -31,7 +31,7 @@ namespace DataLayer
             }
         }
 
-        public bool InsertRecord(string storedProcedureName,Dictionary<string, string> dataset)
+        public bool InsertRecord(string storedProcedureName,Dictionary<string, object> dataset)
         {
             try
             {

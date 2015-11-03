@@ -7,8 +7,6 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using Telerik.Web;
-using Telerik.Web.UI;
 using ModelLayer;
 using BusinessLayer;
 

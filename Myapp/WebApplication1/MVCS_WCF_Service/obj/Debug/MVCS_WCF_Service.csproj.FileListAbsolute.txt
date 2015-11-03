@@ -26,3 +26,16 @@ I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\MVCS_WCF_Service\bin\D
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\ModelLayer.pdb
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\Newtonsoft.Json.xml
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\DataLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.dll.config
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\BusinessLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\ModelLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\Newtonsoft.Json.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\DataLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\BusinessLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\ModelLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\DataLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.csprojResolveAssemblyReference.cache
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.pdb

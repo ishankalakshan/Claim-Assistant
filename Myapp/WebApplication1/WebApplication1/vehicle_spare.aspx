@@ -1,6 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="vehicle_spare.aspx.cs" Inherits="WebApplication1.vehicle_spare" %>
-<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
-
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">   
 </asp:Content>
@@ -84,7 +82,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                    <telerik:RadGrid ID="RadGrid1" runat="server"></telerik:RadGrid>
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>

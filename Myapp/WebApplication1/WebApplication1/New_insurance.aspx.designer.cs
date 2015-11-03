@@ -11,32 +11,5 @@ namespace WebApplication1 {
     
     
     public partial class New_insurance {
-        
-        /// <summary>
-        /// RadTileList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadTileList RadTileList1;
-        
-        /// <summary>
-        /// tlMotorbike control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile tlMotorbike;
-        
-        /// <summary>
-        /// tlTrishaw control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile tlTrishaw;
     }
 }
