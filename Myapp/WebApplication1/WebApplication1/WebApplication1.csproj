@@ -83,7 +83,6 @@
     <Content Include="Content\navbar.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\customStyles.css" />
     <Content Include="css\plugins\dataTables\dataTables.bootstrap.css" />
     <Content Include="css\plugins\morris\morris-0.4.3.min.css" />
     <Content Include="css\plugins\social-buttons\social-buttons.css" />
@@ -162,7 +161,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Skins\MyCustomSkin\Tile.MyCustomSkin.css" />
     <Content Include="subMenuTT_Garages.aspx" />
     <Content Include="Telerik.Web.UI.Skins.dll" />
     <Content Include="tiles\1.PNG" />
@@ -179,9 +177,6 @@
     <Content Include="tiles\TowTruck-icon1.png" />
     <Content Include="tiles\towtruck.png" />
     <Content Include="tiles\vehicles.png" />
-    <Content Include="Skins\MyCustomSkin\Tile\Default.gif" />
-    <Content Include="Skins\MyCustomSkin\Tile\rtileSprite.png" />
-    <Content Include="Skins\MyCustomSkin\Tile\rtileSpriteIE6.png" />
     <Content Include="vehicle_spare.aspx" />
     <Content Include="Views\frmAddGarage.aspx" />
     <Content Include="Views\frmAddNewVehicle.aspx" />
@@ -343,11 +338,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Service References\ServiceReference1\MVCS_Service.wsdl" />
     <Content Include="Service References\ServiceReference1\WebApplication1.ServiceReference1.HelloWorldResponse.datasource">
@@ -374,6 +369,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Skins\" />
     <Folder Include="tiles\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
