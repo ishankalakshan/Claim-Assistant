@@ -87,3 +87,5 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\bin\ModelLayer.pdb
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\bin\DataLayer.pdb
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\121\Claim\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\121\Claim\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll.licenses
