@@ -1,9 +1,12 @@
 ﻿.btn-group>.btn:first-child {
     margin-left: 7px;
 }
-.btn-default.horizontal-bar {
-    width: 8vw;
+.btn.horizontal-bar {
+    width: 6vw;
 }
 .modal-dialog.small{
 	width: 35vw;
+}
+.modal-dialog.error{
+	width: 25vw;
 }

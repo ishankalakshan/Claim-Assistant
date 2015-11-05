@@ -19,14 +19,29 @@ namespace WebApplication1.Views.TowTruckService
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            var id = (Int32)gridTowTrucks.GetSelectedFieldValues("id")[0];
-            txtName.Text = (string)gridTowTrucks.GetSelectedFieldValues("name")[0];
-            txtLocation.Value = (string)gridTowTrucks.GetSelectedFieldValues("location")[0];
-            txtTp.Value = (string)gridTowTrucks.GetSelectedFieldValues("tp")[0];
-            txtEmail.Value = (string)gridTowTrucks.GetSelectedFieldValues("email")[0];
-
-           
-            ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#TowTruckServiceModal').modal('show')});</script>", false);
+            try
+            {
+                if (gridTowTrucks.Selection.Count>0)
+                {
+                    var id = (Int32)gridTowTrucks.GetSelectedFieldValues("id")[0];
+                    txtName.Text = (string)gridTowTrucks.GetSelectedFieldValues("name")[0];
+                    txtLocation.Value = (string)gridTowTrucks.GetSelectedFieldValues("location")[0];
+                    txtTp.Value = (string)gridTowTrucks.GetSelectedFieldValues("tp")[0];
+                    txtEmail.Value = (string)gridTowTrucks.GetSelectedFieldValues("email")[0];
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#TowTruckServiceModal').modal('show')});</script>", false);  
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#SelectErrorModal').modal('show')});</script>", false);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            
         }
         protected void btnRemove_Click(object sender, EventArgs e)
         {

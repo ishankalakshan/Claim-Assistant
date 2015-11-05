@@ -162,7 +162,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
     <Content Include="subMenuTT_Garages.aspx" />
-    <Content Include="Telerik.Web.UI.Skins.dll" />
     <Content Include="tiles\1.PNG" />
     <Content Include="tiles\2.png" />
     <Content Include="tiles\admin_wide.png" />
@@ -188,7 +187,7 @@
     <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
     <Content Include="Views\TestPage.aspx" />
-    <Content Include="Views\TowTruckService\TowTruckService.aspx" />
+    <Content Include="Views\TowTruckService.aspx" />
     <Content Include="vsMenu.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -321,11 +320,11 @@
     <Compile Include="Views\TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\TowTruckService\TowTruckService.aspx.cs">
+    <Compile Include="Views\TowTruckService.aspx.cs">
       <DependentUpon>TowTruckService.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\TowTruckService\TowTruckService.aspx.designer.cs">
+    <Compile Include="Views\TowTruckService.aspx.designer.cs">
       <DependentUpon>TowTruckService.aspx</DependentUpon>
     </Compile>
     <Compile Include="vsMenu.aspx.cs">
