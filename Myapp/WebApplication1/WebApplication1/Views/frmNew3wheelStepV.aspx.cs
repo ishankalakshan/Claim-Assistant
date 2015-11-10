@@ -18,9 +18,9 @@ namespace WebApplication1.Views
         private void GetVehicleList()
         {
 
-            var vehicleTYpe = new VehicleManufac_ML();
-            gridvehicles.DataSource = new VehicleManufac_BL().GetManufacturers(vehicleTYpe);
-            gridvehicles.DataBind();
+            //var vehicleTYpe = new Manufacturer_ML();
+           // gridvehicles.DataSource = new VehicleManufac_BL().GetManufacturers(vehicleTYpe);
+            //gridvehicles.DataBind();
         }
 
         protected void btnNext_Click(object sender, EventArgs e)

@@ -4,7 +4,7 @@ namespace ModelLayer.Spareparts
     public class Sparepart_ML
     {
       public int sparepartId;
-      public string sparepartName;
+      public string sparepartModel;
       public int sparepartCategory;
       public int spareManufacturer;
       public string spareUnitCost;

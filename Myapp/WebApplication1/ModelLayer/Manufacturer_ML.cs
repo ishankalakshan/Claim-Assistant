@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    public class VehicleManufac_ML
+    public class Manufacturer_ML
     {
-        public int VehicleType;
+        public int ManufacturerId { get; set; }
+        public string ManufacturerName { get; set; }
     }
 }

@@ -54,7 +54,7 @@
     <Compile Include="sparePart_ML.cs" />
     <Compile Include="TowTruckService_ML.cs" />
     <Compile Include="UserLogin_ML.cs" />
-    <Compile Include="VehicleManufac_ML.cs" />
+    <Compile Include="Manufacturer_ML.cs" />
     <Compile Include="VehicleType_ML.cs" />
   </ItemGroup>
   <ItemGroup>

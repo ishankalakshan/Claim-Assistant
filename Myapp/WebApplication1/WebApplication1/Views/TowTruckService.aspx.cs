@@ -50,28 +50,27 @@ namespace WebApplication1.Views.TowTruckService
         protected void txtLocationSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }     
+        protected void btnClose_ServerClick(object sender, EventArgs e)
+        {
+            CloseModal();
         }
         private void GetTowTruckServices()
         {
             var TowTruckServiceList = new List<TowTruckService_ML>();
-            TowTruckServiceList.Add(new TowTruckService_ML() { id = 3, name = "PickMe", location = "Badulla", tp = "0716405220",email="isankalakshan@gmail.com" });
+            TowTruckServiceList.Add(new TowTruckService_ML() { id = 3, name = "PickMe", location = "Badulla", tp = "0716405220", email = "isankalakshan@gmail.com" });
 
             gridTowTrucks.DataSource = TowTruckServiceList;
             gridTowTrucks.DataBind();
-            
+
         }
-        private void CloseModal() 
+        private void CloseModal()
         {
             txtName.Text = "";
             txtLocation.Value = "";
             txtTp.Value = "";
             txtEmail.Value = "";
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#TowTruckServiceModal').modal('hide')});</script>", false);
-        }
-
-        protected void btnClose_ServerClick(object sender, EventArgs e)
-        {
-            CloseModal();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace DataLayer
 
         
 
-        public DataTable GetManufacturers(VehicleManufac_ML ml)
+       /* public DataTable GetManufacturers(Manufacturer_ML ml)
         {
             DataTable dt = new DataTable();
 
@@ -62,9 +62,9 @@ namespace DataLayer
                 con.Close();
                 con.Dispose();
             }
-        }
+        }*/
 
-        public DataTable GetVehicleList(VehicleManufac_ML ml)
+        public DataTable GetVehicleList(Manufacturer_ML ml)
         {
             DataTable dt = new DataTable();
 

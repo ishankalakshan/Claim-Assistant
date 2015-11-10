@@ -111,6 +111,7 @@
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
+    <Content Include="Views\Manufacturers.aspx" />
     <Content Include="New_insurance.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
@@ -186,6 +187,7 @@
     <Content Include="Views\frmNew3wheelStepV.aspx" />
     <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
+    <Content Include="Views\Spareparts.aspx" />
     <Content Include="Views\TestPage.aspx" />
     <Content Include="Views\TowTruckService.aspx" />
     <Content Include="vsMenu.aspx" />
@@ -208,6 +210,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manufacturers.aspx.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manufacturers.aspx.designer.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
     </Compile>
     <Compile Include="New_insurance.aspx.cs">
       <DependentUpon>New_insurance.aspx</DependentUpon>
@@ -312,6 +321,13 @@
     </Compile>
     <Compile Include="Views\Garages.aspx.designer.cs">
       <DependentUpon>Garages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Spareparts.aspx.cs">
+      <DependentUpon>Spareparts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Spareparts.aspx.designer.cs">
+      <DependentUpon>Spareparts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\TestPage.aspx.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
