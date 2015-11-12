@@ -62,12 +62,12 @@ namespace MVCS_WCF_Service
             return composite;
         }
 
-        public string GetSparepartCategories()
-        {
-            var result = new SparepartCategory_BL().GetSparepartCategories();
+       public string GetSparepartCategories()
+       {
+            var result = new BusinessLayer.Spareparts.SparepartCategory_BL().GetSparepartCategories();
             var resultJString = JsonConvert.SerializeObject(result);
             return resultJString;
-        }
+       }
 
         public string GetSparepartManufacturers()
         {

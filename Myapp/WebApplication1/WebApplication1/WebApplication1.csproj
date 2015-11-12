@@ -111,7 +111,8 @@
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
-    <Content Include="Views\Manufacturers.aspx" />
+    <Content Include="Views\Employee.aspx" />
+    <Content Include="Views\Manufacturer.aspx" />
     <Content Include="New_insurance.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
@@ -187,7 +188,8 @@
     <Content Include="Views\frmNew3wheelStepV.aspx" />
     <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
-    <Content Include="Views\Spareparts.aspx" />
+    <Content Include="Views\SparepartCatergory.aspx" />
+    <Content Include="Views\Sparepart.aspx" />
     <Content Include="Views\TestPage.aspx" />
     <Content Include="Views\TowTruckService.aspx" />
     <Content Include="vsMenu.aspx" />
@@ -211,12 +213,19 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Manufacturers.aspx.cs">
-      <DependentUpon>Manufacturers.aspx</DependentUpon>
+    <Compile Include="Views\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Manufacturers.aspx.designer.cs">
-      <DependentUpon>Manufacturers.aspx</DependentUpon>
+    <Compile Include="Views\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manufacturer.aspx.cs">
+      <DependentUpon>Manufacturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manufacturer.aspx.designer.cs">
+      <DependentUpon>Manufacturer.aspx</DependentUpon>
     </Compile>
     <Compile Include="New_insurance.aspx.cs">
       <DependentUpon>New_insurance.aspx</DependentUpon>
@@ -322,12 +331,19 @@
     <Compile Include="Views\Garages.aspx.designer.cs">
       <DependentUpon>Garages.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Spareparts.aspx.cs">
-      <DependentUpon>Spareparts.aspx</DependentUpon>
+    <Compile Include="Views\SparepartCatergory.aspx.cs">
+      <DependentUpon>SparepartCatergory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Spareparts.aspx.designer.cs">
-      <DependentUpon>Spareparts.aspx</DependentUpon>
+    <Compile Include="Views\SparepartCatergory.aspx.designer.cs">
+      <DependentUpon>SparepartCatergory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sparepart.aspx.cs">
+      <DependentUpon>Sparepart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Sparepart.aspx.designer.cs">
+      <DependentUpon>Sparepart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\TestPage.aspx.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>

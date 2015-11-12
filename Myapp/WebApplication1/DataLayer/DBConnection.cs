@@ -21,7 +21,7 @@ namespace DataLayer
 
         public DBConnection() {
 
-            connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["DBConnectionLaptop"].ConnectionString;
         }
 
     }
