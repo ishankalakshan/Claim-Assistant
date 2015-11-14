@@ -34,7 +34,7 @@ namespace MVCS_WCF_Service
 
         public string GetGarageInfo(string location)
         {
-            return new GarageView_BL().GetGarageInfo(new GarageView_ML() { GarageLocation = location });
+            return JsonConvert.SerializeObject(new Garage_BL().GetGarageData(new Garage_ML() { GarageLocation = location }), Formatting.Indented);
         }
 
         public string GetTowTruckServiceInfo(string location)

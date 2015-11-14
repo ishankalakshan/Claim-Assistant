@@ -179,9 +179,7 @@
     <Content Include="tiles\towtruck.png" />
     <Content Include="tiles\vehicles.png" />
     <Content Include="vehicle_spare.aspx" />
-    <Content Include="Views\frmAddGarage.aspx" />
     <Content Include="Views\frmAddNewVehicle.aspx" />
-    <Content Include="Views\frmEditGarage.aspx" />
     <Content Include="Views\frmNew3wheelStep1.aspx" />
     <Content Include="Views\frmNew3wheelStep2.aspx" />
     <Content Include="Views\frmNew3wheelStep3.aspx" />
@@ -268,26 +266,12 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmAddGarage.aspx.cs">
-      <DependentUpon>frmAddGarage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\frmAddGarage.aspx.designer.cs">
-      <DependentUpon>frmAddGarage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmAddNewVehicle.aspx.cs">
       <DependentUpon>frmAddNewVehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\frmAddNewVehicle.aspx.designer.cs">
       <DependentUpon>frmAddNewVehicle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\frmEditGarage.aspx.cs">
-      <DependentUpon>frmEditGarage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\frmEditGarage.aspx.designer.cs">
-      <DependentUpon>frmEditGarage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\frmNew3wheelStep1.aspx.cs">
       <DependentUpon>frmNew3wheelStep1.aspx</DependentUpon>

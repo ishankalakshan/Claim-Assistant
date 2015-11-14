@@ -28,14 +28,6 @@ I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\DataLayer\bin\Debug\Mo
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.dll
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.pdb
 I:\KDU\ClaimAssistantWebApplication\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.xml
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.dll
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.pdb
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.dll
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.dll
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.pdb
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.dll
-E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.pdb
 C:\121\Claim\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.dll
 C:\121\Claim\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.pdb
 C:\121\Claim\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.dll
@@ -44,3 +36,11 @@ C:\121\Claim\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.pdb
 C:\121\Claim\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 C:\121\Claim\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.dll
 C:\121\Claim\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.dll
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.pdb

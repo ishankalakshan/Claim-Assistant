@@ -8,7 +8,23 @@ namespace ModelLayer
 {
     public class VehicleType_ML
     {
-        public int VehicleTypeID;
-        public string VehicleTypeName;
+        public int VehicleTypeID { get; set; }
+        public string VehicleType { get; set; }
+
+        public VehicleType_ML()
+        {
+
+        }
+        public VehicleType_ML(string id,string name)
+        {
+            if (id!=null)
+            {
+                VehicleTypeID = Convert.ToInt32(id); 
+            }
+            if (name!=null)
+            {
+                VehicleType = name;
+            }
+        }
     }
 }

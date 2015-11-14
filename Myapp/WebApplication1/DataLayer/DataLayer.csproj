@@ -55,9 +55,6 @@
     <Compile Include="DBConnection.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GarageView_DL.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="GetPolicyDetails_DL.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

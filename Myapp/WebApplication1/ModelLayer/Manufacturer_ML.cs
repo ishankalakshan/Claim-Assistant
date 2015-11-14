@@ -10,5 +10,21 @@ namespace ModelLayer
     {
         public int ManufacturerId { get; set; }
         public string ManufacturerName { get; set; }
+
+        public Manufacturer_ML()
+        {
+
+        }
+        public Manufacturer_ML(string id,string name)
+        {
+            if (id!=null)
+            {
+                ManufacturerId = Convert.ToInt32(id);
+            }
+            if (name!=null)
+            {
+                ManufacturerName = name;
+            }
+        }
     }
 }

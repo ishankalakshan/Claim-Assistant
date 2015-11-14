@@ -10,9 +10,9 @@ using Newtonsoft.Json;
 
 namespace DataLayer
 {
-    public class GarageView_DL : DBConnection
+    public class Garage_DL : DBConnection
     {
-        public DataTable GetGarageData(GarageView_ML ml)
+        public DataTable GetGarageData(Garage_ML ml)
         {
             DataTable dt = new DataTable();
 
@@ -38,7 +38,7 @@ namespace DataLayer
             }
         }
 
-        public Boolean RemoveGarage(GarageView_ML ml)
+        public Boolean RemoveGarage(Garage_ML ml)
         {
             try
             {
@@ -59,31 +59,8 @@ namespace DataLayer
                 con.Close();
                 con.Dispose();
             }
-        }
-        public Boolean AddGarage(GarageView_ML ml) {
-            try
-            {
-                con = new SqlConnection(connectionString);
-                con.Open();
-
-                cmd = new SqlCommand("sp_AddGarage", con) { CommandType = CommandType.StoredProcedure };
-                cmd.Parameters.AddWithValue("@GarageName", ml.garageName);
-                cmd.Parameters.AddWithValue("@GarageLocation", ml.GarageLocation);
-                cmd.Parameters.AddWithValue("@GarageTP", ml.GarageTP);
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                return false;
-            }
-            finally
-            {
-                con.Close();
-                con.Dispose();
-            }
-        }
-        public DataTable GetByGarageID(GarageView_ML ml)
+        }        
+        public DataTable GetByGarageID(Garage_ML ml)
         {
             DataTable dt = new DataTable();
 
@@ -110,7 +87,7 @@ namespace DataLayer
 
             return dt;
         }
-        public string GetGarageInfo(GarageView_ML ml) 
+        public string GetGarageInfo(Garage_ML ml) 
         {
             DataTable dt = new DataTable();
 
