@@ -51,11 +51,31 @@ namespace BusinessLayer
                 {
                     {"@Id", ml.spareCategoryId}
                 };
-                return new DBAccessController().InsertRecord(StoredProcedures.sp_RemoveCategory, DataDic);
+                return new DBAccessController().DeleteRecord(StoredProcedures.sp_RemoveCategory, DataDic);
             }
             catch (System.Exception)
             {
                 
+                throw;
+            }
+        }
+
+        public bool UpdateSparepartCategory(SparepartCategory_ML ml)
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    {"@Id",ml.spareCategoryId},
+                    {"@spareCategoryName", ml.spareCategoryName}
+                };
+
+                return new DBAccessController().UpdateRecord(StoredProcedures.sp_UpdateCategory, DataDic);
+
+            }
+            catch (System.Exception)
+            {
+                return false;
                 throw;
             }
         }

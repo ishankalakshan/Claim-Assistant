@@ -9,6 +9,8 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnUpdate.Visible = false;
+            btnSave.Visible = true;
             GetSparepartCatogoriesData();
         }
 
@@ -29,6 +31,8 @@ namespace WebApplication1.Views
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
+            btnSave.Visible = false;
+            btnUpdate.Visible = true;
             try
             {
                 if (gridSparepartCategories.Selection.Count > 0)
@@ -105,7 +109,34 @@ namespace WebApplication1.Views
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#SparepartCategoryModal').modal('hide')});</script>", false);
         }
 
+        protected void btnUpdate_ServerClick(object sender, EventArgs e)
+        {          
+            try
+            {
+                if (gridSparepartCategories.Selection.Count > 0)
+                {
+                    var id = (Int64)gridSparepartCategories.GetSelectedFieldValues("spareCategoryId")[0];
+                    var ml = new SparepartCategory_ML()
+                    {
+                        spareCategoryId = Convert.ToInt32(id),
+                        spareCategoryName = txtName.Text
+                    };
+                    new SparepartCategory_BL().UpdateSparepartCategory(ml);
+                    GetSparepartCatogoriesData();
+                    btnUpdate.Visible = false;
+                    btnSave.Visible = true;
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#SelectErrorModal').modal('show')});</script>", false);
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
 
     }
 }

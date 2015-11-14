@@ -113,5 +113,32 @@ namespace DataLayer
                 con.Dispose();
             }
         }
+
+        public bool UpdateRecord(string storedProcedureName, Dictionary<string, object> param)
+        {
+            try
+            {
+                con = new SqlConnection(connectionString);
+                con.Open();
+                cmd = new SqlCommand(storedProcedureName, con) { CommandType = CommandType.StoredProcedure };
+
+                foreach (var item in param)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
     }
 }

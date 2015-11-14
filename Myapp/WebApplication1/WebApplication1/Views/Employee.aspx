@@ -12,7 +12,7 @@
         <button type="button" class="btn btn-primary horizontal-bar" data-toggle="modal" data-target="#EmployeeModal">
             Add
         </button>
-        <button type="button" runat="server" class="btn btn-warning horizontal-bar" name="btnEdit">
+        <button type="button" runat="server" class="btn btn-warning horizontal-bar" id="btnEdit">
             Edit
         </button>
         <button type="button" class="btn btn-danger horizontal-bar">
@@ -32,32 +32,32 @@
 							<div class="form-group">
 								<label  class="col-sm-2 control-label">Name</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="txtName"/>
+									<input runat="server" type="text" class="form-control" id="txtName"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label  class="col-sm-2 control-label">Mobile</label>
 								<div class="col-sm-10">
-									<input type="number" class="form-control" id="txtMobile"/>
+									<input runat="server" type="number" class="form-control" id="txtMobile"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-10">
-									<input type="email" class="form-control" id="txtEmail"/>
+									<input runat="server" type="email" class="form-control" id="txtEmail"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label  class="col-sm-2 control-label">Branch</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="txtBranch"/>
+									<input runat="server" type="text" class="form-control" id="txtBranch"/>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick">Save</button>
 					</div>
 				</div>
 				<!-- /.modal-content -->

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Claim_ML.cs" />
+    <Compile Include="Employee_ML.cs" />
     <Compile Include="GarageView_ML.cs" />
     <Compile Include="GetPolicyDetails_ML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
