@@ -78,7 +78,7 @@ namespace MVCS_WCF_Service
 
         public string GetSpareparts()
         {
-            var result = new Sparepart_BL().GetSpareparts();
+            var result = new BusinessLayer.Spareparts.Sparepart_BL().GetSpareparts();
             var resultJString = JsonConvert.SerializeObject(result);
             return resultJString;
         }

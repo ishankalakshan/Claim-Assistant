@@ -190,6 +190,8 @@
     <Content Include="Views\Sparepart.aspx" />
     <Content Include="Views\TestPage.aspx" />
     <Content Include="Views\TowTruckService.aspx" />
+    <Content Include="Views\Vehicle.aspx" />
+    <Content Include="Views\VehicleType.aspx" />
     <Content Include="vsMenu.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -342,6 +344,20 @@
     </Compile>
     <Compile Include="Views\TowTruckService.aspx.designer.cs">
       <DependentUpon>TowTruckService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vehicle.aspx.cs">
+      <DependentUpon>Vehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Vehicle.aspx.designer.cs">
+      <DependentUpon>Vehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VehicleType.aspx.cs">
+      <DependentUpon>VehicleType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\VehicleType.aspx.designer.cs">
+      <DependentUpon>VehicleType.aspx</DependentUpon>
     </Compile>
     <Compile Include="vsMenu.aspx.cs">
       <DependentUpon>vsMenu.aspx</DependentUpon>

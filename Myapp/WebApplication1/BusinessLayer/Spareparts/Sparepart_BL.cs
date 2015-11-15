@@ -24,7 +24,7 @@ namespace BusinessLayer.Spareparts
                         spareManufacturer = Convert.ToInt32(row["spareManufacturer"]),
                         spareManufacYear = row["spareManufacYear"].ToString(),
                         sparepartModel = row["sparepartName"].ToString(),
-                        spareUnitCost = row["spareUnitCost"].ToString()
+                        //spareUnitCost = row["spareUnitCost"].ToString()
                     });
                 }
                 return Spareparts;

@@ -1,18 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Manufacturer.aspx.cs" Inherits="WebApplication1.Manufacturers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="VehicleType.aspx.cs" Inherits="WebApplication1.Views.VehicleType" %>
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
-     <i class="fa fa-cogs fa-2x"></i>&nbsp;Manufacturers
+    <i class="fa fa-cogs fa-2x"></i>&nbsp;Vehicle Types
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpFprmContaintName" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cpForm" runat="server">
-    <asp:ScriptManager runat="server"></asp:ScriptManager>
+     <asp:ScriptManager runat="server"></asp:ScriptManager>
 
     <div class="form-inline">
-        <button type="button" class="btn btn-primary horizontal-bar" runat="server" id="btnAdd" onserverclick="btnAdd_ServerClick">
+        <button type="button" class="btn btn-primary horizontal-bar" id="btnAdd" runat="server" onserverclick="btnAdd_ServerClick">
             Add
         </button>
         <button type="button" runat="server" class="btn btn-warning horizontal-bar" id="btnEdit" onserverclick="btnEdit_ServerClick">
@@ -23,12 +22,12 @@
         </button>
     </div>
 
-    <div class="modal fade" id="ManufacturerModal">
+    <div class="modal fade" id="VehicleTypeModal">
         <div class="modal-dialog small">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Manufacturer</h4>
+                    <h4 class="modal-title">Vehicle Type</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-horizontal">
@@ -37,11 +36,11 @@
                             <div class="col-sm-10">
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
-                        </div>
+                        </div>                                              
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" runat="server" id="btnClose" onserverclick="btnClose_ServerClick">Close</button>
+                    <button type="button" class="btn btn-default" runat="server" data-dismiss="modal" id="btnClose" onserverclick="btnClose_ServerClick">Close</button>
                     <button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick">Save</button>
                     <button type="button" class="btn btn-primary" runat="server" id="btnUpdate" onserverclick="btnUpdate_ServerClick">Save changes</button>
                 </div>
@@ -51,23 +50,20 @@
         <!-- /.modal-dialog -->
     </div>
 
-    <asp:UpdatePanel ID="upManufacturers" runat="server">
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
-                        <div>
+            <div>
                 <br />
-                <dx:ASPxTextBox ID="txtNameSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
-                </dx:ASPxTextBox>
-                <br />
-                <dx:ASPxGridView ID="gridManufacturers" KeyFieldName="ManufactureId" runat="server" AutoGenerateColumns="False" Width="80%">
+                <dx:ASPxGridView ID="gridVehicleTypes" KeyFieldName="VehicleTypeID" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureId" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="VehicleTypeID" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureName" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="VehicleTypeName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />
                     <Settings ShowTitlePanel="true" />
-                    <SettingsText Title="Manufacturers" />
+                    <SettingsText Title="Garages Information" />
                     <SettingsBehavior AllowSelectByRowClick="true" />
                 </dx:ASPxGridView>
             </div>
@@ -108,5 +104,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>

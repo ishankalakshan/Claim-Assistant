@@ -30,6 +30,18 @@ namespace DataLayer
         public const string sp_GetVehicleTypes = "sp_GetVehicleTypes";
         public const string sp_RemoveVehicleType = "sp_RemoveVehicleType";
         public const string sp_UpdateVehicleType = "sp_UpdateVehicleType";
+        public const string sp_AddSparepart = "sp_AddSparepart";
+        public const string sp_GetSparepart = "sp_GetSparepart";
+        public const string sp_RemoveSparepart = "sp_RemoveSparepart";
+        public const string sp_UpdateSparepart = "sp_UpdateSparepart";
+        public const string sp_AddVehicle = "sp_AddVehicle";
+        public const string sp_GetVehicle = "sp_GetVehicle";
+        public const string sp_RemoveVehicle = "sp_RemoveVehicle";
+        public const string sp_UpdateVehicle = "sp_UpdateVehicle";
+
+
+
+
     }
 
 }

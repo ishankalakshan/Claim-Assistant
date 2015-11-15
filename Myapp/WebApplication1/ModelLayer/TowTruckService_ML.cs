@@ -12,7 +12,7 @@ namespace ModelLayer
 
         public TowTruckService_ML() { }
 
-        public TowTruckService_ML(int Id, string Name, string Location, string Tp, string Email)
+        public TowTruckService_ML(string Id, string Name, string Location, string Tp, string Email)
         {
             if (Id != null)
             {

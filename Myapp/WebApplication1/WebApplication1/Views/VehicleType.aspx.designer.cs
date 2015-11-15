@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
+namespace WebApplication1.Views {
     
     
-    public partial class Manufacturers {
+    public partial class VehicleType {
         
         /// <summary>
         /// btnAdd control.
@@ -67,31 +67,22 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnUpdate;
         
         /// <summary>
-        /// upManufacturers control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upManufacturers;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
-        /// txtNameSearch control.
+        /// gridVehicleTypes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtNameSearch;
-        
-        /// <summary>
-        /// gridManufacturers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView gridManufacturers;
+        protected global::DevExpress.Web.ASPxGridView gridVehicleTypes;
         
         /// <summary>
         /// btnDelete control.

@@ -57,6 +57,7 @@
     <Compile Include="UserLogin_ML.cs" />
     <Compile Include="Manufacturer_ML.cs" />
     <Compile Include="VehicleType_ML.cs" />
+    <Compile Include="Vehicle_ML.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

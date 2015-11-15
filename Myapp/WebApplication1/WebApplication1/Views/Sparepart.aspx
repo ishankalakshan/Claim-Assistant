@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Sparepart.aspx.cs" Inherits="WebApplication1.Views.Spareparts" %>
+
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -12,32 +13,15 @@
     <asp:ScriptManager runat="server"></asp:ScriptManager>
 
     <div class="form-inline">
-        <button type="button" class="btn btn-primary horizontal-bar" data-toggle="modal" data-target="#SparepartModal">
+        <button type="button" class="btn btn-primary horizontal-bar" runat="server" id="btnAdd" onserverclick="btnAdd_ServerClick">
             Add
         </button>
         <button type="button" runat="server" class="btn btn-warning horizontal-bar" name="btnEdit" onserverclick="btnEdit_ServerClick">
             Edit
         </button>
-        <button type="button" class="btn btn-danger horizontal-bar">
+        <button type="button" class="btn btn-danger horizontal-bar" runat="server" id="btnRemove" onserverclick="btnRemove_ServerClick">
             Remove
         </button>
-    </div>
-
-    <div class="modal fade" id="SelectErrorModal">
-        <div class="modal-dialog error">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Error</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Error Occured</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="modal fade" id="SparepartModal">
@@ -58,25 +42,15 @@
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Category</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="cmbCategory">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <asp:DropDownList runat="server" CssClass="form-control" ID="ddlCatogaries">
+                                </asp:DropDownList>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtLocation" class="col-sm-2 control-label">Manufacturer</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="cmbManufacturer">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <asp:DropDownList runat="server" CssClass="form-control" ID="ddlManufacturers">
+                                </asp:DropDownList>
                             </div>
                         </div>
                         <div class="form-group">
@@ -95,7 +69,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" runat="server" name="btnClose" onserverclick="btnClose_ServerClick">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick">Save</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnUpdate" onserverclick="btnUpdate_ServerClick">Save changes</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -114,15 +89,15 @@
                     <Columns>
                         <dx:GridViewDataTextColumn Visible="false" FieldName="sparepartId" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparepartModel" VisibleIndex="1" Caption="Name" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" VisibleIndex="1" Caption="Category">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparepartCategory" VisibleIndex="2" Caption="Category">
+                        <dx:GridViewDataTextColumn FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareManufacturer" VisibleIndex="3" Caption="Manufacturer">
+                        <dx:GridViewDataTextColumn FieldName="sparepartName" VisibleIndex="3" Caption="Model" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareUnitCost" VisibleIndex="4" Caption="Year">
+                        <dx:GridViewDataTextColumn FieldName="spareparManufacYear" VisibleIndex="4" Caption=" Model Year">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareManufacYear" VisibleIndex="5" Caption="Unit Cost">
+                        <dx:GridViewDataTextColumn FieldName="sparepartUnitCost" VisibleIndex="5" Caption="Unit Cost">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />
@@ -133,4 +108,40 @@
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
+
+    <div class="modal fade" id="SelectErrorModal">
+        <div class="modal-dialog error">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Error Occured</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="DeleteModal">
+        <div class="modal-dialog error">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Warning! Are you sure you want to delete this record?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">No</button>
+                    <button type="button" runat="server" class="btn btn-danger btn-sm" data-dismiss="modal" id="btnDelete" onserverclick="btnDelete_ServerClick">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>

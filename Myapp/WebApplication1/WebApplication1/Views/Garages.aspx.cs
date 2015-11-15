@@ -25,13 +25,21 @@ namespace WebApplication1.Views
 
         private void GetGarageData()
         {
-            var ml = new Garage_ML();
+            try
             {
-                ml.GarageLocation = string.IsNullOrEmpty(txtLocationSearch.Text) ? "" : txtLocationSearch.Text;
-            };
+                var ml = new Garage_ML();
+                {
+                    ml.GarageLocation = string.IsNullOrEmpty(txtLocationSearch.Text) ? "" : txtLocationSearch.Text;
+                };
 
-            gridGarages.DataSource = new Garage_BL().GetGarageData(ml);
-            gridGarages.DataBind();
+                gridGarages.DataSource = new Garage_BL().GetGarageData(ml);
+                gridGarages.DataBind();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
@@ -68,7 +76,7 @@ namespace WebApplication1.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -137,7 +145,7 @@ namespace WebApplication1.Views
         {
             try
             {
-                var ml = new Garage_ML(gridGarages.GetSelectedFieldValues("GarageID")[0].ToString(), 
+                var ml = new Garage_ML(gridGarages.GetSelectedFieldValues("GarageID")[0].ToString(),
                                             txtLocation.Value, txtName.Text, txtTp.Value, txtEmail.Value);
 
                 var result = new Garage_BL().UpdateGarage(ml);
@@ -148,7 +156,7 @@ namespace WebApplication1.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
