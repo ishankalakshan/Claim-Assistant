@@ -31,11 +31,6 @@ namespace BusinessLayer
                     });
                 }
 
-                var num = Convert.ToInt32(jArray["policyId"].ToString());
-                var loca = jArray["location"].ToString();
-                var reas = jArray["reason"].ToString();
-                var date = Convert.ToDateTime(jArray["_3rdRenewalDate"].ToString());
-
                 var claimObj = new Claim_ML(Convert.ToInt32(jArray["policyId"].ToString()),
                    jArray["location"].ToString(),
                    jArray["reason"].ToString(),
@@ -60,7 +55,7 @@ namespace BusinessLayer
                    Convert.ToDateTime(jArray["purchaseDate".ToString()]),
                    jArray["VehicleUsedFor"].ToString(),
                    jArray["rentCompanyName"].ToString(),
-                   Convert.ToDouble(jArray["rentAmount"].ToString()),
+                   0,
                    sparelist,
                    jArray["garageCosts"].ToString(),
                    jArray["otherCosts"].ToString(),

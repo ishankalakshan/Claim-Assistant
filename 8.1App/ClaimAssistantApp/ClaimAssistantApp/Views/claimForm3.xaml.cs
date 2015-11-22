@@ -110,9 +110,9 @@ namespace ClaimAssistantApp.Views
             }
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           /* var ml = new Claim_ML(
+           var ml = new Claim_ML(
                 (App.Current as App).policyid,
                 (App.Current as App).location,
                 (App.Current as App).reason,
@@ -144,9 +144,11 @@ namespace ClaimAssistantApp.Views
                 (App.Current as App).empid
                 );
             var result = JsonConvert.SerializeObject(ml);
-            var data = new ServiceReference1.Service1Client().InsertClaimAsync(result);*/
-
-            Frame.Navigate(typeof(Views.claimSuccess));
+            var data =  await new ServiceReference1.Service1Client().InsertClaimAsync(result);
+            if (data)
+            {
+                Frame.Navigate(typeof(Views.claimSuccess));
+            }           
         }
 
         private async void btnAddPart_Click(object sender, RoutedEventArgs e)
