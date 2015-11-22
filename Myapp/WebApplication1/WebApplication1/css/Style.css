@@ -10,3 +10,9 @@
 .modal-dialog.error{
 	width: 25vw;
 }
+.mif-towtruck {
+	content: url('icons/icon-towtruck.png');
+	height: 6vw !important;
+    width: 8vw !important;
+    margin-left: -3.8vw!important;
+}

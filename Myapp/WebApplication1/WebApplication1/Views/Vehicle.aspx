@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
-    <i class="fa fa-cogs fa-2x"></i>&nbsp;Vehicle
+    <i class="fa fa-automobile"></i>&nbsp;Vehicles
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpFprmContaintName" runat="server">
 </asp:Content>

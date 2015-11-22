@@ -6,9 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    >
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bg-menus.jpg"
+                    Stretch="UniformToFill" />
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition Height="25" />
@@ -25,7 +29,7 @@
         <TextBlock Grid.Row="1"
                    FontSize="13"
                    FontFamily="Segoe UI">
-            2nd October 2015
+            22nd November 2015
         </TextBlock>
         
         <StackPanel Orientation="Vertical" 
@@ -50,7 +54,8 @@
                         FontSize="15"
                         FontFamily="Segoe UI"
                         VerticalAlignment="Center"
-                        Background="DarkGray"
+                        Background="Transparent"
+                        Foreground="White"
                         HorizontalAlignment="Right" Click="btnSubmit_Click">
                     Report
                 </Button>

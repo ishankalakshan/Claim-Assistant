@@ -9,14 +9,14 @@
     <title>Online Claim Manager</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    
+    <link type="text/css" rel="stylesheet" href="css/metro-icons.css" />
     <link href="css/sb-admin.css" rel="stylesheet"/>
     <link href="css/Style.css" rel="stylesheet" />
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/sb-admin.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
 	crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX"
@@ -24,24 +24,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
 	crossorigin="anonymous"></script>
-
  
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
-    <script type="text/javascript">
-        function validateLength(oSrc, args) {
-            args.IsValid = (args.Value.length >= 8);
-            alert("ok");
-        }
-        function OnNameValidation(s, e) {
-            var name = e.value;
-            if (name == null)
-                return;
-            if (name.length < 2)
-                e.isValid = false;
-        }
-    </script>
 </head>
 
 <body>
@@ -56,7 +41,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand fa fa-2x" href="#">Online Claiming Assistant
-                    <!--<img alt="Brand" src="tiles/brand.png"/>-->
                     <i class="fa fa-cog fa-spin"></i>
                 </a>
             </div>
@@ -80,55 +64,22 @@
             
              <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search..."/>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </li>
+                    <ul class="nav" id="side-menu">                        
                         <li>
-                            <a href="#"><i class="fa fa-home fa-fw"></i>Home<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/Home.aspx">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">New Insurance</a>
-                                </li>
-                                <li>
-                                    <a href="#">View Insurance Records</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tow Truck & garages</a>
-                                </li>
-                                <li>
-                                    <a href="#">Vehicles & Spare Parts</a>
-                                </li>
-                                <li>
-                                    <a href="#">Claims</a>
-                                </li>
-                                <li>
-                                    <a href="#">Reports</a>
-                                </li>
-                                <li>
-                                    <a href="#">Administration</a>
-                                </li>
-                                <li>
-                                    <a href="#">Help</a>
-                                </li>
-                            </ul>
-                        </li>    
-                        <li>
-                            <div class="panel panel-default">
-                              <div class="panel-body">                                                                                                                     
-                              </div>
-                            </div>
-                        </li>                       
+                            <a href="Views/Home.html"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a>
+                            <a href=""><i class="mif-folder-plus"></i>&nbsp;&nbsp;New Policy</a>
+                            <a href=""><i class="mif-file-text"></i>&nbsp;&nbsp;Claims</a>
+                            <a href=""><i class="mif-perm-phone-msg"></i>&nbsp;&nbsp;Claim Requests</a>
+                            <a href="Views/Vehicle.aspx"><i class="icon mif-automobile"></i>&nbsp;&nbsp;Vehicles</a>
+                            <a href="Views/VehicleType.aspx"><i class="icon mif-list2"></i>&nbsp;&nbsp;Vehicle Types</a>
+                            <a href="Views/Garages.aspx"><i class="icon mif-wrench"></i>&nbsp;&nbsp;Garages</a>
+                            <a href="Views/TowTruckService.aspx"><i class="icon mif-truck"></i>&nbsp;&nbsp;Tow Trucks</a>
+                            <a href="Views/Sparepart.aspx"><i class="icon mif-cog"></i>&nbsp;&nbsp;Spareparts</a>
+                            <a href="Views/Manufacturer.aspx"><i class="icon mif-trademark"></i>&nbsp;&nbsp;Manufacturers</a>
+                            <a href="Views/SparepartCatergory.aspx"><i class="icon mif-cabinet"></i>&nbsp;&nbsp;Categories</a>
+                            <a href="Views/Employee.aspx"><i class="icon mif-users"></i>&nbsp;&nbsp;Employees</a>
+                            <a href=""><i class="icon mif-key"></i>&nbsp;&nbsp;User Accounts</a>                         
+                        </li>                          
                     </ul>
                 </div>
             </div>

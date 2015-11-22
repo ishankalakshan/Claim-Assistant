@@ -83,6 +83,7 @@
     <Content Include="Content\navbar.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\icons\icon-towtruck.png" />
     <Content Include="css\metro-icons.css" />
     <Content Include="css\metro.css" />
     <Content Include="css\plugins\dataTables\dataTables.bootstrap.css" />
@@ -119,7 +120,6 @@
     <Content Include="Views\Employee.aspx" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\Manufacturer.aspx" />
-    <Content Include="New_insurance.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
@@ -173,7 +173,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="subMenuTT_Garages.aspx" />
     <Content Include="tiles\1.PNG" />
     <Content Include="tiles\2.png" />
     <Content Include="tiles\admin_wide.png" />
@@ -188,13 +187,10 @@
     <Content Include="tiles\TowTruck-icon1.png" />
     <Content Include="tiles\towtruck.png" />
     <Content Include="tiles\vehicles.png" />
-    <Content Include="vehicle_spare.aspx" />
-    <Content Include="Views\frmAddNewVehicle.aspx" />
     <Content Include="Views\frmNew3wheelStep1.aspx" />
     <Content Include="Views\frmNew3wheelStep2.aspx" />
     <Content Include="Views\frmNew3wheelStep3.aspx" />
     <Content Include="Views\frmNew3wheelStepV.aspx" />
-    <Content Include="Views\frmNewInsuranceStep1.aspx" />
     <Content Include="Views\Garages.aspx" />
     <Content Include="Views\SparepartCatergory.aspx" />
     <Content Include="Views\Sparepart.aspx" />
@@ -202,7 +198,6 @@
     <Content Include="Views\TowTruckService.aspx" />
     <Content Include="Views\Vehicle.aspx" />
     <Content Include="Views\VehicleType.aspx" />
-    <Content Include="vsMenu.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -236,13 +231,6 @@
     <Compile Include="Views\Manufacturer.aspx.designer.cs">
       <DependentUpon>Manufacturer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="New_insurance.aspx.cs">
-      <DependentUpon>New_insurance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="New_insurance.aspx.designer.cs">
-      <DependentUpon>New_insurance.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -255,27 +243,6 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="subMenuTT_Garages.aspx.cs">
-      <DependentUpon>subMenuTT_Garages.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="subMenuTT_Garages.aspx.designer.cs">
-      <DependentUpon>subMenuTT_Garages.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="vehicle_spare.aspx.cs">
-      <DependentUpon>vehicle_spare.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vehicle_spare.aspx.designer.cs">
-      <DependentUpon>vehicle_spare.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\frmAddNewVehicle.aspx.cs">
-      <DependentUpon>frmAddNewVehicle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\frmAddNewVehicle.aspx.designer.cs">
-      <DependentUpon>frmAddNewVehicle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\frmNew3wheelStep1.aspx.cs">
       <DependentUpon>frmNew3wheelStep1.aspx</DependentUpon>
@@ -304,13 +271,6 @@
     </Compile>
     <Compile Include="Views\frmNew3wheelStepV.aspx.designer.cs">
       <DependentUpon>frmNew3wheelStepV.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\frmNewInsuranceStep1.aspx.cs">
-      <DependentUpon>frmNewInsuranceStep1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\frmNewInsuranceStep1.aspx.designer.cs">
-      <DependentUpon>frmNewInsuranceStep1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Garages.aspx.cs">
       <DependentUpon>Garages.aspx</DependentUpon>
@@ -360,13 +320,6 @@
     </Compile>
     <Compile Include="Views\VehicleType.aspx.designer.cs">
       <DependentUpon>VehicleType.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="vsMenu.aspx.cs">
-      <DependentUpon>vsMenu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vsMenu.aspx.designer.cs">
-      <DependentUpon>vsMenu.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

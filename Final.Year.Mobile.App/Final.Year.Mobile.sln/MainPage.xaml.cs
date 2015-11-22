@@ -29,9 +29,9 @@ namespace Final.Year.Mobile.sln
                      maximumAge: TimeSpan.FromMinutes(5),
                      timeout: TimeSpan.FromSeconds(10)
                 );
-
+       
                 geolocation.Text = "GPS:" + geoposition.Coordinate.Latitude.ToString("0.00") + ", " + geoposition.Coordinate.Longitude.ToString("0.00");
-            }
+            } 
             catch (Exception ex)
             {
 
