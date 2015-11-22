@@ -33,8 +33,8 @@ namespace ClaimAssistantApp
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             
-               Frame.Navigate(typeof(Views.MainMenu));    
-            /*try
+               //Frame.Navigate(typeof(Views.MainMenu));    
+            try
             {
                 
                 ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
@@ -76,7 +76,7 @@ namespace ClaimAssistantApp
 		     var NetworkErrorMessage = new Windows.UI.Popups.MessageDialog("Could not connect to the network");
                       NetworkErrorMessage.Title = "Network Error";
                       await NetworkErrorMessage.ShowAsync();
-	        }*/
+	        }
         }
     }
 }

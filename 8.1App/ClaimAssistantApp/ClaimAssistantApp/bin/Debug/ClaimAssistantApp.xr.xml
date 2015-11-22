@@ -206,7 +206,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ClaimAssistantApp.Views.claimInformation" />
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="StrokeThickness" />
     </RootType>

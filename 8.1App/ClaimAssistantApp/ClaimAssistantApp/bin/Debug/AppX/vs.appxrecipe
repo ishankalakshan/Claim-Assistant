@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
-      <Modified>2015-11-21T18:33:33.987</Modified>
+      <Modified>2015-11-22T17:53:39.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\BusinessLayer.dll">
       <PackagePath>BusinessLayer.dll</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimSuccess.xbf">
       <PackagePath>Views\claimSuccess.xbf</PackagePath>
-      <Modified>2015-11-19T18:13:00.630</Modified>
+      <Modified>2015-11-22T17:53:39.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\Garages.xbf">
       <PackagePath>Views\Garages.xbf</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
-      <Modified>2015-11-21T16:52:21.314</Modified>
+      <Modified>2015-11-22T17:53:38.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
