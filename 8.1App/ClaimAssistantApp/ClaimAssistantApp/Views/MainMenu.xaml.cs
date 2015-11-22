@@ -39,6 +39,8 @@ namespace ClaimAssistantApp.Views
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+            pageTitle.Text = "Welcome " + (App.Current as App).empName;
+
         }
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {

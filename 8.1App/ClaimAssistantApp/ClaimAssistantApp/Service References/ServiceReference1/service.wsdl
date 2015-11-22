@@ -25,6 +25,12 @@
   <wsdl:message name="IService1_GetPolicyInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPolicyInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetClaimHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimHistory" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClaimHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimHistoryResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetGarageInfo_InputMessage">
     <wsdl:part name="parameters" element="tns:GetGarageInfo" />
   </wsdl:message>
@@ -80,6 +86,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPolicyInfo" message="tns:IService1_GetPolicyInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPolicyInfoResponse" message="tns:IService1_GetPolicyInfo_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetClaimHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClaimHistory" message="tns:IService1_GetClaimHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClaimHistoryResponse" message="tns:IService1_GetClaimHistory_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetGarageInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGarageInfo" message="tns:IService1_GetGarageInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGarageInfoResponse" message="tns:IService1_GetGarageInfo_OutputMessage" />
@@ -131,6 +141,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetPolicyInfo">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPolicyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimHistory">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetClaimHistory" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

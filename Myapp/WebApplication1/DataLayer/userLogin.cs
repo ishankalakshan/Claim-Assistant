@@ -83,10 +83,11 @@ namespace DataLayer
                 {
                     foreach (DataRow row in dt.Rows)
                     {
-                        string id = row["employee_id"].ToString();
-                        string type = row["type"].ToString();
+                        var id = row["employee_id"].ToString();
+                        var type = row["type"].ToString();
+                        var name = row["EmpName"].ToString(); 
 
-                        return id + "," + type;
+                        return id + "," + type + "," + name;
                     }
                     return ""; 
                 }                   

@@ -1,4 +1,4 @@
-I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\BusinessLayer\BusinessLayer.csproj;neutral
-I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ClaimAssistantApp\ClaimAssistantApp.csproj;neutral
-I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral
-I:\KDU\ClaimAssistantWebApplication\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral
+E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\BusinessLayer\BusinessLayer.csproj;neutral
+E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\ClaimAssistantApp.csproj;neutral
+E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral
+E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ModelLayer\ModelLayer.csproj;neutral

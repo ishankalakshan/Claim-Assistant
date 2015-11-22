@@ -31,9 +31,12 @@ namespace BusinessLayer
                     });
                 }
 
+                var num = Convert.ToInt32(jArray["policyId"].ToString());
+                var loca = jArray["location"].ToString();
+                var reas = jArray["reason"].ToString();
+                var date = Convert.ToDateTime(jArray["_3rdRenewalDate"].ToString());
 
-
-                var claimObj = new Claim_ML(Convert.ToInt32(jArray["policyId"]),
+                var claimObj = new Claim_ML(Convert.ToInt32(jArray["policyId"].ToString()),
                    jArray["location"].ToString(),
                    jArray["reason"].ToString(),
                    jArray["knockedOn"].ToString(),
@@ -41,23 +44,23 @@ namespace BusinessLayer
                    jArray["_3rdOwnerName"].ToString(),
                    jArray["_3rdAddress"].ToString(),
                    jArray["_3rdContactNo"].ToString(),
-                   Convert.ToDateTime(jArray["_3rdRenewalDate"]),
+                   Convert.ToDateTime(jArray["_3rdRenewalDate"].ToString()),
                    jArray["_3rdSpecialNotes"].ToString(),
                    jArray["_3rdVictimName"].ToString(),
                    jArray["_3rdVictimAddress"].ToString(),
                    jArray["_3rdDamageNature"].ToString(),
                    jArray["_3rdClaimant"].ToString(),
-                   Convert.ToDouble(jArray["_3rdAmountClaimed"]),
+                   Convert.ToDouble(jArray["_3rdAmountClaimed"].ToString()),
                    jArray["isDriverOwner"].ToString(),
                    jArray["driverName"].ToString(),
                    jArray["driverLicense"].ToString(),
                    jArray["licenseCat"].ToString(),
-                   Convert.ToDateTime(jArray["licenseExpreDate"]),
+                   Convert.ToDateTime(jArray["licenseExpreDate"].ToString()),
                    jArray["driverNIC"].ToString(),
-                   Convert.ToDateTime(jArray["purchaseDate"]),
+                   Convert.ToDateTime(jArray["purchaseDate".ToString()]),
                    jArray["VehicleUsedFor"].ToString(),
                    jArray["rentCompanyName"].ToString(),
-                   Convert.ToDouble(jArray["rentAmount"]),
+                   Convert.ToDouble(jArray["rentAmount"].ToString()),
                    sparelist,
                    jArray["garageCosts"].ToString(),
                    jArray["otherCosts"].ToString(),

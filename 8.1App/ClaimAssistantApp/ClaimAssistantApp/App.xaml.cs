@@ -27,8 +27,9 @@ namespace ClaimAssistantApp
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
-
+        public string policyid { get; set; }
         public string empid { get; set; }
+        public string empName { get; set; }
         public string location { get; set; }
         public string reason { get; set; }
         public string knockedOn { get; set; }

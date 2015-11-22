@@ -73,6 +73,9 @@ namespace ClaimAssistantApp.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPolicyInfo", ReplyAction="http://tempuri.org/IService1/GetPolicyInfoResponse")]
         System.Threading.Tasks.Task<string> GetPolicyInfoAsync(int policy_ID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClaimHistory", ReplyAction="http://tempuri.org/IService1/GetClaimHistoryResponse")]
+        System.Threading.Tasks.Task<string> GetClaimHistoryAsync(int policy_ID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetGarageInfo", ReplyAction="http://tempuri.org/IService1/GetGarageInfoResponse")]
         System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location);
         
@@ -148,6 +151,10 @@ namespace ClaimAssistantApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetPolicyInfoAsync(int policy_ID) {
             return base.Channel.GetPolicyInfoAsync(policy_ID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetClaimHistoryAsync(int policy_ID) {
+            return base.Channel.GetClaimHistoryAsync(policy_ID);
         }
         
         public System.Threading.Tasks.Task<string> GetGarageInfoAsync(string location) {

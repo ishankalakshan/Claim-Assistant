@@ -28,27 +28,35 @@ namespace MVCS_WCF_Service
 
         public string GetPolicyInfo(int policy_ID)
         {
-            //return new GetPolicyDetails_BL().GetPolicyDetails(new GetPolicyDetails_ML() { policyID=policy_ID });
-            return new GetPolicyDetails_BL().GetPolicyDetails(new GetPolicyDetails_ML() { policyID = 4 });
+            var result = new Policy_BL().GetPolicy(new Policy_ML() { policyID = policy_ID });
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
+        }
+
+        public string GetClaimHistory(int policy_ID)
+        {
+            var result = new Policy_BL().GetClaimHistory(new Policy_ML() { policyID = policy_ID });
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
         }
 
         public string GetGarageInfo(string location)
         {
-            return JsonConvert.SerializeObject(new Garage_BL().GetGarageData(new Garage_ML() { GarageLocation = location }), Formatting.Indented);
+            var result = new Garage_BL().GetGarageData(new Garage_ML() { GarageLocation = location});
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
         }
 
         public string GetTowTruckServiceInfo(string location)
         {
-            return new TowTruckService_BL().GetTowTruckServiceInfo(new TowTruckService_ML() { location = location });
+            var result = new TowTruckService_BL().GetTowTruckServices(new TowTruckService_ML() { location = location });
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
         }
 
         public bool InsertClaim(string claim)
         {
-            var call =new Claim_BL().createClaimObject(claim);
+            var call = new Claim_BL().createClaimObject(claim);
 
             return true;
         }
-        
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -62,25 +70,26 @@ namespace MVCS_WCF_Service
             return composite;
         }
 
-       public string GetSparepartCategories()
-       {
-            var result = new BusinessLayer.Spareparts.SparepartCategory_BL().GetSparepartCategories();
-            var resultJString = JsonConvert.SerializeObject(result);
-            return resultJString;
-       }
+        public string GetSparepartCategories()
+        {
+            var result = new BusinessLayer.SparepartCategory_BL().GetSparepartCategories(
+                new ModelLayer.Spareparts.SparepartCategory_ML() { spareCategoryName = "" });
+
+            return JsonConvert.SerializeObject(result,Formatting.Indented);
+        }
 
         public string GetSparepartManufacturers()
         {
-            var result = new SparepartManufacturer_BL().GetSparepartManufacturers();
-            var resultJString = JsonConvert.SerializeObject(result);
-            return resultJString;
+            var result = new Manufacturer_BL().GetManufacturers(new Manufacturer_ML() { ManufacturerName = "" });
+            return JsonConvert.SerializeObject(result,Formatting.Indented);
         }
 
         public string GetSpareparts()
         {
-            var result = new BusinessLayer.Spareparts.Sparepart_BL().GetSpareparts();
-            var resultJString = JsonConvert.SerializeObject(result);
-            return resultJString;
+            var result = new BusinessLayer.Sparepart_BL().GetSpareparts(
+                new ModelLayer.Spareparts.Sparepart_ML() { spareManufacturerName = "", sparepartCategoryName = "", sparepartModel = "", spareManufacYear = "" });
+
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
         }
     }
 }

@@ -83,6 +83,8 @@
     <Content Include="Content\navbar.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\metro-icons.css" />
+    <Content Include="css\metro.css" />
     <Content Include="css\plugins\dataTables\dataTables.bootstrap.css" />
     <Content Include="css\plugins\morris\morris-0.4.3.min.css" />
     <Content Include="css\plugins\social-buttons\social-buttons.css" />
@@ -93,12 +95,15 @@
     <Content Include="font-awesome\css\font-awesome.css" />
     <Content Include="font-awesome\css\font-awesome.min.css" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\metro.svg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\demo\dashboard-demo.js" />
     <Content Include="js\demo\flot-demo.js" />
     <Content Include="js\demo\morris-demo.js" />
     <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\metro.js" />
     <Content Include="js\plugins\dataTables\dataTables.bootstrap.js" />
     <Content Include="js\plugins\dataTables\jquery.dataTables.js" />
     <Content Include="js\plugins\flot\excanvas.min.js" />
@@ -112,6 +117,7 @@
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
     <Content Include="Views\Employee.aspx" />
+    <Content Include="Views\Home.html" />
     <Content Include="Views\Manufacturer.aspx" />
     <Content Include="New_insurance.aspx" />
     <Content Include="packages.config" />
@@ -150,6 +156,10 @@
     <Content Include="font-awesome\scss\_spinning.scss" />
     <Content Include="font-awesome\scss\_stacked.scss" />
     <Content Include="font-awesome\scss\_variables.scss" />
+    <Content Include="fonts\metro.eot" />
+    <Content Include="fonts\metro.ttf" />
+    <Content Include="fonts\metro.woff" />
+    <Content Include="fonts\selection.json" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -196,7 +206,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Home.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -260,13 +269,6 @@
     </Compile>
     <Compile Include="vehicle_spare.aspx.designer.cs">
       <DependentUpon>vehicle_spare.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\frmAddNewVehicle.aspx.cs">
       <DependentUpon>frmAddNewVehicle.aspx</DependentUpon>

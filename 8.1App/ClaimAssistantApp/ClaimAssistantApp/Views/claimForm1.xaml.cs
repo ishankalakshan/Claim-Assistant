@@ -66,7 +66,7 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep2_Click(object sender, RoutedEventArgs e)
         {
-            if (txtLocation.Text=="")
+            /*if (txtLocation.Text=="")
             {
                 showMessageBox("Location required");
                 return;
@@ -90,7 +90,7 @@ namespace ClaimAssistantApp.Views
             {
                 showMessageBox("Owner name required");
                 return;
-            }
+            }*/
 
             (App.Current as App).location = txtLocation.Text;
             (App.Current as App).reason = txtReason.Text;

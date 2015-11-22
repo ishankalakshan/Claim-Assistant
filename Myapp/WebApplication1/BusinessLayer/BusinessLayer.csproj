@@ -48,7 +48,7 @@
     <Compile Include="Claim_BL.cs" />
     <Compile Include="Employee_BL.cs" />
     <Compile Include="Garage_BL.cs" />
-    <Compile Include="GetPolicyDetails_BL.cs" />
+    <Compile Include="Policy_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SparepartCategory_BL.cs" />
     <Compile Include="Spareparts\SparepartCategory_BL.cs" />

@@ -9,7 +9,7 @@ namespace ModelLayer
 {
     public class Claim_ML
     {
-        public int claimId;
+        public int policyId;
         public string location;
         public string reason;
         public string knockedOn;
@@ -46,7 +46,7 @@ namespace ModelLayer
 
         }
 
-        public Claim_ML(int pclaimId, string plocation, string preason, string pknockedOn, string p_3rdVehicleNo,
+        public Claim_ML(string pclaimId, string plocation, string preason, string pknockedOn, string p_3rdVehicleNo,
                         string p_3rdOwnerName, string p_3rdAddress, string p_3rdContactNo, DateTime p_3rdRenewalDate, string p_3rdSpecialNotes,
                         string p_3rdVictimName, string p_3rdVictimAddress, string p_3rdDamageNature, string p_3rdClaimant, double p_3rdAmountClaimed,
                         string pisDriverOwner, string pdriverName, string pdriverLicense, string plicenseCat, DateTime plicenseExpreDate,
@@ -57,7 +57,7 @@ namespace ModelLayer
             {
                 if (pclaimId != null)
             {
-                claimId = pclaimId;
+                policyId = Convert.ToInt32(pclaimId);
             }
             if (plocation != null)
             {

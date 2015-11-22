@@ -42,6 +42,7 @@ namespace ClaimAssistantApp
                 if (res!="")
 	                {
                        (App.Current as App).empid = res.Split(',')[0];
+                       (App.Current as App).empName = res.Split(',')[2];
                         var type = res.Split(',')[1];
                         if (type=="agent")
                         {

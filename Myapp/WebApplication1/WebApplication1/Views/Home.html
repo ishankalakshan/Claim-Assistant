@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/metro.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/metro.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/metro-icons.css">
+    <style>
+        .tile-area-controls {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+    </style>
+    <script>
+        function GoToVehicles(){
+            window.location.href='Vehicle.aspx';
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
+        <h1 class="tile-area-title">Online Claim Assistant</h1>
+        <div class="tile-area-controls">
+            <button class="image-button icon-right bg-transparent fg-white bg-hover-dark no-border"><span class="sub-header no-margin text-light">Sergey Pimenov</span> <span class="icon mif-user"></span></button>
+            <button class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-search"></span></button>
+            <button class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-cog"></span></button>
+            <a href="../tiles.html" class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-switch"></span></a>
+        </div>
+
+        <div class="tile-group double">
+            <span class="tile-group-title">General</span>
+            <div class="tile-container">
+
+                <a href="#" class="tile-wide bg-indigo fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-folder-plus"></span>
+                    </div>
+                    <span class="tile-label">New Policy</span>
+                </a>
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-file-text"></span>
+                    </div>
+                    <span class="tile-label">Claims</span>
+                </div>
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-perm-phone-msg"></span>
+                    </div>
+                    <span class="tile-label">Claim Requests</span>
+                </div>
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-clipboard"></span>
+                    </div>
+                    <span class="tile-label">Reports</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-group one">
+            <span class="tile-group-title">Office</span>
+            <div class="tile-container">
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-wrench"></span>
+                    </div>
+                </div>
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-truck"></span>
+                    </div>
+                </div>
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="GoToVehicles()">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-automobile"></span>
+                    </div>
+                </div>
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-cogs"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-group one">
+            <span class="tile-group-title">Administration</span>
+            <div class="tile-container">
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-users"></span>
+                    </div>
+                    <span class="tile-label">Employees</span>
+                </div>
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="#">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-key"></span>
+                    </div>
+                    <span class="tile-label">User Accounts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

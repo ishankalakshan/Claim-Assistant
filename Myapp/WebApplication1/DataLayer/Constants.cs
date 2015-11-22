@@ -38,8 +38,8 @@ namespace DataLayer
         public const string sp_GetVehicle = "sp_GetVehicle";
         public const string sp_RemoveVehicle = "sp_RemoveVehicle";
         public const string sp_UpdateVehicle = "sp_UpdateVehicle";
-
-
+        public const string sp_GetPolicyDetails = "sp_GetPolicyDetails";
+        public const string sp_GetClaimHistory = "sp_GetClaimHistory";
 
 
     }

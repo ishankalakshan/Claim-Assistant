@@ -30,21 +30,21 @@ namespace ModelLayer
           {
               sparepartName = item["sparepartName"].ToString();
           }
-          if (item["sparepartCategory"] != null)
+          if (item["spareCategoryId"] != null)
           {
-              sparepartCategory = Convert.ToInt32(item["sparepartCategory"]);
+              sparepartCategory = Convert.ToInt32(item["spareCategoryId"]);
           }
-          if (item["spareManufacturer"] != null)
+          if (item["ManufacturerId"] != null)
           {
-              spareManufacturer = Convert.ToInt32(item["spareManufacturer"]);
+              spareManufacturer = Convert.ToInt32(item["ManufacturerId"]);
           }
-          if (item["spareUnitCost"] != null)
+          if (item["sparepartUnitCost"] != null)
           {
-              spareUnitCost = Convert.ToSingle((item["spareUnitCost"]));
+              spareUnitCost = Convert.ToSingle((item["sparepartUnitCost"]));
           }
-          if (item["spareManufacYear"] != null)
+          if (item["spareparManufacYear"] != null)
           {
-              spareManufacYear = item["spareManufacYear"].ToString();
+              spareManufacYear = item["spareparManufacYear"].ToString();
           }
       }
 

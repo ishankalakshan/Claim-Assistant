@@ -7,7 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bg.jpg"
+                    Stretch="UniformToFill" />
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="50"/>
@@ -24,19 +28,19 @@
                        FontSize="20"
                        Margin="10,0"/>
         </StackPanel>
-        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="10,10,10,10">
-            <StackPanel Orientation="Vertical" >
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="10,10,10,10"> 
+            <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Username" 
                            FontSize="20" 
                            Width="100"
                            Margin="0,0,30,0"
                            FontFamily="Segoe WP Light"/>
-                    <TextBox Name="txtUsername" 
-                         Width="500"
-                         FontFamily="Segoe WP Light" 
-                         Foreground="Gray"
-                         Background="Transparent"   />
+                    <TextBox x:Name="txtUsername" 
+                    	Width="500"
+                    	FontFamily="Segoe WP Light" 
+                    	Foreground="White"                           
+                    	Background="Transparent"   />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
@@ -48,7 +52,7 @@
                     <PasswordBox Name="txtPassword"  
                              Width="500"
                              FontFamily="Segoe WP Light"
-                             Foreground="Gray"
+                             Foreground="White"
                              IsPasswordRevealButtonEnabled="True"
                              Background="Transparent" />
                 </StackPanel>

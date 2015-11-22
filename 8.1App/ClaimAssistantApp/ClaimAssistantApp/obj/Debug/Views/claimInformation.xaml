@@ -20,13 +20,11 @@
             <AppBarButton x:ConnectionId='2' Label="Claim" Icon="Add" Name="btnClaim"                       ></AppBarButton>
         </CommandBar>
     </Page.BottomAppBar>
-
-    <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
-    -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bg-menus.jpg"
+                    Stretch="UniformToFill" />
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -41,7 +39,7 @@
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>              
+                <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
@@ -91,19 +89,19 @@
                     <TextBlock Name="tbEngineNo" Text="Engine No: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbChassissNo" Text="Chassis No: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbManufacturer" Text="Manufacturer: " FontSize="15" Margin="2"></TextBlock>
-                    
+
                     <TextBlock Name="tbModel" Text="Model: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbYear" Text="Year: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbEngineCapacity" Text="Engine Capacity: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbAbsoluteOwner" Text="Absolute Owner: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbFinancialRights" Text="Financial Rights: " FontSize="15" Margin="2"></TextBlock>
-                    
+
                     <TextBlock Name="tbUsage" Text="Usage:" FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbCurrentDamages" Text="Current Damages: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbExtraFitting" Text="Extra Fitting: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbPresentValue" Text="Present Value: " FontSize="15" Margin="2"></TextBlock>
                 </StackPanel>
-                <StackPanel Grid.Column="2" Margin="50,0,0,0">      
+                <StackPanel Grid.Column="2" Margin="50,0,0,0">
                     <TextBlock Text="Policy" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>
                     <TextBlock Name="tbPolicyId" Text="Policy ID: " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbExpireOn" Text="Expire On: " FontSize="15" Margin="2"></TextBlock>
@@ -115,12 +113,12 @@
                     <TextBlock Name="tbTerrorCover" Text="Terrorism Cover: Rs. " FontSize="15" Margin="2"></TextBlock>
                     <TextBlock Name="tbVandalism" Text="Vandalism Cover: Rs. " FontSize="15" Margin="2"></TextBlock>
                 </StackPanel>
-                <StackPanel Grid.Column="3" Margin="50,0,0,0">
+                <StackPanel Name="stackHistory" Grid.Column="3" Margin="50,0,0,0">
                     <TextBlock Text="Claim History" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>
                 </StackPanel>
             </Grid>
         </StackPanel>
-        
+
     </Grid>
 </Page>
 

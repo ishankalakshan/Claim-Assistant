@@ -24,6 +24,9 @@ namespace MVCS_WCF_Service
         string GetPolicyInfo(int policy_ID);
 
         [OperationContract]
+        string GetClaimHistory(int policy_ID);
+
+        [OperationContract]
         string GetGarageInfo(string location);
 
         [OperationContract]

@@ -113,7 +113,7 @@ namespace ClaimAssistantApp.Views
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             var ml = new Claim_ML(
-                4,
+                (App.Current as App).policyid,
                 (App.Current as App).location,
                 (App.Current as App).reason,
                 (App.Current as App).knockedOn,
@@ -149,57 +149,47 @@ namespace ClaimAssistantApp.Views
             //Frame.Navigate(typeof(Views.claimSuccess));
         }
 
-        private void btnAddPart_Click(object sender, RoutedEventArgs e)
+        private async void btnAddPart_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbSparepart.SelectedItem == null) return;
+            try
+            {
+                if (txtQuantity.Text=="")
+                {
+                    var messageDialog = new Windows.UI.Popups.MessageDialog("Enter quantity");
+                    messageDialog.Title = "Required";
+                    await messageDialog.ShowAsync();
+                    return;
+                }
 
-            var jsonselected = JsonConvert.SerializeObject(cmbSparepart.SelectedItem);
-            var obj = JObject.Parse(jsonselected);
-            var name = (string)obj["sparepartName"];
-            var price = (string)obj["spareUnitCost"];
-            lstboxSparelist.Items.Add(name + "Rs " + price + "/=" + "Qty: "+txtQuantity.Text);
+                if (cmbSparepart.SelectedItem == null) return;
 
-            SparepartList.Add(new SparepartPayment_ML() 
-            { 
-                SparepartId= Convert.ToInt32(cmbSparepart.SelectedValue),
-                SparepartQty = Convert.ToDouble(txtQuantity.Text),
-                SparepartCost = Convert.ToDouble(price)
-            });   
+                var jsonselected = JsonConvert.SerializeObject(cmbSparepart.SelectedItem);
+                var obj = JObject.Parse(jsonselected);
+                var name = (string)obj["sparepartName"];
+                var price = (string)obj["spareUnitCost"];
+                lstboxSparelist.Items.Add(name + "-" + " Rs " + price + "/=  " + "  Qty: " + txtQuantity.Text);
+
+                _totalcost += Convert.ToSingle(price) * Convert.ToInt32(txtQuantity.Text);
+
+                SparepartList.Add(new SparepartPayment_ML()
+                {
+                    SparepartId = Convert.ToInt32(cmbSparepart.SelectedValue),
+                    SparepartQty = Convert.ToDouble(txtQuantity.Text),
+                    SparepartCost = Convert.ToDouble(price)
+                });   
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
         }
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
             var selected = lstboxSparelist.SelectedValue;
+            var name = selected.ToString().Split('-')[0];
             lstboxSparelist.Items.Remove(selected);
-        }
-
-        private List<SparepartCategory_ML> GetSparepartCatogories()
-        {
-            var spareList = new List<SparepartCategory_ML>();
-            spareList.Add(new SparepartCategory_ML() { spareId=1, spareCatergory="Lamps"});
-            spareList.Add(new SparepartCategory_ML() { spareId = 2, spareCatergory = "Tires" });
-            spareList.Add(new SparepartCategory_ML() { spareId = 3, spareCatergory = "Mirrors" });
-
-            return spareList;
-        }
-
-        private List<SparepartManufacturer_ML> GetSparepartManufacturers()
-        {
-            var spareManufacturerList = new List<SparepartManufacturer_ML>();
-            spareManufacturerList.Add(new SparepartManufacturer_ML() { manufacturerId=1, manufacturerName="Toyota"});
-            spareManufacturerList.Add(new SparepartManufacturer_ML() { manufacturerId = 2, manufacturerName = "DSI" });
-
-            return spareManufacturerList;
-        }
-
-        private List<Sparepart_ML> GetSpareparts()
-        {
-            var sparepartList = new List<Sparepart_ML>();
-            sparepartList.Add(new Sparepart_ML() {sparepartId=1,sparepartName="Xenon Head Lamps", sparepartCategory=1,spareManufacturer=1,spareManufacYear="2015",spareUnitCost=25000.00f});
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 2, sparepartName = "Side Mirror", sparepartCategory = 3, spareManufacturer = 1, spareManufacYear = "2015", spareUnitCost = 25000.00f });
-            sparepartList.Add(new Sparepart_ML() { sparepartId = 3, sparepartName = "23' Tire", sparepartCategory = 2, spareManufacturer = 2, spareManufacYear = "2015", spareUnitCost = 24500.00f });
-
-            return sparepartList;
         }
 
         private void loadSparepartCatogoriesToCombo() {
@@ -223,7 +213,7 @@ namespace ClaimAssistantApp.Views
                 }
 
             }
-            cmbSparepart.ItemsSource = sparepartList;
+            cmbSparepart.ItemsSource = list;
         }
 
         private void cmbSparePartCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)

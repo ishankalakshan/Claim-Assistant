@@ -107,7 +107,8 @@ namespace ClaimAssistantApp.Views
 
             (App.Current as App)._3rdClaimant = txt3rdPartyClaimant.Text;
 
-            if (txt3rdAmountClaimed.Text != null || txt3rdAmountClaimed.Text != "")
+            var test = txt3rdAmountClaimed.Text;
+            if (txt3rdAmountClaimed.Text != "")
             {
                 (App.Current as App)._3rdClaimAmount = Convert.ToSingle(txt3rdAmountClaimed.Text);
             }

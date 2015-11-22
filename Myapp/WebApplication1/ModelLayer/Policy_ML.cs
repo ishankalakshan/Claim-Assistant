@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
-    public class GetPolicyDetails_ML
+    public class Policy_ML
     {
         public int policyID;
     }
