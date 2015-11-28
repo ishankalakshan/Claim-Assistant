@@ -69,7 +69,7 @@ namespace ClaimAssistantApp
             catch (Exception ex)
             {
                
-                txtUsername.Text = ex.ToString();
+                //txtUsername.Text = ex.ToString();
             }
             if (networkError)
 	        {
