@@ -3,6 +3,7 @@ using Windows.Devices.Geolocation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;  
 
 
 
@@ -25,12 +26,14 @@ namespace Final.Year.Mobile.sln
 
             try
             {
-                var geoposition = await geolocator.GetGeopositionAsync(
+                MessageDialog msgbox = new MessageDialog("Reported Successfully");
+                await msgbox.ShowAsync();  
+                /*var geoposition = await geolocator.GetGeopositionAsync(
                      maximumAge: TimeSpan.FromMinutes(5),
                      timeout: TimeSpan.FromSeconds(10)
                 );
        
-                geolocation.Text = "GPS:" + geoposition.Coordinate.Latitude.ToString("0.00") + ", " + geoposition.Coordinate.Longitude.ToString("0.00");
+                geolocation.Text = "GPS:" + geoposition.Coordinate.Latitude.ToString("0.00") + ", " + geoposition.Coordinate.Longitude.ToString("0.00");*/
             } 
             catch (Exception ex)
             {
