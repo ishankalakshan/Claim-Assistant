@@ -84,10 +84,10 @@ namespace MVCS_WCF_Service
             return JsonConvert.SerializeObject(result,Formatting.Indented);
         }
 
-        public string GetSpareparts()
+        public string GetSpareparts(string manufacturer, string catergory)
         {
             var result = new BusinessLayer.Sparepart_BL().GetSpareparts(
-                new ModelLayer.Spareparts.Sparepart_ML() { spareManufacturerName = "", sparepartCategoryName = "", sparepartModel = "", spareManufacYear = "" });
+                new ModelLayer.Spareparts.Sparepart_ML() { spareManufacturerName = manufacturer, sparepartCategoryName = catergory, sparepartModel = "", spareManufacYear = "" });
 
             return JsonConvert.SerializeObject(result, Formatting.Indented);
         }

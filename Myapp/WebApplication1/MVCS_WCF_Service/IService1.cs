@@ -42,7 +42,7 @@ namespace MVCS_WCF_Service
         string GetSparepartManufacturers();
 
         [OperationContract]
-        string GetSpareparts();
+        string GetSpareparts(string manufacturer,string catergory);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -43,10 +43,11 @@ namespace ClaimAssistantApp.Views
 
             LoadSparepartCategories();
             LoadSparepartManufacturers();
-            LoadSpareparts();
+            LoadSpareparts("","");
 
             loadSparepartCatogoriesToCombo();
             loadSparepartManufacturersToCombo();
+            loadSparepartsToCombo();
             
         }
 
@@ -90,12 +91,13 @@ namespace ClaimAssistantApp.Views
             }
         }
 
-        public async void LoadSpareparts()
+        public async void LoadSpareparts(string manufacturer,string catergory)
         {
             try
             {
+                LocalSparepartsList.Clear();
                 var client = new ServiceReference1.Service1Client();
-                var result = await client.GetSparepartsAsync();
+                var result = await client.GetSparepartsAsync(manufacturer,catergory);
                 var spareparts = JArray.Parse(result);
 
                 foreach (var item in spareparts)
@@ -166,12 +168,14 @@ namespace ClaimAssistantApp.Views
                 if (cmbSparepart.SelectedItem == null) return;
 
                 var jsonselected = JsonConvert.SerializeObject(cmbSparepart.SelectedItem);
-                var obj = JObject.Parse(jsonselected);
+                var obj = JObject.Parse(jsonselected); 
+                var id = (string)obj["sparepartId"];
                 var name = (string)obj["sparepartName"];
                 var price = (string)obj["spareUnitCost"];
-                lstboxSparelist.Items.Add(name + "-" + " Rs " + price + "/=  " + "  Qty: " + txtQuantity.Text);
+                lstboxSparelist.Items.Add(id + "- " + name + " Rs " + price + "/=  " + "  Qty: " + txtQuantity.Text);
 
                 _totalcost += Convert.ToSingle(price) * Convert.ToInt32(txtQuantity.Text);
+                txtSparecost.Text = _totalcost.ToString();
 
                 SparepartList.Add(new SparepartPayment_ML()
                 {
@@ -190,7 +194,19 @@ namespace ClaimAssistantApp.Views
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
             var selected = lstboxSparelist.SelectedValue;
-            var name = selected.ToString().Split('-')[0];
+            var id = selected.ToString().Split('-')[0];
+           
+
+            var r = SparepartList.Where(n => n.SparepartId.ToString() == id).ToList();
+
+            foreach (var item  in r)
+            {
+                _totalcost = _totalcost - Convert.ToSingle(item.SparepartCost) * Convert.ToInt32(item.SparepartQty);
+                txtSparecost.Text = _totalcost.ToString();
+                SparepartList.Remove(item);
+            }
+
+            
             lstboxSparelist.Items.Remove(selected);
         }
 
@@ -203,10 +219,10 @@ namespace ClaimAssistantApp.Views
             cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;
         }
 
-        private void loadSparepartsToCombo(int categoryId, int manufacturerId)
+        private void loadSparepartsToCombo()
         {
             var list = LocalSparepartsList;
-            var sparepartList = new List<Sparepart_ML>();
+            /*var sparepartList = new List<Sparepart_ML>();
             foreach (var item in list)
             {
                 if (item.sparepartCategory == categoryId || item.spareManufacturer==manufacturerId)
@@ -214,25 +230,25 @@ namespace ClaimAssistantApp.Views
                     sparepartList.Add(item);
                 }
 
-            }
+            }*/
             cmbSparepart.ItemsSource = list;
         }
 
         private void cmbSparePartCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue); 
-            var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
-            loadSparepartsToCombo(catID,ManId);
+            var catname = cmbSparePartCategory.SelectedValue.ToString();
+            var Manname = cmbSparepartManufacturer.SelectedValue.ToString();
+            LoadSpareparts(Manname, catname);
+            loadSparepartsToCombo();
         }
 
         private void cmbSparepartManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var catID = Convert.ToInt32(cmbSparePartCategory.SelectedValue);
-            var ManId = Convert.ToInt32(cmbSparepartManufacturer.SelectedValue);
-            loadSparepartsToCombo(catID,ManId);
+            var catname = cmbSparePartCategory.SelectedValue.ToString();
+            var Manname = cmbSparepartManufacturer.SelectedValue.ToString();
+            LoadSpareparts(Manname, catname);
+            loadSparepartsToCombo();
         }
-
-
 
         public ObservableDictionary DefaultViewModel
         {

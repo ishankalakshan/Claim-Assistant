@@ -92,7 +92,7 @@ namespace ClaimAssistantApp.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetSparepartManufacturersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSpareparts", ReplyAction="http://tempuri.org/IService1/GetSparepartsResponse")]
-        System.Threading.Tasks.Task<string> GetSparepartsAsync();
+        System.Threading.Tasks.Task<string> GetSparepartsAsync(string manufacturer, string catergory);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite);
@@ -177,8 +177,8 @@ namespace ClaimAssistantApp.ServiceReference1 {
             return base.Channel.GetSparepartManufacturersAsync();
         }
         
-        public System.Threading.Tasks.Task<string> GetSparepartsAsync() {
-            return base.Channel.GetSparepartsAsync();
+        public System.Threading.Tasks.Task<string> GetSparepartsAsync(string manufacturer, string catergory) {
+            return base.Channel.GetSparepartsAsync(manufacturer, catergory);
         }
         
         public System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite) {
