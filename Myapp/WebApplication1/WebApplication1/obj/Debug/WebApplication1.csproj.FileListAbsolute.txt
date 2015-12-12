@@ -89,3 +89,4 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebAppli
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll.licenses
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml

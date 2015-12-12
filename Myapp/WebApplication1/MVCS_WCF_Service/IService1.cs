@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.ServiceModel;
 using System.Text;
 using System.Data;
 using ModelLayer;
 using BusinessLayer;
+using System.ServiceModel;
 
 namespace MVCS_WCF_Service
 {
@@ -27,7 +27,6 @@ namespace MVCS_WCF_Service
         string GetClaimHistory(int policy_ID);
 
         [OperationContract]
-        [WebGet(UriTemplate = "AddClaimRequest")]
         int AddClaimRequest(string claimRequest);
 
         [OperationContract]
