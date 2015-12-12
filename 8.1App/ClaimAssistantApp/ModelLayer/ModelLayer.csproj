@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="Claim_ML.cs" />
     <Compile Include="Garage_ML.cs" />
+    <Compile Include="ImageSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SparepartCategory_ML.cs" />
     <Compile Include="SparepartManufacturer_ML.cs" />

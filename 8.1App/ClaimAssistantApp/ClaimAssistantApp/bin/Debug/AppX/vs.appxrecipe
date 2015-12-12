@@ -26,15 +26,15 @@
   <ItemGroup>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.exe">
       <PackagePath>ClaimAssistantApp.exe</PackagePath>
-      <Modified>2015-12-05T18:34:56.879</Modified>
+      <Modified>2015-12-06T17:29:06.021</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\BusinessLayer\bin\Debug\BusinessLayer.dll">
       <PackagePath>BusinessLayer.dll</PackagePath>
-      <Modified>2015-12-05T18:14:45.542</Modified>
+      <Modified>2015-12-06T17:29:01.164</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ModelLayer\bin\Debug\ModelLayer.dll">
       <PackagePath>ModelLayer.dll</PackagePath>
-      <Modified>2015-12-05T18:14:44.410</Modified>
+      <Modified>2015-12-06T17:29:00.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -110,11 +110,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimForm3.xbf">
       <PackagePath>Views\claimForm3.xbf</PackagePath>
-      <Modified>2015-12-05T18:14:47.719</Modified>
+      <Modified>2015-12-06T17:29:05.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimInformation.xbf">
       <PackagePath>Views\claimInformation.xbf</PackagePath>
-      <Modified>2015-12-05T18:14:47.721</Modified>
+      <Modified>2015-12-06T12:58:16.551</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\Views\claimSuccess.xbf">
       <PackagePath>Views\claimSuccess.xbf</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\ClaimAssistantApp.xr.xml">
       <PackagePath>ClaimAssistantApp.xr.xml</PackagePath>
-      <Modified>2015-11-22T17:53:38.940</Modified>
+      <Modified>2015-12-06T17:29:05.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

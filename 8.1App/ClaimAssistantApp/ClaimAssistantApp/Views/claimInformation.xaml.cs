@@ -100,28 +100,28 @@ namespace ClaimAssistantApp.Views
                 {
                     JArray policyInformation = JArray.Parse(result);
 
-                    tbInsuredPerson.Text = tbInsuredPerson.Text + " " + policyInformation[0]["Name"].ToString();
-                    tbAddress.Text = tbAddress.Text + " " + policyInformation[0]["Address"].ToString();
-                    tbNic.Text = tbNic.Text + " " + policyInformation[0]["NIC"].ToString();
-                    tbPhoneNo.Text = tbPhoneNo.Text + " " + policyInformation[0]["Mobile"].ToString();
-                    tbEmail.Text = tbEmail.Text + " " + policyInformation[0]["Email"].ToString();
+                    tbInsuredPerson.Text = policyInformation[0]["Name"].ToString();
+                    tbAddress.Text = policyInformation[0]["Address"].ToString();
+                    tbNic.Text = policyInformation[0]["NIC"].ToString();
+                    tbPhoneNo.Text = policyInformation[0]["Mobile"].ToString();
+                    tbEmail.Text = policyInformation[0]["Email"].ToString();
 
-                    tbRegistrationNo.Text = tbRegistrationNo.Text + " " + policyInformation[0]["RegistrationNo"].ToString();
-                    tbColor.Text = tbColor.Text + " " + policyInformation[0]["Color"].ToString();
-                    tbEngineNo.Text = tbEngineNo.Text + " " + policyInformation[0]["EngineNo"].ToString();
-                    tbChassissNo.Text = tbChassissNo.Text + " " + policyInformation[0]["ChassisNo"].ToString();
-                    tbManufacturer.Text = tbManufacturer.Text + " " + policyInformation[0]["ManufactureName"].ToString();
+                    tbRegistrationNo.Text = policyInformation[0]["RegistrationNo"].ToString();
+                    tbColor.Text = policyInformation[0]["Color"].ToString();
+                    tbEngineNo.Text =policyInformation[0]["EngineNo"].ToString();
+                    tbChassissNo.Text = policyInformation[0]["ChassisNo"].ToString();
+                    tbManufacturer.Text = policyInformation[0]["ManufactureName"].ToString();
 
-                    tbModel.Text = tbModel.Text + " " + policyInformation[0]["Model"].ToString();
-                    tbYear.Text = tbYear.Text + " " + policyInformation[0]["MakeYear"].ToString();
-                    tbEngineCapacity.Text = tbEngineCapacity.Text + " " + policyInformation[0]["EngineCpacity"].ToString();
-                    tbAbsoluteOwner.Text = tbAbsoluteOwner.Text + " " + policyInformation[0]["AbsoluteOwner"].ToString();
-                    tbFinancialRights.Text = tbFinancialRights.Text + " " + policyInformation[0]["FinancialRights"].ToString();
+                    tbModel.Text = policyInformation[0]["Model"].ToString();
+                    tbYear.Text = policyInformation[0]["MakeYear"].ToString();
+                    tbEngineCapacity.Text = policyInformation[0]["EngineCpacity"].ToString();
+                    tbAbsoluteOwner.Text = policyInformation[0]["AbsoluteOwner"].ToString();
+                    tbFinancialRights.Text =  policyInformation[0]["FinancialRights"].ToString();
 
-                    tbUsage.Text = tbUsage.Text + " " + policyInformation[0]["Usage"].ToString();
-                    tbCurrentDamages.Text = tbCurrentDamages.Text + " " + policyInformation[0]["CurrentDamages"].ToString();
-                    tbExtraFitting.Text = tbExtraFitting.Text + " " + policyInformation[0]["ExtraFittins"].ToString();
-                    tbPresentValue.Text = tbPresentValue.Text + " " + policyInformation[0]["PresentValue"].ToString();
+                    tbUsage.Text = policyInformation[0]["Usage"].ToString();
+                    tbCurrentDamages.Text = policyInformation[0]["CurrentDamages"].ToString();
+                    tbExtraFitting.Text = policyInformation[0]["ExtraFittins"].ToString();
+                    tbPresentValue.Text = policyInformation[0]["PresentValue"].ToString();
 
                     tbPolicyId.Text = tbPolicyId.Text + " " + "4";
                     tbExpireOn.Text = tbExpireOn.Text + " " + policyInformation[0]["ExpireOn"].ToString();

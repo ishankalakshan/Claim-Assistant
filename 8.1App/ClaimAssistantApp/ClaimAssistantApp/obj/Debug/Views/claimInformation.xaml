@@ -75,43 +75,313 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Orientation="Vertical" Margin="50,0,0,0">
-                    <TextBlock Text="Client" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>
-                    <TextBlock Name="tbInsuredPerson" Text="Insured Person: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbAddress" Text="Address: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbNic" Text="NIC:" FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbPhoneNo" Text="Contact No: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbEmail" Text="Email: " FontSize="15" Margin="2"></TextBlock>
-                </StackPanel>
-                <StackPanel Grid.Column="1" Margin="50,0,0,0">
-                    <TextBlock Text="Vehicle" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>
-                    <TextBlock Name="tbRegistrationNo" Text="Reg No: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbColor" Text="Color: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbEngineNo" Text="Engine No: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbChassissNo" Text="Chassis No: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbManufacturer" Text="Manufacturer: " FontSize="15" Margin="2"></TextBlock>
+                    <Grid>
+                       <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-                    <TextBlock Name="tbModel" Text="Model: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbYear" Text="Year: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbEngineCapacity" Text="Engine Capacity: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbAbsoluteOwner" Text="Absolute Owner: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbFinancialRights" Text="Financial Rights: " FontSize="15" Margin="2"></TextBlock>
-
-                    <TextBlock Name="tbUsage" Text="Usage:" FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbCurrentDamages" Text="Current Damages: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbExtraFitting" Text="Extra Fitting: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbPresentValue" Text="Present Value: " FontSize="15" Margin="2"></TextBlock>
+                        <TextBlock Text="Client" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"/>
+                        <TextBlock Text="Insured Person: " Grid.Column="0" Grid.Row="1" FontSize="15"/>
+                        <TextBox Name="tbInsuredPerson" 
+                                 Grid.Column="1" 
+                                 Grid.Row="1" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Text="Address: " Grid.Column="0" Grid.Row="2" FontSize="15"/>
+                        <TextBox Name="tbAddress" 
+                                 Grid.Column="1" 
+                                 Grid.Row="2" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Text="NIC:" FontSize="15"/>
+                        <TextBox Name="tbNic" 
+                                 Grid.Column="1" 
+                                 Grid.Row="3" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="4" Text="Contact No: " FontSize="15"/>
+                        <TextBox Name="tbPhoneNo" 
+                                 Grid.Column="1" 
+                                 Grid.Row="4" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="5" Text="Email: " FontSize="15"/>
+                        <TextBox Name="tbEmail" 
+                                 Grid.Column="1" 
+                                 Grid.Row="5" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                    </Grid>                       
                 </StackPanel>
-                <StackPanel Grid.Column="2" Margin="50,0,0,0">
-                    <TextBlock Text="Policy" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>
-                    <TextBlock Name="tbPolicyId" Text="Policy ID: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbExpireOn" Text="Expire On: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbCommenceOn" Text="Commenced From: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbNaturalDisaster" Text="Natural Disaster: " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbPassengerCompensastion" Text="Passenger Compensastion: Rs. " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbDriverCompensastion" Text="Driver Compensastion: Rs. " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbTowingCharges" Text="Towing Charges: Rs. " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbTerrorCover" Text="Terrorism Cover: Rs. " FontSize="15" Margin="2"></TextBlock>
-                    <TextBlock Name="tbVandalism" Text="Vandalism Cover: Rs. " FontSize="15" Margin="2"></TextBlock>
+                <StackPanel Grid.Column="1" Margin="50,0,0,0" Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Vehicle" 
+                                   Grid.Column="0" 
+                                   Grid.ColumnSpan="2" 
+                                   Grid.Row="0" 
+                                   FontSize="30" 
+                                   FontStyle="Italic"  
+                                   Margin="2,0,0,10"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Reg No: " FontSize="15"/>
+                        <TextBox Name="tbRegistrationNo" 
+                                 Grid.Column="1" 
+                                 Grid.Row="1" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Color: " FontSize="15"/>
+                        <TextBox Name="tbColor" 
+                                 Grid.Column="1" 
+                                 Grid.Row="2" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Text="Engine No: " FontSize="15"/>
+                        <TextBox Name="tbEngineNo" 
+                                 Grid.Column="1" 
+                                 Grid.Row="3" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="4" Text="Chassis No: " FontSize="15"/>
+                        <TextBox Name="tbChassissNo" 
+                                 Grid.Column="1" 
+                                 Grid.Row="4" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="5" Text="Manufacturer: " FontSize="15"/>
+                        <TextBox Name="tbManufacturer" 
+                                 Grid.Column="1" 
+                                 Grid.Row="5" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="6" Text="Model: " FontSize="15"/>
+                        <TextBox Name="tbModel" 
+                                 Grid.Column="1" 
+                                 Grid.Row="6" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="7" Text="Year: " FontSize="15"/>
+                        <TextBox Name="tbYear" 
+                                 Grid.Column="1" 
+                                 Grid.Row="7" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="8" Text="Engine Capacity: " FontSize="15"/>
+                        <TextBox Name="tbEngineCapacity" 
+                                 Grid.Column="1" 
+                                 Grid.Row="8" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="9" Text="Absolute Owner: " FontSize="15"/>
+                        <TextBox Name="tbAbsoluteOwner" 
+                                 Grid.Column="1" 
+                                 Grid.Row="9" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="10" Text="Financial Rights: " FontSize="15"/>
+                        <TextBox Name="tbFinancialRights" 
+                                 Grid.Column="1" 
+                                 Grid.Row="10" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="11" Text="Usage:" FontSize="15"/>
+                        <TextBox Name="tbUsage" 
+                                 Grid.Column="1" 
+                                 Grid.Row="11" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="12" Text="Current Damages: " FontSize="15"/>
+                        <TextBox Name="tbCurrentDamages" 
+                                 Grid.Column="1" 
+                                 Grid.Row="12" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="13" Text="Extra Fitting: " FontSize="15"/>
+                        <TextBox Name="tbExtraFitting" 
+                                 Grid.Column="1" 
+                                 Grid.Row="13" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="14" Text="Present Value: " FontSize="15"/>
+                        <TextBox Name="tbPresentValue" 
+                                 Grid.Column="1" 
+                                 Grid.Row="14" 
+                                 FontSize="15"  
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                    </Grid>                         
+                </StackPanel>
+                
+                <StackPanel Grid.Column="2" Margin="50,0,0,0" Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Policy" 
+                                   Grid.Column="0" 
+                                   Grid.Row="0" 
+                                   Grid.ColumnSpan="2" 
+                                   FontSize="30" 
+                                   FontStyle="Italic"  
+                                   Margin="2,0,0,10"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Policy ID: " FontSize="15"/>
+                        <TextBox Name="tbPolicyId" 
+                                 Grid.Column="1" 
+                                 Grid.Row="1" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Expire On: " FontSize="15"/>
+                        <TextBox Name="tbExpireOn" 
+                                 Grid.Column="1" 
+                                 Grid.Row="2" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Text="Commenced From: " FontSize="15"/>
+                        <TextBox Name="tbCommenceOn" 
+                                 Grid.Column="1" 
+                                 Grid.Row="3" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="4" Text="Natural Disaster: " FontSize="15"/>
+                        <TextBox Name="tbNaturalDisaster" 
+                                 Grid.Column="1" 
+                                 Grid.Row="4" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="5" Text="Passenger Compensastion: Rs. " FontSize="15"/>
+                        <TextBox Name="tbPassengerCompensastion" 
+                                 Grid.Column="1" 
+                                 Grid.Row="5" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="6" Text="Driver Compensastion: Rs. " FontSize="15"/>
+                        <TextBox Name="tbDriverCompensastion" 
+                                 Grid.Column="1" 
+                                 Grid.Row="6" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="7" Text="Towing Charges: Rs. " FontSize="15"/>
+                        <TextBox Name="tbTowingCharges" 
+                                 Grid.Column="1" 
+                                 Grid.Row="7" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="8" Text="Terrorism Cover: Rs. " FontSize="15"/>
+                        <TextBox Name="tbTerrorCover" 
+                                 Grid.Column="1" 
+                                 Grid.Row="8" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                        <TextBlock Grid.Column="0" Grid.Row="9" Text="Vandalism Cover: Rs. " FontSize="15"/>
+                        <TextBox Name="tbVandalism" 
+                                 Grid.Column="1" 
+                                 Grid.Row="9" 
+                                 FontSize="15" 
+                                 Background="Transparent" 
+                                 Foreground="White" 
+                                 BorderThickness="0"/>
+                    </Grid>    
                 </StackPanel>
                 <StackPanel Name="stackHistory" Grid.Column="3" Margin="50,0,0,0">
                     <TextBlock Text="Claim History" FontSize="30" FontStyle="Italic"  Margin="2,0,0,10"></TextBlock>

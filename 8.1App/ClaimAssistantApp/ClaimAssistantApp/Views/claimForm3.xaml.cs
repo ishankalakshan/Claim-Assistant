@@ -17,7 +17,10 @@ using Windows.Web.AtomPub;
 using ModelLayer;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
+using Windows.Storage.Pickers;
+using Windows.ApplicationModel.Activation;
+using Windows.Storage;
+using Windows.UI.Xaml.Media.Imaging;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace ClaimAssistantApp.Views
@@ -142,7 +145,8 @@ namespace ClaimAssistantApp.Views
                 (App.Current as App).rentAmount,
                 SparepartList,
                 txtgarageCost.Text,
-                txtgarageCost.Text,
+                txtOtherCosts.Text,
+                txtDeductions.Text,
                 (App.Current as App).empid
                 );
             var result = JsonConvert.SerializeObject(ml);
@@ -250,6 +254,11 @@ namespace ClaimAssistantApp.Views
             loadSparepartsToCombo();
         }
 
+        private double CalculateAmountPayable(double sparepartCost,double garageCost,double otherCost,double deduction, double insurancePercentage)
+        {
+            return ((sparepartCost + garageCost + otherCost) - deduction);
+        }
+
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
@@ -280,6 +289,42 @@ namespace ClaimAssistantApp.Views
 
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
+        }
+
+
+        private void btnChoosePhotos_Click(object sender, RoutedEventArgs e)
+        {
+            ChoosePhotos();
+        }
+
+        public async void ChoosePhotos()
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".jpg");
+            openPicker.FileTypeFilter.Add(".jpeg");
+            openPicker.FileTypeFilter.Add(".png");
+            // Launch file open picker and caller app is suspended and may be terminated if required
+           // await openPicker.PickMultipleFilesAsync();
+
+            IAsyncOperation<IReadOnlyList<StorageFile>> asyncOp = openPicker.PickMultipleFilesAsync();
+            IReadOnlyList<StorageFile> fileList = await asyncOp;
+
+            if (fileList!=null)
+            {
+                var myPictures = new List<BitmapImage>();
+
+                foreach (var item in fileList)
+                {
+                    var stream = await item.OpenAsync(Windows.Storage.FileAccessMode.Read);
+                    var image = new BitmapImage();
+                    image.SetSource(stream);
+                    myPictures.Add(image);
+                }
+
+                imgPresenter.DataContext = myPictures;
+            }
         }
     }
 }

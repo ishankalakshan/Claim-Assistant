@@ -58,6 +58,7 @@ namespace DataLayer
                 cmd = new SqlCommand("sp_InsertClaimPayment", con) { CommandType = CommandType.StoredProcedure };
                 cmd.Parameters.AddWithValue("@OtherCosts", ml.otherCosts);
                 cmd.Parameters.AddWithValue("@GarageCosts", ml.garageCosts);
+                cmd.Parameters.AddWithValue("@Deductions", ml.Deductions);
 
                 SqlParameter retval = cmd.Parameters.Add("@PaymentId", SqlDbType.Int);
                 retval.Direction = ParameterDirection.ReturnValue;
