@@ -27,6 +27,10 @@ namespace MVCS_WCF_Service
         string GetClaimHistory(int policy_ID);
 
         [OperationContract]
+        [WebGet(UriTemplate = "AddClaimRequest")]
+        int AddClaimRequest(string claimRequest);
+
+        [OperationContract]
         string GetGarageInfo(string location);
 
         [OperationContract]

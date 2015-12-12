@@ -57,6 +57,11 @@ namespace MVCS_WCF_Service
             return true;
         }
 
+        public int AddClaimRequest(string claimRequest)
+        {
+            return new ClaimRequest_BL().AddClaimRequest(new ClaimRequest_BL().CreateClaimRequestObject(claimRequest));
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

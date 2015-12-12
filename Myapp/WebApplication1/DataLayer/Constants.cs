@@ -40,6 +40,7 @@ namespace DataLayer
         public const string sp_UpdateVehicle = "sp_UpdateVehicle";
         public const string sp_GetPolicyDetails = "sp_GetPolicyDetails";
         public const string sp_GetClaimHistory = "sp_GetClaimHistory";
+        public const string sp_AddClaimRequest = "sp_AddClaimRequest";
 
 
     }

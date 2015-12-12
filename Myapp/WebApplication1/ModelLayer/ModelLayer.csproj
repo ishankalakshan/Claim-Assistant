@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimRequest_ML.cs" />
     <Compile Include="Claim_ML.cs" />
     <Compile Include="Employee_ML.cs" />
     <Compile Include="Garage_ML.cs" />

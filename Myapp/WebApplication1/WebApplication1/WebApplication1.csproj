@@ -117,6 +117,7 @@
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
+    <Content Include="Views\ClaimRequests.aspx" />
     <Content Include="Views\Employee.aspx" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\Manufacturer.aspx" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClaimRequests.aspx.cs">
+      <DependentUpon>ClaimRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClaimRequests.aspx.designer.cs">
+      <DependentUpon>ClaimRequests.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Employee.aspx.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
