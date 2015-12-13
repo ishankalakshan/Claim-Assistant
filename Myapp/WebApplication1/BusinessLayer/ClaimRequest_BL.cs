@@ -1,7 +1,11 @@
-﻿using ModelLayer;
-using DataLayer;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ModelLayer;
+using DataLayer;
+using System.Data;
 using Newtonsoft.Json.Linq;
 
 namespace BusinessLayer
@@ -27,8 +31,7 @@ namespace BusinessLayer
                 }
                 catch (System.Exception)
                 {
-
-                    throw;
+                    return 2;
                 }
             }
             else
@@ -39,7 +42,7 @@ namespace BusinessLayer
             
         }
 
-        private bool CheckPolicyNumberValidity(ClaimRequest_ML ml)
+        public bool CheckPolicyNumberValidity(ClaimRequest_ML ml)
         {
             try
             {
@@ -47,8 +50,10 @@ namespace BusinessLayer
                 {
                     {"@policy_id",ml.PolicyId}
                 };
-                var dt = new DBAccessController().RetriveRecordsWithPara(StoredProcedures.sp_GetPolicyDetails, DataDic);
-                if (dt.Rows.Count>0)
+
+                DBAccessController db = new DBAccessController();
+                var dt = db.RetriveRecordsWithPara(StoredProcedures.sp_GetPolicyDetails, DataDic);
+                if (dt.Rows.Count > 0)
                 {
                     return true;
                 }
@@ -70,12 +75,30 @@ namespace BusinessLayer
             {
                 //var obj = JObject.Parse(claimRequest);
                 var jArray = JObject.Parse(claimRequest);
-                var claimRequestObj = new ClaimRequest_ML(jArray["policyId"].ToString(), jArray["latitude"].ToString(), jArray["longitude"].ToString(), jArray["status"].ToString(), DateTime.Now);               
+                var claimRequestObj = new ClaimRequest_ML(jArray["PolicyId"].ToString(), jArray["Latitude"].ToString(), jArray["Longitude"].ToString(), jArray["Status"].ToString(), DateTime.Now);               
                 return claimRequestObj;
             }
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        public DataTable GetClaimRequests(string status)
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    {"@Status",status}
+                };
+
+                return new DBAccessController().RetriveRecordsWithPara(StoredProcedures.sp_GetClaimRequests, DataDic);
+            }
+            catch (Exception)
+            {
+                
                 throw;
             }
         }

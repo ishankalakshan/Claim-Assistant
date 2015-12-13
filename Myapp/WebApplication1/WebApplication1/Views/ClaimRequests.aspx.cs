@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ModelLayer;
+using BusinessLayer;
 
 namespace WebApplication1.Views
 {
@@ -11,7 +13,15 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GetClaimRequests();
         }
+
+        private void GetClaimRequests()
+        {
+            gridClaimRequests.DataSource = new ClaimRequest_BL().GetClaimRequests(txtStatusSearch.Text);
+            gridClaimRequests.DataBind();
+        } 
+
+
     }
 }

@@ -30,6 +30,10 @@ namespace ModelLayer
             {
                 Longitude = longitude;
             }
+            if (status != null)
+            {
+                Status = status;
+            }
             if (submittime != null)
             {
                 SubmitTime = submittime;

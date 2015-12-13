@@ -9,6 +9,7 @@ using BusinessLayer;
 using System.Data;
 using BusinessLayer.Spareparts;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace MVCS_WCF_Service
 {
@@ -16,6 +17,13 @@ namespace MVCS_WCF_Service
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class Service1 : IService1
     {
+        public int AddClaimRequest()
+        {
+            var dt = new ClaimRequest_BL().CheckPolicyNumberValidity(new ClaimRequest_ML { PolicyId = 4 });
+
+            return 0;
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
@@ -55,11 +63,6 @@ namespace MVCS_WCF_Service
             var call = new Claim_BL().createClaimObject(claim);
 
             return true;
-        }
-
-        public int AddClaimRequest(string claimRequest)
-        {
-            return new ClaimRequest_BL().AddClaimRequest(new ClaimRequest_BL().CreateClaimRequestObject(claimRequest));
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

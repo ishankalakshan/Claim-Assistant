@@ -25,6 +25,7 @@ namespace Claim.MobileApp
             var geolocator = new Geolocator { DesiredAccuracyInMeters = 50 };
             try
             {
+                ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();        
                 //MessageDialog msgbox = new MessageDialog("Reported Successfully");
                 //await msgbox.ShowAsync();  
                 /*var geoposition = await geolocator.GetGeopositionAsync(

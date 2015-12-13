@@ -7,6 +7,8 @@ using System.Data;
 using ModelLayer;
 using BusinessLayer;
 using System.ServiceModel;
+using System.ServiceModel.Web;
+using System.IO;
 
 namespace MVCS_WCF_Service
 {
@@ -14,6 +16,9 @@ namespace MVCS_WCF_Service
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        int AddClaimRequest();
+
         [OperationContract]
         string GetData(int value);
 
@@ -25,9 +30,6 @@ namespace MVCS_WCF_Service
 
         [OperationContract]
         string GetClaimHistory(int policy_ID);
-
-        [OperationContract]
-        int AddClaimRequest(string claimRequest);
 
         [OperationContract]
         string GetGarageInfo(string location);

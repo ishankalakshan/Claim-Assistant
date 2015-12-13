@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{0B8C992C-FB09-4846-9315-38A9A211F41D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{0B056E59-91C1-4383-99C8-DEF6313D5295}"
@@ -10,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{B9A312CC-A39A-4EC6-9FA5-C4A45ACDD71D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCS_WCF_Service", "MVCS_WCF_Service\MVCS_WCF_Service.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rest_Service", "Rest_Service\Rest_Service.csproj", "{C46DF0D0-8BAD-4496-81DC-446B3F33BC07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46DF0D0-8BAD-4496-81DC-446B3F33BC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46DF0D0-8BAD-4496-81DC-446B3F33BC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46DF0D0-8BAD-4496-81DC-446B3F33BC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46DF0D0-8BAD-4496-81DC-446B3F33BC07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
