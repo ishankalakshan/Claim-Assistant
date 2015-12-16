@@ -91,6 +91,7 @@
     <Content Include="css\plugins\social-buttons\social-buttons.css" />
     <Content Include="css\plugins\timeline\timeline.css" />
     <Content Include="css\sb-admin.css" />
+    <Content Include="css\style-login.css" />
     <Content Include="css\Style.css" />
     <Content Include="Error.aspx" />
     <Content Include="font-awesome\css\font-awesome.css" />
@@ -115,6 +116,7 @@
     <Content Include="js\plugins\metisMenu\jquery.metisMenu.js" />
     <Content Include="js\plugins\morris\morris.js" />
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="js\prefixfree.min.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
     <Content Include="Views\ClaimRequests.aspx" />

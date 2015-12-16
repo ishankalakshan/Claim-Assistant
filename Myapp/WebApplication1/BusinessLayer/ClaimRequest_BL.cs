@@ -102,5 +102,25 @@ namespace BusinessLayer
                 throw;
             }
         }
+
+        public bool UpdateClaimRequest(ClaimRequest_ML ml)
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    {"@claimRequestId",ml.Id},
+                    {"@EmpId",ml.RespondEmployeeId},
+                    {"@status",ml.Status},
+                    {"@respondtime",ml.RespondTime}
+                };
+                new DBAccessController().InsertRecord(StoredProcedures.sp_UpdateClaimRequest, DataDic);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

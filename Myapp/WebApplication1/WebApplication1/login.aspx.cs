@@ -22,14 +22,14 @@ namespace WebApplication1
         {
             var User = new UserLogin_ML();
             {
-                User.username = txtUsername.Text;
-                User.password = txtPassword.Text;
+                User.username = txtUsername.Value;
+                User.password = txtPassword.Value;
             };
 
             state = new UserLogin_BL().UserAuthentication(User);
             if (state)
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("Views/Home.html");
             }
             else
             {

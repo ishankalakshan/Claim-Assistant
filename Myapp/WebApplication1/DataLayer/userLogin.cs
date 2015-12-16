@@ -37,9 +37,11 @@ namespace DataLayer
 
                 adp.Fill(dt);
 
-                if (dt.Rows.Count > 0)
+                if (dt.Rows.Count == 1)
                 {
                     Session["Username"] = ml.username;
+                    Session["EmpId"] = dt.Rows[0]["EmpId"].ToString();
+                    Session["EmpName"] = dt.Rows[0]["EmpName"].ToString();
                     return true;
                    
                 }

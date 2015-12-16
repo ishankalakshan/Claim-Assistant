@@ -2,6 +2,9 @@
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false" type="text/javascript"></script>
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false"
+        type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
      <i class="fa fa-user"></i>&nbsp;Employees
@@ -12,9 +15,66 @@
      <asp:ScriptManager runat="server"></asp:ScriptManager>
 
     <div class="form-inline">
-        <button type="button" class="btn btn-primary horizontal-bar" data-toggle="modal" data-target="#EmployeeModal">
-            View
+        <button type="button" runat="server" class="btn btn-primary horizontal-bar" id="btnRespond" onserverclick="btnRespond_ServerClick">
+            Respond
         </button>
+    </div>
+
+    <div class="modal fade" id="DetailsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Claim Request</h4>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td colspan="2"><asp:Label Text="" CssClass="col-sm-10 control-label" ID="id" Visible="false" runat="server" /></td>                        
+                        </tr>
+                        <tr>
+                            <td><label class="col-sm-2 control-label">Policy Id</label></td>
+                            <td><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblPolicyId" runat="server" /></td>                        
+                        </tr>
+                        <tr>
+                            <td><label class="col-sm-2 control-label">Client</label></td>
+                            <td><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblClient" runat="server" /></td>                         
+                        </tr>
+                        <tr>
+                            <td><label class="col-sm-2 control-label">Mobile</label></td>
+                            <td><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblMobile" runat="server" /></td>               
+                        </tr>
+                        <tr>
+                            <td><label class="col-sm-2 control-label">Status</label></td>                           
+                            <td><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblStatus" runat="server" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="col-sm-2 control-label">Submited Time</label></td>                        
+                            <td><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblSubmitTime" runat="server" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                 <div>
+                                   <asp:Panel ID="Panel1" runat="server">
+                                       <%--Place holder to fill with javascript by server side code--%>
+                                       <asp:Literal ID="js" runat="server"></asp:Literal>
+                                       <%--Place for google to show your MAP--%>
+                                       <div id="map_canvas" style="width: 100%; height: 400px; 
+		                            margin-bottom: 2px;">
+                                       </div>
+                                   </asp:Panel> 
+                                </div>
+                            </td>                        
+                        </tr>
+                       
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">No</button>
+                    <button type="button" runat="server" class="btn btn-success btn-sm" data-dismiss="modal" id="btnResponded" onserverclick="btnResponded_ServerClick"> Mark as Responded</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
@@ -30,7 +90,7 @@
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%" onhtml OnHtmlDataCellPrepared="gridClaimRequests_HtmlDataCellPrepared">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="id" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
@@ -46,6 +106,10 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="respondtime" VisibleIndex="6" Caption="Respond">
                         </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="latitude" Visible="false" VisibleIndex="7" Caption="latitude">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="longitude" Visible="false" VisibleIndex="8" Caption="longitude">
+                        </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowPager" />
                     <Settings ShowTitlePanel="true" />
@@ -55,5 +119,7 @@
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
+
+
 
 </asp:Content>
