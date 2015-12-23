@@ -120,6 +120,7 @@
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
     <Content Include="Views\ClaimRequests.aspx" />
+    <Content Include="Views\Claims.aspx" />
     <Content Include="Views\Employee.aspx" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\Manufacturer.aspx" />
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="Views\ClaimRequests.aspx.designer.cs">
       <DependentUpon>ClaimRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Claims.aspx.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Claims.aspx.designer.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Employee.aspx.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
