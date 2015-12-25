@@ -79,15 +79,15 @@
                 <br />
                 <dx:ASPxGridView ID="gridGarages" KeyFieldName="GarageID" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="GarageID" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="GarageID" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="GarageName" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="GarageName" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="GarageLocation" VisibleIndex="2" Caption="Location" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="GarageLocation" VisibleIndex="2" Caption="Location" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="GarageTP" VisibleIndex="3" Caption="Contact No">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="GarageTP" VisibleIndex="3" Caption="Contact No">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="Email" VisibleIndex="3" Caption="Email">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Email" VisibleIndex="3" Caption="Email">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />

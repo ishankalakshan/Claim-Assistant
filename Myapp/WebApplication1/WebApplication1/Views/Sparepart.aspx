@@ -89,15 +89,15 @@
                     <Columns>
                         <dx:GridViewDataTextColumn Visible="false" FieldName="sparepartId" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" VisibleIndex="1" Caption="Category">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="spareCategoryName" VisibleIndex="1" Caption="Category">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparepartName" VisibleIndex="3" Caption="Model" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="sparepartName" VisibleIndex="3" Caption="Model" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareparManufacYear" VisibleIndex="4" Caption=" Model Year">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="spareparManufacYear" VisibleIndex="4" Caption=" Model Year">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparepartUnitCost" VisibleIndex="5" Caption="Unit Cost">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="sparepartUnitCost" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="5" Caption="Unit Cost (Rs)">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />

@@ -99,6 +99,37 @@ namespace WebApplication1.Views
             string value = e.GetValue("status").ToString();
             if (value == "Pending")
                 e.Cell.ForeColor = System.Drawing.Color.Red;
+        }
+
+        protected void btnFail_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var ml = new ClaimRequest_ML()
+                {
+                    Id = Convert.ToInt32(id.Text),
+                    RespondEmployeeId = 3,
+                    Status = "Failed",
+                    RespondTime = DateTime.Now
+                };
+                var result = new ClaimRequest_BL().UpdateClaimRequest(ml);
+
+                if (result)
+                {
+                    GetClaimRequests();
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#DetailsModal').modal('hide')});</script>", false);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        protected void txtStatusSearch_TextChanged(object sender, EventArgs e)
+        {
+            GetClaimRequests();
         } 
 
 

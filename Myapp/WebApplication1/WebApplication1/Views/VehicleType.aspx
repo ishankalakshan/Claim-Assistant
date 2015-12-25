@@ -54,17 +54,17 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxGridView ID="gridVehicleTypes" KeyFieldName="VehicleTypeID" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView ID="gridVehicleTypes" KeyFieldName="VehicleTypeID" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="VehicleTypeID" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="VehicleTypeName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" />
                     <Settings ShowTitlePanel="true" />
-                    <SettingsText Title="Garages Information" />
-                    <SettingsBehavior AllowSelectByRowClick="true" />
+                    <SettingsText Title="Vehicle Types" />
+                    <SettingsBehavior AllowSelectByRowClick="true" AllowSelectSingleRowOnly="true" />
                 </dx:ASPxGridView>
             </div>
         </ContentTemplate>

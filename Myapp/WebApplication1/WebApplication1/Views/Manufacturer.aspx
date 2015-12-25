@@ -60,15 +60,15 @@
                 <br />
                 <dx:ASPxGridView ID="gridManufacturers" KeyFieldName="ManufactureId" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureId" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="ManufactureId" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureName" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="ManufactureName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" />
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Manufacturers" />
-                    <SettingsBehavior AllowSelectByRowClick="true" />
+                    <SettingsBehavior AllowSelectByRowClick="true" AllowSelectSingleRowOnly="true" />
                 </dx:ASPxGridView>
             </div>
         </ContentTemplate>

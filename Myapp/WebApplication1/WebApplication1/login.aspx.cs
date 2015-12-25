@@ -29,7 +29,7 @@ namespace WebApplication1
             state = new UserLogin_BL().UserAuthentication(User);
             if (state)
             {
-                Response.Redirect("Views/Home.html");
+                Response.Redirect("Views/Home.aspx");
             }
             else
             {

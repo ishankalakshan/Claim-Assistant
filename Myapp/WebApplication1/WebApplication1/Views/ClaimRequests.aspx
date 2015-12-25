@@ -7,7 +7,7 @@
         type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
-     <i class="fa fa-user"></i>&nbsp;Employees
+     <i class="fa fa-phone"></i>&nbsp;Claim Requests
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpFprmContaintName" runat="server">
 </asp:Content>
@@ -70,8 +70,9 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">No</button>
-                    <button type="button" runat="server" class="btn btn-success btn-sm" data-dismiss="modal" id="btnResponded" onserverclick="btnResponded_ServerClick"> Mark as Responded</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="button" runat="server" class="btn btn-success btn-sm" data-dismiss="modal" id="btnResponded" onserverclick="btnResponded_ServerClick">Responded</button>
+                    <button type="button" runat="server" class="btn btn-danger btn-sm" data-dismiss="modal" id="btnFail" onserverclick="btnFail_ServerClick">Failed</button>
                 </div>
             </div>
         </div>
@@ -84,31 +85,31 @@
                 <table border="0">
                     <tr>
                         <td>
-                            <dx:ASPxTextBox ID="txtStatusSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter status Search" Width="170px">
+                            <dx:ASPxTextBox ID="txtStatusSearch" OnTextChanged="txtStatusSearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Search by status" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%" onhtml OnHtmlDataCellPrepared="gridClaimRequests_HtmlDataCellPrepared">
+                <dx:ASPxGridView ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%" OnHtmlDataCellPrepared="gridClaimRequests_HtmlDataCellPrepared">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="id" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="Policy_ID" VisibleIndex="1" Caption="PolicyId">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Policy_ID" VisibleIndex="1" Caption="Policy Id">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="Client" VisibleIndex="2" Caption="Client">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Client" VisibleIndex="2" Caption="Client">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="Mobile" VisibleIndex="3" Caption="Telephone">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Mobile" VisibleIndex="3" Caption="Telephone">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="status" VisibleIndex="4" Caption="Status">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="status" VisibleIndex="4" Caption="Status">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="submittime" VisibleIndex="5" Caption="Submit">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="submittime" VisibleIndex="5" Caption="Submit">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="respondtime" VisibleIndex="6" Caption="Respond">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="respondtime" VisibleIndex="6" Caption="Respond">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="latitude" Visible="false" VisibleIndex="7" Caption="latitude">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="latitude" Visible="false" VisibleIndex="7" Caption="latitude">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="longitude" Visible="false" VisibleIndex="8" Caption="longitude">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="longitude" Visible="false" VisibleIndex="8" Caption="longitude">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowPager" />
@@ -120,6 +121,22 @@
         </ContentTemplate>
     </asp:UpdatePanel>
 
+    <div class="modal fade" id="SelectErrorModal">
+        <div class="modal-dialog error">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Heads up! You have not selected a record.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </asp:Content>

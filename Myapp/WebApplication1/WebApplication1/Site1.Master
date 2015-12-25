@@ -66,18 +66,18 @@
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">                        
                         <li>
-                            <a href="Views/Home.html"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a>
+                            <a href="../Views/Home.aspx"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a>
                             <a href=""><i class="mif-folder-plus"></i>&nbsp;&nbsp;New Policy</a>
-                            <a href=""><i class="mif-file-text"></i>&nbsp;&nbsp;Claims</a>
-                            <a href=""><i class="mif-perm-phone-msg"></i>&nbsp;&nbsp;Claim Requests</a>
-                            <a href="Views/Vehicle.aspx"><i class="icon mif-automobile"></i>&nbsp;&nbsp;Vehicles</a>
-                            <a href="Views/VehicleType.aspx"><i class="icon mif-list2"></i>&nbsp;&nbsp;Vehicle Types</a>
-                            <a href="Views/Garages.aspx"><i class="icon mif-wrench"></i>&nbsp;&nbsp;Garages</a>
-                            <a href="Views/TowTruckService.aspx"><i class="icon mif-truck"></i>&nbsp;&nbsp;Tow Trucks</a>
-                            <a href="Views/Sparepart.aspx"><i class="icon mif-cog"></i>&nbsp;&nbsp;Spareparts</a>
-                            <a href="Views/Manufacturer.aspx"><i class="icon mif-trademark"></i>&nbsp;&nbsp;Manufacturers</a>
-                            <a href="Views/SparepartCatergory.aspx"><i class="icon mif-cabinet"></i>&nbsp;&nbsp;Categories</a>
-                            <a href="Views/Employee.aspx"><i class="icon mif-users"></i>&nbsp;&nbsp;Employees</a>
+                            <a href="../Views/Claims.aspx"><i class="mif-file-text"></i>&nbsp;&nbsp;Claims</a>
+                            <a href="../Views/ClaimRequests.aspx"><i class="mif-perm-phone-msg"></i>&nbsp;&nbsp;Claim Requests</a>
+                            <a href="../Views/Vehicle.aspx"><i class="icon mif-automobile"></i>&nbsp;&nbsp;Vehicles</a>
+                            <a href="../Views/VehicleType.aspx"><i class="icon mif-list2"></i>&nbsp;&nbsp;Vehicle Types</a>
+                            <a href="../Views/Garages.aspx"><i class="icon mif-wrench"></i>&nbsp;&nbsp;Garages</a>
+                            <a href="../Views/TowTruckService.aspx"><i class="icon mif-truck"></i>&nbsp;&nbsp;Tow Trucks</a>
+                            <a href="../Views/Sparepart.aspx"><i class="icon mif-cog"></i>&nbsp;&nbsp;Spareparts</a>
+                            <a href="../Views/Manufacturer.aspx"><i class="icon mif-trademark"></i>&nbsp;&nbsp;Manufacturers</a>
+                            <a href="../Views/SparepartCatergory.aspx"><i class="icon mif-cabinet"></i>&nbsp;&nbsp;Categories</a>
+                            <a href="../Views/Employee.aspx"><i class="icon mif-users"></i>&nbsp;&nbsp;Employees</a>
                             <a href=""><i class="icon mif-key"></i>&nbsp;&nbsp;User Accounts</a>                         
                         </li>                          
                     </ul>

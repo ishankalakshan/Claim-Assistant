@@ -53,14 +53,14 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxTextBox ID="txtCategorySearch" OnTextChanged="txtCategorySearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Location to Search" Width="170px">
+                <dx:ASPxTextBox ID="txtCategorySearch" OnTextChanged="txtCategorySearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Enter name to search" Width="170px">
                 </dx:ASPxTextBox>
                 <br />
-                <dx:ASPxGridView ID="gridSparepartCategories" KeyFieldName="spareCategoryId" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView ID="gridSparepartCategories" KeyFieldName="spareCategoryId" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="spareCategoryId" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="spareCategoryId" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsEditing EditFormColumnCount="3" Mode="PopupEditForm" />

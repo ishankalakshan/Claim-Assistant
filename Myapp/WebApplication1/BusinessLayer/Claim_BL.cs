@@ -7,6 +7,7 @@ using ModelLayer;
 using DataLayer;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Data;
 
 namespace BusinessLayer
 {
@@ -85,6 +86,40 @@ namespace BusinessLayer
             }
             catch
             {
+                throw;
+            }
+        }
+
+        public DataTable GetAllClaims()
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    
+                };
+                return new DBAccessController().RetriveRecordsWithPara(StoredProcedures.sp_GetAllClaims, DataDic);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable GetClaimById(int claimID)
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    {"@ClaimId",claimID}
+                };
+                return new DBAccessController().RetriveRecordsWithPara(StoredProcedures.sp_GetClaim, DataDic);
+            }
+            catch (Exception)
+            {
+                
                 throw;
             }
         }

@@ -144,25 +144,25 @@
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="VehicleID" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="VehicleTypeName" VisibleIndex="1" Caption="Type">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="VehicleTypeName" VisibleIndex="1" Caption="Type">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="Model" VisibleIndex="3" Caption="Model">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Model" VisibleIndex="3" Caption="Model">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="MakeYear" VisibleIndex="4" Caption="Year">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="MakeYear" VisibleIndex="4" Caption="Year">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="FuelType" VisibleIndex="5" Caption="Fuel">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="FuelType" VisibleIndex="5" Caption="Fuel">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="EngineCpacity" VisibleIndex="6" Caption="Engine" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="EngineCpacity" VisibleIndex="6" Caption="Engine">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="seatingCapacity" VisibleIndex="7" Caption="Seating">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="seatingCapacity" VisibleIndex="7" Caption="Seating">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="CarryingCapacity" VisibleIndex="8" Caption="Carrying">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="CarryingCapacity" VisibleIndex="8" Caption="Carrying">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="PresentValue" VisibleIndex="9" Caption="Present Value">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="PresentValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="9" Caption="Present Value">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="DutyFreeValue" VisibleIndex="10" Caption="Duty Free">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="DutyFreeValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="10" Caption="Duty Free">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />

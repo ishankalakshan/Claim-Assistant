@@ -92,13 +92,13 @@
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="EmpId" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="EmpName" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="EmpName" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="EmpPhone" VisibleIndex="2" Caption="Telephone">
+                        <dx:GridViewDataTextColumn FieldName="EmpPhone" HeaderStyle-HorizontalAlign="Center" VisibleIndex="2" Caption="Telephone">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="EmpEmail" VisibleIndex="3" Caption="Email">
+                        <dx:GridViewDataTextColumn FieldName="EmpEmail" HeaderStyle-HorizontalAlign="Center" VisibleIndex="3" Caption="Email">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="EmpBranch" VisibleIndex="4" Caption="Branch">
+                        <dx:GridViewDataTextColumn FieldName="EmpBranch" HeaderStyle-HorizontalAlign="Center" VisibleIndex="4" Caption="Branch">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />

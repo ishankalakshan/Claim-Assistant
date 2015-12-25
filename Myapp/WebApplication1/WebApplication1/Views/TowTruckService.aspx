@@ -78,20 +78,20 @@
                 <br />
                 <dx:ASPxGridView ID="gridTowTrucks" KeyFieldName="Id" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="Id" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="Id" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="name" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="name" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="location" VisibleIndex="2" Caption="Location" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="location" VisibleIndex="2" Caption="Location" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="telephone" VisibleIndex="3" Caption="Contact No">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="telephone" VisibleIndex="3" Caption="Contact No">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="email" VisibleIndex="3" Caption="Email">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="email" VisibleIndex="3" Caption="Email">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowAllRecords" />
                     <Settings ShowTitlePanel="true" />
-                    <SettingsText Title="Garages Information" />
+                    <SettingsText Title="Tow Truck Services" />
                     <SettingsBehavior AllowSelectByRowClick="true" />
                 </dx:ASPxGridView>
             </div>

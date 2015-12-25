@@ -1,6 +1,10 @@
-﻿<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1.Views.Home" %>
 
-<head>
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
     <link rel="stylesheet" href="../css/metro.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/metro.js"></script>
@@ -42,7 +46,7 @@
 
         <h2 class="tile-area-title">Online Claim Assisant&nbsp;<i class="fa fa-cog fa-spin"></i></h2>
         <div class="tile-area-controls">
-            <button class="image-button icon-right bg-transparent fg-white bg-hover-dark no-border"><span class="sub-header no-margin text-light">Sergey Pimenov</span> <span class="icon mif-user"></span></button>
+            <button class="image-button icon-right bg-transparent fg-white bg-hover-dark no-border"><span class="sub-header no-margin text-light"><%:Session["EmpName"]%></span> <span class="icon mif-user"></span></button>
             <a href="../tiles.html" class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-switch"></span></a>
         </div>
 
@@ -56,24 +60,18 @@
                     </div>
                     <span class="tile-label">New Policy</span>
                 </a>
-                <div class="tile bg-Blue fg-white" data-role="tile" onclick="#">
+                <a href="Claims.aspx" class="tile bg-Blue fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-file-text"></span>
                     </div>
                     <span class="tile-label">Claims</span>
-                </div>
-                <div class="tile bg-red fg-white" data-role="tile" onclick="#">
+                </a>
+                <a href="ClaimRequests.aspx" class="tile bg-red fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-perm-phone-msg"></span>
                     </div>
                     <span class="tile-label">Claim Requests</span>
-                </div>
-                <div class="tile bg-lightBlue fg-white" data-role="tile" onclick="#">
-                    <div class="tile-content iconic">
-                        <span class="icon mif-clipboard"></span>
-                    </div>
-                    <span class="tile-label">Reports</span>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -86,55 +84,55 @@
                     </div>
                     <span class="tile-label">Vehicles</span>
                 </a>
-                <a href="#" class="tile-square bg-lime fg-white" data-role="tile">
+                <a href="VehicleType.aspx" class="tile-square bg-lime fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-list2"></span>
                     </div>
                     <span class="tile-label">Vehicle Types</span>
                 </a>
-                <div class="tile-square bg-teal fg-white" data-role="tile" onclick="#">
+                <a href="Garages.aspx" class="tile-square bg-teal fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-wrench"></span>
                     </div>
                     <span class="tile-label">Garages</span>
-                </div>
-                <div class="tile-square bg-amber fg-white" data-role="tile" onclick="#">
+                </a>
+                <a href="TowTruckService.aspx" class="tile-square bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-towtruck"></span>
                     </div>
                     <span class="tile-label">Tow Trucks</span>
-                </div>
-                <div class="tile-square bg-olive fg-white" data-role="tile" onclick="#">
+                </a>
+                <a href="Sparepart.aspx" class="tile-square bg-olive fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-cog"></span>
                     </div>
                     <span class="tile-label">Spareparts</span>
-                </div>
-                <div class="tile-square bg-pink fg-white" data-role="tile" onclick="#">
+                </a>
+                <a href="Manufacturer.aspx" class="tile-small bg-pink fg-white" data-role="tile" title="Manufacturers">
                     <div class="tile-content iconic">
-                        <span class="icon mif-trademark"></span>
+                        <span title="Manufacturers" class="icon mif-trademark"></span>
                     </div>
-                    <span class="tile-label">Manufacturers</span>
-                </div>
-                <div class="tile-square bg-steel fg-white" data-role="tile" onclick="#">
+                    <%--<span class="tile-label">Manufacturers</span>--%>
+                </a>
+                <a href="SparepartCatergory.aspx" class="tile-small bg-steel fg-white" data-role="tile" title="Sparepart Categories">
                     <div class="tile-content iconic">
-                        <span class="icon mif-cabinet"></span>
+                        <span title="Sparepart Categories" class="icon mif-cabinet"></span>
                     </div>
-                    <span class="tile-label">Sparepart Categories</span>
-                </div>
+                    <%--<span class="tile-label">Sparepart Categories</span>--%>
+                </a>
             </div>
         </div>
 
         <div class="tile-group double">
             <span class="tile-group-title">Administration</span>
             <div class="tile-container">
-                <div class="tile bg-darkViolet fg-white" data-role="tile" onclick="#">
+                <a href="Employee.aspx" class="tile bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-users"></span>
                     </div>
                     <span class="tile-label">Employees</span>
-                </div>
-                <div class="tile bg-darkOrange fg-white" data-role="tile" onclick="#">
+                </a>
+                <div class="tile bg-darkOrange fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-key"></span>
                     </div>
