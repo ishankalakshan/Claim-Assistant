@@ -45,6 +45,7 @@ namespace DataLayer
         public const string sp_UpdateClaimRequest = "sp_UpdateClaimRequest";
         public const string sp_GetClaim = "sp_GetClaim";
         public const string sp_GetAllClaims = "sp_GetAllClaims";
+        public const string sp_UpdateClaimStatus = "sp_UpdateClaimStatus";
 
     }
 

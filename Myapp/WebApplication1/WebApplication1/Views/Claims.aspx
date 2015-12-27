@@ -215,6 +215,9 @@
                                         <td class="col-sm-2"><label class="control-label">Debit Outstanding</label></td>
                                         <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDebitOutstanding" runat="server" /></td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="2" hidden="hidden" class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblClaimId" runat="server" /></td>
+                                    </tr>
                                 </table>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="thirdparty">
@@ -308,8 +311,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="btnClose" runat="server">Close</button>
-                    <button type="button" class="btn btn-primary" runat="server" id="btnSave">Save</button>
-                    <button type="button" class="btn btn-primary" runat="server" id="btnUpdate">Save changes</button>
+                    <button type="button" class="btn btn-success" runat="server" id="btnAccepted" onserverclick="btnAccepted_ServerClick">Accept</button>
                 </div>
             </div>
             <!-- /.modal-content -->

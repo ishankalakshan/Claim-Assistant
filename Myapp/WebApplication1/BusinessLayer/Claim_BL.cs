@@ -124,5 +124,22 @@ namespace BusinessLayer
             }
         }
 
+        public bool UpdateClaimStatus(int claimId,string status)
+        {
+            try
+            {
+                var DataDic = new Dictionary<string, object>
+                {
+                    {"@ClaimId",claimId},
+                    {"@ClaimStatus",status}
+                };
+                return new DBAccessController().UpdateRecord(StoredProcedures.sp_UpdateClaimStatus, DataDic);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
     }
 }

@@ -192,6 +192,7 @@
     <Content Include="tiles\towtruck.png" />
     <Content Include="tiles\vehicles.png" />
     <Content Include="Views\Garages.aspx" />
+    <Content Include="Views\Policy.aspx" />
     <Content Include="Views\SparepartCatergory.aspx" />
     <Content Include="Views\Sparepart.aspx" />
     <Content Include="Views\TestPage.aspx" />
@@ -271,6 +272,13 @@
     </Compile>
     <Compile Include="Views\Garages.aspx.designer.cs">
       <DependentUpon>Garages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Policy.aspx.cs">
+      <DependentUpon>Policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Policy.aspx.designer.cs">
+      <DependentUpon>Policy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SparepartCatergory.aspx.cs">
       <DependentUpon>SparepartCatergory.aspx</DependentUpon>

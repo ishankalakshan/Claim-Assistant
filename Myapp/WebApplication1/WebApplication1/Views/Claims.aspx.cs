@@ -132,6 +132,7 @@ namespace WebApplication1.Views
         {
             try
             {
+                lblClaimId.Text = dt.Rows[0]["claimId"].ToString();
                 lblLocation.Text = dt.Rows[0]["location"].ToString();
                 lblReason.Text = dt.Rows[0]["reason"].ToString();
                 lblKnockedOn.Text = dt.Rows[0]["knockedOn"].ToString();
@@ -226,6 +227,23 @@ namespace WebApplication1.Views
                 }
                 totalcost = totalsparecost + GarageCosts + OtherCosts - Deductions;
                 lblPayable.Text = Convert.ToDecimal(totalcost).ToString("C", numberFormatInfo); 
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        protected void btnAccepted_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(lblClaimId.Text), "Accepted")) ;
+                {
+                    GetAllClaimsForGrid();
+                }
+               
             }
             catch (Exception)
             {

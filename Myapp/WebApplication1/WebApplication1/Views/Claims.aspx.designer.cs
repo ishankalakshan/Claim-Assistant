@@ -355,6 +355,15 @@ namespace WebApplication1.Views {
         protected global::System.Web.UI.WebControls.Label lblDebitOutstanding;
         
         /// <summary>
+        /// lblClaimId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblClaimId;
+        
+        /// <summary>
         /// lblVehicleNo control.
         /// </summary>
         /// <remarks>
@@ -499,22 +508,13 @@ namespace WebApplication1.Views {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnClose;
         
         /// <summary>
-        /// btnSave control.
+        /// btnAccepted control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnSave;
-        
-        /// <summary>
-        /// btnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnUpdate;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAccepted;
         
         /// <summary>
         /// UpdatePanel2 control.
