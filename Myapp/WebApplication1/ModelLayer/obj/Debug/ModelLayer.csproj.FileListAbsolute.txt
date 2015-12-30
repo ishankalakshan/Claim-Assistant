@@ -26,5 +26,6 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.dl
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.pdb
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.xml
+E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.pdb

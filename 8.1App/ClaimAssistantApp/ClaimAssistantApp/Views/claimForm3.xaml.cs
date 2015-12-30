@@ -102,11 +102,13 @@ namespace ClaimAssistantApp.Views
                 var client = new ServiceReference1.Service1Client();
                 var result = await client.GetSparepartsAsync(manufacturer,catergory);
                 var spareparts = JArray.Parse(result);
+                var sparelist = new List<Sparepart_ML>();
 
                 foreach (var item in spareparts)
                 {
-                    LocalSparepartsList.Add(new Sparepart_ML(item));
+                    sparelist.Add(new Sparepart_ML(item));
                 }
+                cmbSparepart.ItemsSource = sparelist;
             }
             catch (Exception)
             {
@@ -220,38 +222,69 @@ namespace ClaimAssistantApp.Views
         }
 
         private void loadSparepartManufacturersToCombo(){
-            cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;
+            cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;    
         }
 
         private void loadSparepartsToCombo()
         {
-            var list = LocalSparepartsList;
-            /*var sparepartList = new List<Sparepart_ML>();
-            foreach (var item in list)
+            try
             {
-                if (item.sparepartCategory == categoryId || item.spareManufacturer==manufacturerId)
-                {
-                    sparepartList.Add(item);
-                }
-
-            }*/
-            cmbSparepart.ItemsSource = list;
+                var list = LocalSparepartsList;
+                cmbSparepart.ItemsSource = list;
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         private void cmbSparePartCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var catname = cmbSparePartCategory.SelectedValue.ToString();
-            var Manname = cmbSparepartManufacturer.SelectedValue.ToString();
-            LoadSpareparts(Manname, catname);
-            loadSparepartsToCombo();
+            try
+            {
+                var catname = cmbSparePartCategory.SelectedValue.ToString();
+                var Manname = cmbSparepartManufacturer.SelectedValue;
+                if (Manname != null)
+                {
+                    LoadSpareparts(Manname.ToString(), catname);
+                }
+                else
+                {
+                    LoadSpareparts("", catname);
+                }
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }       
         }
 
         private void cmbSparepartManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var catname = cmbSparePartCategory.SelectedValue.ToString();
-            var Manname = cmbSparepartManufacturer.SelectedValue.ToString();
-            LoadSpareparts(Manname, catname);
-            loadSparepartsToCombo();
+            try
+            {
+                var Manname = cmbSparepartManufacturer.SelectedValue.ToString();
+                var catname = cmbSparePartCategory.SelectedValue;
+                if (catname != null)
+                {
+                    LoadSpareparts(Manname,catname.ToString());
+                }
+                else
+                {
+                    LoadSpareparts(Manname,"");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }   
+            
         }
 
         private double CalculateAmountPayable(double sparepartCost,double garageCost,double otherCost,double deduction, double insurancePercentage)
@@ -317,14 +350,19 @@ namespace ClaimAssistantApp.Views
 
                 foreach (var item in fileList)
                 {
+                    var name = item.DisplayName;
                     var stream = await item.OpenAsync(Windows.Storage.FileAccessMode.Read);
                     var image = new BitmapImage();
                     image.SetSource(stream);
                     myPictures.Add(image);
+                    ImageListBox.Items.Add(image);
                 }
-
-                imgPresenter.DataContext = myPictures;
             }
+        }
+
+        private void btnRemovePhoto_Click(object sender, RoutedEventArgs e)
+        {
+            ImageListBox.Items.Remove(ImageListBox.SelectedItem);
         }
     }
 }
