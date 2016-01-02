@@ -183,7 +183,7 @@ namespace ClaimAssistantApp.Views
 
         private async void btnClaim_Click(object sender, RoutedEventArgs e)
         {
-            if (IsPolicyNoEntered)
+            if (IsPolicyNoEntered)//
             {
                 (App.Current as App).policyid = txtPolicyNumber.Text;
                 Frame.Navigate(typeof(Views.claimForm1));

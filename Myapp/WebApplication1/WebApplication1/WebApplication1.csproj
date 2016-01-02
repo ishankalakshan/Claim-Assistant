@@ -119,6 +119,12 @@
     <Content Include="js\prefixfree.min.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="login.aspx" />
+    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Views\ClaimRequests.aspx" />
     <Content Include="Views\Claims.aspx" />
     <Content Include="Views\Employee.aspx" />
@@ -217,6 +223,11 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Views\ClaimRequests.aspx.cs">
       <DependentUpon>ClaimRequests.aspx</DependentUpon>
@@ -335,6 +346,19 @@
     <Content Include="Service References\ServiceReference1\WebApplication1.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\ServiceReference2\ImageUpload_Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\service.wsdl" />
+    <None Include="Service References\ServiceReference2\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceReference2\WebApplication1.ServiceReference2.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -364,6 +388,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

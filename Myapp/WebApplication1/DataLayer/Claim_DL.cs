@@ -12,7 +12,7 @@ namespace DataLayer
 {
    public  class Claim_DL : DBConnection
     {
-        public bool insertClaim(Claim_ML ml, int paymentId, int driverId, int _3rdpartyId)
+        public int insertClaim(Claim_ML ml, int paymentId, int driverId, int _3rdpartyId)
        {
            try
            {
@@ -34,12 +34,17 @@ namespace DataLayer
                cmd.Parameters.AddWithValue("@rentAmount", ml.rentAmount);
                cmd.Parameters.AddWithValue("@date", date);
                cmd.Parameters.AddWithValue("@empid", ml.empid);
+
+               SqlParameter retval = cmd.Parameters.Add("@ClaimId", SqlDbType.Int);
+               retval.Direction = ParameterDirection.ReturnValue;
+
                cmd.ExecuteNonQuery();
-               return true;
+               int claimId = (int)cmd.Parameters["@ClaimId"].Value;
+               return claimId;
            }
            catch (SqlException ex)
            {
-               return false;
+               return -1;
            }
            finally
            {

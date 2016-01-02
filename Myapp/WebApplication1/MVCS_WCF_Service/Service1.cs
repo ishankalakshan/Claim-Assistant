@@ -58,11 +58,11 @@ namespace MVCS_WCF_Service
             return JsonConvert.SerializeObject(result, Formatting.Indented);
         }
 
-        public bool InsertClaim(string claim)
+        public int InsertClaim(string claim)
         {
-            var call = new Claim_BL().createClaimObject(claim);
+            var claimId = new Claim_BL().createClaimObject(claim);
 
-            return true;
+            return claimId;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
@@ -98,6 +98,11 @@ namespace MVCS_WCF_Service
                 new ModelLayer.Spareparts.Sparepart_ML() { spareManufacturerName = manufacturer, sparepartCategoryName = catergory, sparepartModel = "", spareManufacYear = "" });
 
             return JsonConvert.SerializeObject(result, Formatting.Indented);
+        }
+
+        public bool UploadImages(string image64string, string name,string claimId)
+        {
+            return new Claim_BL().SaveImages(image64string,name,claimId);
         }
     }
 }

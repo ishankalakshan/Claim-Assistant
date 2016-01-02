@@ -445,6 +445,24 @@ namespace WebApplication1.Views {
         protected global::System.Web.UI.WebControls.Label lblClaimantAmount;
         
         /// <summary>
+        /// slideshow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl slideshow;
+        
+        /// <summary>
+        /// activeimage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl activeimage;
+        
+        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>

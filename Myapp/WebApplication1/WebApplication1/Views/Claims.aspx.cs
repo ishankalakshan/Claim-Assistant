@@ -9,6 +9,7 @@ using BusinessLayer;
 using ModelLayer;
 using System.Web.UI.HtmlControls;
 using System.Globalization;
+using System.IO;
 
 namespace WebApplication1.Views
 {
@@ -52,6 +53,7 @@ namespace WebApplication1.Views
                         SetThirdPartyDetails(dt);
                         SetClaimPaymentDetails(dt);
                         SetSparepareListDetails(dt);
+                        SetImages("4019");
                     }
                     ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#Modal').modal('show')});</script>", false);
                 }
@@ -233,6 +235,36 @@ namespace WebApplication1.Views
                 
                 throw;
             }
+        }
+
+        private void SetImages(string claimId)
+        {
+            string directory = "E:\\KDU\\Claim.Assisstant\\Myapp\\WebApplication1\\WebApplication1\\ClaimImages\\" + claimId + "\\";
+            string[] images = Directory.GetFiles(directory, "*.png");
+            string path = String.Format("..\\ClaimImages\\{0}\\{1}",claimId,System.IO.Path.GetFileName(images[0]));
+            activeimage.Controls.Add(new HtmlImage()
+                {
+                    Width = 500,
+                    Height = 400,
+                    Src = path
+                });
+
+            for (int i = 1; i < images.Length; i++)
+            {
+                HtmlGenericControl div = new HtmlGenericControl();
+                div.TagName = "div"; 
+                div.Attributes["class"] = "item";
+                div.Attributes["id"] = "photo"+i;
+                div.Attributes["runat"] = "server";
+                div.Controls.Add(new HtmlImage()
+                {
+                    Width=500,
+                    Height=400,
+                    Src=String.Format("..\\ClaimImages\\{0}\\{1}",claimId,System.IO.Path.GetFileName(images[i]))
+                });
+                slideshow.Controls.Add(div);
+            }
+
         }
 
         protected void btnAccepted_ServerClick(object sender, EventArgs e)

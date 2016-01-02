@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Claims.aspx.cs" Inherits="WebApplication1.Views.Claims" %>
+
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
@@ -34,6 +35,7 @@
                             <li role="presentation"><a href="#policy" aria-controls="policy" role="tab" data-toggle="tab">Policy</a></li>
                             <li role="presentation"><a href="#claim" aria-controls="claim" role="tab" data-toggle="tab">Claim</a></li>
                             <li role="presentation"><a href="#thirdparty" aria-controls="thirdparty" role="tab" data-toggle="tab">Third party</a></li>
+                            <li role="presentation"><a href="#imagesTab" aria-controls="thirdparty" role="tab" data-toggle="tab">Photos</a></li>
                             <li role="presentation"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">Payment</a></li>
                         </ul>
 
@@ -42,12 +44,16 @@
                             <div role="tabpanel" class="tab-pane active" id="client">
                                 <table>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Name</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblName" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Name</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblName" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Address</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblAddress" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Address</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblAddress" runat="server" /></td>
                                     </tr>
                                     <tr>
                                         <td class="col-sm-2">
@@ -96,212 +102,314 @@
                             <div role="tabpanel" class="tab-pane" id="vehicle">
                                 <table>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Manufacturer</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblManufacturer" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Manufacturer</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblManufacturer" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Model</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblModel" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Model</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblModel" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Year</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblYear" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Year</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblYear" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Present Value</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblPresentValue" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Present Value</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblPresentValue" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Duty Free Value</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDutyFreeValue" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Duty Free Value</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDutyFreeValue" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Registration No</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblRegistrationNo" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Registration No</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblRegistrationNo" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Absolute Owner</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblAbsoluteOwner" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Absolute Owner</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblAbsoluteOwner" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Financial Rights</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblFinancialRights" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Financial Rights</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblFinancialRights" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Usage</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblUsage" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Usage</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblUsage" runat="server" /></td>
                                     </tr>
                                 </table>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="policy">
                                 <table>
-                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">PolicyId</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblPolicyId" runat="server" /></td>
+                                    <tr>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">PolicyId</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblPolicyId" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Commence On</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblCommenceOn" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Commence On</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblCommenceOn" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Expire On</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblExpireOn" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Expire On</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblExpireOn" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Natural Disaster Cover</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblNaturalDisasterCover" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Natural Disaster Cover</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblNaturalDisasterCover" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Terrorism Cover</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblTerrorismCover" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Terrorism Cover</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblTerrorismCover" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Strike/Riot Cover</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblStrikeRiotCover" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Strike/Riot Cover</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblStrikeRiotCover" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Air Bag Cover</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblAirBagCover" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Air Bag Cover</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblAirBagCover" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Driver Compensation</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDriverCompensation" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Driver Compensation</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDriverCompensation" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Passenger Compensation</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblPassengerCompensation" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Passenger Compensation</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblPassengerCompensation" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Towing Charges</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblTowingCharges" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Towing Charges</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblTowingCharges" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Status</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblStatus" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Status</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblStatus" runat="server" /></td>
                                     </tr>
                                 </table>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="claim">
                                 <table>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Location</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblLocation" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Location</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblLocation" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Reason</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblReason" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Reason</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblReason" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Knocked On</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblKnockedOn" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Knocked On</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblKnockedOn" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Is Driver Owner</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblIsDriverOwner" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Is Driver Owner</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblIsDriverOwner" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Driver Name</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDriverName" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Driver Name</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDriverName" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Driver NIC</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDriverNic" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Driver NIC</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDriverNic" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">License</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblLicense" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">License</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblLicense" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Debit Outstanding</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDebitOutstanding" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Debit Outstanding</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDebitOutstanding" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2" hidden="hidden" class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblClaimId" runat="server" /></td>
+                                        <td colspan="2" hidden="hidden" class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblClaimId" runat="server" /></td>
                                     </tr>
                                 </table>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="thirdparty">
+                            <div role="tabpanel" class="tab-pane" id="thirdparty" style="height:80%;">
                                 <table>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Vehicle No</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblVehicleNo" runat="server" /></td>
-                                    </tr>
-                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Owner</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblOwner" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Vehicle No</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblVehicleNo" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Address</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblThirdpartyAddress" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Owner</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblOwner" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Notes</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblNotes" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Address</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblThirdpartyAddress" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Victim Name</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblVictimName" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Notes</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblNotes" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Address</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblVictimAddress" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Victim Name</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblVictimName" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Damages</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDamages" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Address</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblVictimAddress" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Claimant</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblClaimant" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Damages</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDamages" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Amount</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblClaimantAmount" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Claimant</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblClaimant" runat="server" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Amount</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblClaimantAmount" runat="server" /></td>
                                     </tr>
                                 </table>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="imagesTab">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox" id="slideshow" runat="server">
+                                        <div class="item active" runat="server" id="activeimage">                 
+                                        </div>
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="payment">
                                 <table>
                                     <tr>
-                                        <td><label class="col-sm-2 control-label">Sparelist</label></td>
                                         <td>
-                                             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <div>
-                <dx:ASPxGridView ID="gridSpareparts" KeyFieldName="sparepartName" runat="server" AutoGenerateColumns="False" Width="70%">
-                    <Columns>
-                        <dx:GridViewDataTextColumn FieldName="sparepartName"  VisibleIndex="0" Caption="Name">
-                        </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparepartQty" VisibleIndex="1" Caption="Quantity">
-                        </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="sparePartCost" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="2" Caption="Unit Cost">
-                        </dx:GridViewDataTextColumn>
-                    </Columns>
-                    <SettingsPager Mode="ShowPager" />
-                    <Settings ShowTitlePanel="true" />
-                    <SettingsText Title="Sparepart List" />
-                    <SettingsBehavior AllowSelectByRowClick="false" />
-                </dx:ASPxGridView>
-            </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+                                            <label class="col-sm-2 control-label">Sparelist</label></td>
+                                        <td>
+                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                <ContentTemplate>
+                                                    <div>
+                                                        <dx:ASPxGridView ID="gridSpareparts" KeyFieldName="sparepartName" runat="server" AutoGenerateColumns="False" Width="70%">
+                                                            <Columns>
+                                                                <dx:GridViewDataTextColumn FieldName="sparepartName" VisibleIndex="0" Caption="Name">
+                                                                </dx:GridViewDataTextColumn>
+                                                                <dx:GridViewDataTextColumn FieldName="sparepartQty" VisibleIndex="1" Caption="Quantity">
+                                                                </dx:GridViewDataTextColumn>
+                                                                <dx:GridViewDataTextColumn FieldName="sparePartCost" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="2" Caption="Unit Cost">
+                                                                </dx:GridViewDataTextColumn>
+                                                            </Columns>
+                                                            <SettingsPager Mode="ShowPager" />
+                                                            <Settings ShowTitlePanel="true" />
+                                                            <SettingsText Title="Sparepart List" />
+                                                            <SettingsBehavior AllowSelectByRowClick="false" />
+                                                        </dx:ASPxGridView>
+                                                    </div>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Garage Costs</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblGarageCosts" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Garage Costs</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblGarageCosts" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Other Costs</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblOtherCosts" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Other Costs</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblOtherCosts" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Deductions</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblDeductions" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Deductions</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblDeductions" runat="server" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="col-sm-2"><label class="control-label">Amount Payable</label></td>
-                                        <td class="col-sm-10"><asp:Label Text="" CssClass="control-label" ID="lblPayable" runat="server" /></td>
+                                        <td class="col-sm-2">
+                                            <label class="control-label">Amount Payable</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblPayable" runat="server" /></td>
                                     </tr>
                                 </table>
                             </div>

@@ -62,8 +62,8 @@ namespace WebApplication1.Views
                     ml.otherCosts = 324.43f;
 
             Claim_BL bl = new Claim_BL();
-            bool returValue = bl.insertClaim(ml);
-            ASPxTextBox1.Text = returValue.ToString();
+            //bool returValue = bl.insertClaim(ml);
+           // ASPxTextBox1.Text = returValue.ToString();
         }
 
         /*protected void ASPxButton1_Click(object sender, EventArgs e)

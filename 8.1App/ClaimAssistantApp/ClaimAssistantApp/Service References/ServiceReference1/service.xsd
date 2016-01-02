@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/MVCS_WCF_Service" />
+  <xs:element name="AddClaimRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddClaimRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddClaimRequestResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -96,7 +108,7 @@
   <xs:element name="InsertClaimResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertClaimResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="InsertClaimResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -136,6 +148,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="GetSparepartsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image64string" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claimId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadImagesResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

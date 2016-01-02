@@ -21,6 +21,11 @@ using Windows.Storage.Pickers;
 using Windows.ApplicationModel.Activation;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Net.Http;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using ClaimAssistantApp.ServiceReference1;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace ClaimAssistantApp.Views
@@ -35,10 +40,13 @@ namespace ClaimAssistantApp.Views
         List<SparepartCategory_ML> LocalSparepartCatogoryList = new List<SparepartCategory_ML>();
         List<SparepartManufacturer_ML> LocalSparepartmanufacturerList = new List<SparepartManufacturer_ML>();
         List<Sparepart_ML> LocalSparepartsList = new List<Sparepart_ML>();
+        IReadOnlyList<StorageFile> fileList = null;
+
+        private Service1Client _client = new Service1Client();
 
         public claimForm3()
         {
-            
+
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
@@ -46,16 +54,16 @@ namespace ClaimAssistantApp.Views
 
             LoadSparepartCategories();
             LoadSparepartManufacturers();
-            LoadSpareparts("","");
+            LoadSpareparts("", "");
 
             loadSparepartCatogoriesToCombo();
             loadSparepartManufacturersToCombo();
             loadSparepartsToCombo();
-            
+
         }
 
         public async void LoadSparepartCategories()
-        {            
+        {
             try
             {
                 var client = new ServiceReference1.Service1Client();
@@ -69,9 +77,9 @@ namespace ClaimAssistantApp.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
-            }           
+            }
         }
 
         public async void LoadSparepartManufacturers()
@@ -84,7 +92,7 @@ namespace ClaimAssistantApp.Views
 
                 foreach (var item in sprepartManufacturers)
                 {
-                    LocalSparepartmanufacturerList.Add(new SparepartManufacturer_ML(item));                
+                    LocalSparepartmanufacturerList.Add(new SparepartManufacturer_ML(item));
                 }
             }
             catch (Exception)
@@ -94,13 +102,13 @@ namespace ClaimAssistantApp.Views
             }
         }
 
-        public async void LoadSpareparts(string manufacturer,string catergory)
+        public async void LoadSpareparts(string manufacturer, string catergory)
         {
             try
             {
                 LocalSparepartsList.Clear();
                 var client = new ServiceReference1.Service1Client();
-                var result = await client.GetSparepartsAsync(manufacturer,catergory);
+                var result = await client.GetSparepartsAsync(manufacturer, catergory);
                 var spareparts = JArray.Parse(result);
                 var sparelist = new List<Sparepart_ML>();
 
@@ -119,51 +127,64 @@ namespace ClaimAssistantApp.Views
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           var ml = new Claim_ML(
-                (App.Current as App).policyid,
-                (App.Current as App).location,
-                (App.Current as App).reason,
-                (App.Current as App).knockedOn,
-                (App.Current as App)._3rdVehicleRegno,
-                (App.Current as App)._3rdOwnerName,
-                (App.Current as App)._3rdAddress,
-                (App.Current as App)._3rdContact,
-                (App.Current as App)._3rdRenewalDate,
-                (App.Current as App)._3rdSpecialNotes,
-                (App.Current as App).victimName,
-                (App.Current as App).victimAddress,
-                (App.Current as App).damageNature,
-                (App.Current as App)._3rdClaimant,
-                (App.Current as App)._3rdClaimAmount,
-                (App.Current as App).isDriverOwner,
-                (App.Current as App).drivername,
-                (App.Current as App).driverLicense,
-                (App.Current as App).driverCategories,
-                (App.Current as App).driverLicenseExpire,
-                (App.Current as App).driverNIC,
-                (App.Current as App).dateOfPrchase,
-                (App.Current as App).vehicleUsage,
-                (App.Current as App).rentName,
-                (App.Current as App).rentAmount,
-                SparepartList,
-                txtgarageCost.Text,
-                txtOtherCosts.Text,
-                txtDeductions.Text,
-                (App.Current as App).empid
-                );
+            /*var ml = new Claim_ML(
+                 (App.Current as App).policyid,
+                 (App.Current as App).location,
+                 (App.Current as App).reason,
+                 (App.Current as App).knockedOn,
+                 (App.Current as App)._3rdVehicleRegno,
+                 (App.Current as App)._3rdOwnerName,
+                 (App.Current as App)._3rdAddress,
+                 (App.Current as App)._3rdContact,
+                 (App.Current as App)._3rdRenewalDate,
+                 (App.Current as App)._3rdSpecialNotes,
+                 (App.Current as App).victimName,
+                 (App.Current as App).victimAddress,
+                 (App.Current as App).damageNature,
+                 (App.Current as App)._3rdClaimant,
+                 (App.Current as App)._3rdClaimAmount,
+                 (App.Current as App).isDriverOwner,
+                 (App.Current as App).drivername,
+                 (App.Current as App).driverLicense,
+                 (App.Current as App).driverCategories,
+                 (App.Current as App).driverLicenseExpire,
+                 (App.Current as App).driverNIC,
+                 (App.Current as App).dateOfPrchase,
+                 (App.Current as App).vehicleUsage,
+                 (App.Current as App).rentName,
+                 (App.Current as App).rentAmount,
+                 SparepartList,
+                 txtgarageCost.Text,
+                 txtOtherCosts.Text,
+                 txtDeductions.Text,
+                 (App.Current as App).empid
+                 );
             var result = JsonConvert.SerializeObject(ml);
-            var data =  await new ServiceReference1.Service1Client().InsertClaimAsync(result);
-            if (data)
+            var data = await new ServiceReference1.Service1Client().InsertClaimAsync(result);
+
+            if (data != -1)
             {
+                var msg = String.Format("Your claim Id reference is {0}", data.ToString());
+                var messageDialog = new Windows.UI.Popups.MessageDialog(msg);
+                messageDialog.Title = "Successful";
+                await messageDialog.ShowAsync();
                 Frame.Navigate(typeof(Views.claimSuccess));
-            }           
+            }
+            else
+            {
+                var msg = String.Format("Claiming failed.Please re submit.");
+                var messageDialog = new Windows.UI.Popups.MessageDialog(msg);
+                messageDialog.Title = "Failed";
+                await messageDialog.ShowAsync();
+            }*/
+            UploadPhotos("4019");
         }
 
         private async void btnAddPart_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (txtQuantity.Text=="")
+                if (txtQuantity.Text == "")
                 {
                     var messageDialog = new Windows.UI.Popups.MessageDialog("Enter quantity");
                     messageDialog.Title = "Required";
@@ -174,7 +195,7 @@ namespace ClaimAssistantApp.Views
                 if (cmbSparepart.SelectedItem == null) return;
 
                 var jsonselected = JsonConvert.SerializeObject(cmbSparepart.SelectedItem);
-                var obj = JObject.Parse(jsonselected); 
+                var obj = JObject.Parse(jsonselected);
                 var id = (string)obj["sparepartId"];
                 var name = (string)obj["sparepartName"];
                 var price = (string)obj["spareUnitCost"];
@@ -188,11 +209,11 @@ namespace ClaimAssistantApp.Views
                     SparepartId = Convert.ToInt32(cmbSparepart.SelectedValue),
                     SparepartQty = Convert.ToDouble(txtQuantity.Text),
                     SparepartCost = Convert.ToDouble(price)
-                });   
+                });
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -201,28 +222,30 @@ namespace ClaimAssistantApp.Views
         {
             var selected = lstboxSparelist.SelectedValue;
             var id = selected.ToString().Split('-')[0];
-           
+
 
             var r = SparepartList.Where(n => n.SparepartId.ToString() == id).ToList();
 
-            foreach (var item  in r)
+            foreach (var item in r)
             {
                 _totalcost = _totalcost - Convert.ToSingle(item.SparepartCost) * Convert.ToInt32(item.SparepartQty);
                 txtSparecost.Text = _totalcost.ToString();
                 SparepartList.Remove(item);
             }
 
-            
+
             lstboxSparelist.Items.Remove(selected);
         }
 
-        private void loadSparepartCatogoriesToCombo() {
+        private void loadSparepartCatogoriesToCombo()
+        {
 
             cmbSparePartCategory.ItemsSource = LocalSparepartCatogoryList;
         }
 
-        private void loadSparepartManufacturersToCombo(){
-            cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;    
+        private void loadSparepartManufacturersToCombo()
+        {
+            cmbSparepartManufacturer.ItemsSource = LocalSparepartmanufacturerList;
         }
 
         private void loadSparepartsToCombo()
@@ -234,10 +257,10 @@ namespace ClaimAssistantApp.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
-            
+
         }
 
         private void cmbSparePartCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -258,9 +281,9 @@ namespace ClaimAssistantApp.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
-            }       
+            }
         }
 
         private void cmbSparepartManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -271,11 +294,11 @@ namespace ClaimAssistantApp.Views
                 var catname = cmbSparePartCategory.SelectedValue;
                 if (catname != null)
                 {
-                    LoadSpareparts(Manname,catname.ToString());
+                    LoadSpareparts(Manname, catname.ToString());
                 }
                 else
                 {
-                    LoadSpareparts(Manname,"");
+                    LoadSpareparts(Manname, "");
                 }
 
             }
@@ -283,11 +306,11 @@ namespace ClaimAssistantApp.Views
             {
 
                 throw;
-            }   
-            
+            }
+
         }
 
-        private double CalculateAmountPayable(double sparepartCost,double garageCost,double otherCost,double deduction, double insurancePercentage)
+        private double CalculateAmountPayable(double sparepartCost, double garageCost, double otherCost, double deduction, double insurancePercentage)
         {
             return ((sparepartCost + garageCost + otherCost) - deduction);
         }
@@ -324,7 +347,6 @@ namespace ClaimAssistantApp.Views
         {
         }
 
-
         private void btnChoosePhotos_Click(object sender, RoutedEventArgs e)
         {
             ChoosePhotos();
@@ -339,18 +361,17 @@ namespace ClaimAssistantApp.Views
             openPicker.FileTypeFilter.Add(".jpeg");
             openPicker.FileTypeFilter.Add(".png");
             // Launch file open picker and caller app is suspended and may be terminated if required
-           // await openPicker.PickMultipleFilesAsync();
-
+            // await openPicker.PickMultipleFilesAsync();
             IAsyncOperation<IReadOnlyList<StorageFile>> asyncOp = openPicker.PickMultipleFilesAsync();
-            IReadOnlyList<StorageFile> fileList = await asyncOp;
+            fileList = await asyncOp;
 
-            if (fileList!=null)
+            if (fileList != null)
             {
                 var myPictures = new List<BitmapImage>();
 
                 foreach (var item in fileList)
                 {
-                    var name = item.DisplayName;
+                    var name = item.DisplayName;       
                     var stream = await item.OpenAsync(Windows.Storage.FileAccessMode.Read);
                     var image = new BitmapImage();
                     image.SetSource(stream);
@@ -358,6 +379,45 @@ namespace ClaimAssistantApp.Views
                     ImageListBox.Items.Add(image);
                 }
             }
+        }
+
+        public async void UploadPhotos(string claimId)
+        {
+            try
+            {
+                if (fileList!=null)
+                {
+                    foreach (var item in fileList)
+                    {
+                        var res = ImageToBase64(item);
+                        var name = item.DisplayName;
+                        var fileExt = item.FileType;
+
+                        var result = await _client.UploadImagesAsync(res.Result,name,claimId);
+                    }  
+                }   
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }           
+        }
+
+        public async Task<string> ImageToBase64(StorageFile MyImageFile)
+        {
+            try
+            {
+                Stream ms = await MyImageFile.OpenStreamForReadAsync();
+                byte[] imageBytes = new byte[(int)ms.Length];
+                ms.Read(imageBytes, 0, (int)ms.Length);
+                return Convert.ToBase64String(imageBytes);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }           
         }
 
         private void btnRemovePhoto_Click(object sender, RoutedEventArgs e)

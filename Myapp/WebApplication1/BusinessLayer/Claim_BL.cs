@@ -8,12 +8,16 @@ using DataLayer;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Data;
+using System.IO;
+using System.Drawing;
+using System.Web.UI.WebControls;
+using System.Web;
 
 namespace BusinessLayer
 {
     public class Claim_BL
     {
-        public bool createClaimObject(string jstring)
+        public int createClaimObject(string jstring)
         {
             try
             {
@@ -64,9 +68,9 @@ namespace BusinessLayer
                    jArray["empid"].ToString()
                    );
 
-                insertClaim(claimObj);
+                   var claimId = insertClaim(claimObj);
 
-                return true;
+                   return claimId;
             }
             catch (Exception)
             {
@@ -76,7 +80,7 @@ namespace BusinessLayer
             
         }
 
-        public bool insertClaim(Claim_ML ml)
+        public int insertClaim(Claim_ML ml)
         {
             try
             {
@@ -140,6 +144,65 @@ namespace BusinessLayer
                 
                 throw;
             }
+        }
+
+        public bool SaveImages(string Image64String,string name,string claimId)
+        {
+            try
+            {
+                string directory = "E:\\KDU\\Claim.Assisstant\\Myapp\\WebApplication1\\WebApplication1\\ClaimImages\\" + claimId + "\\";
+                CreateDirectoryIfNotExists(directory);  
+                string dict = directory + name + ".png";                
+                System.Drawing.Image image = Base64ToImage(Image64String);
+                //System.IO.File.WriteAllText(dict, "Testing valid path & permissions.");
+                using (MemoryStream memory = new MemoryStream())
+                {
+                    using (FileStream fs = new FileStream(dict, FileMode.Create, FileAccess.ReadWrite))
+                    {
+                        Bitmap im = new Bitmap(image);
+                        image.Dispose();
+                        image = null;
+                        im.Save(memory, System.Drawing.Imaging.ImageFormat.Png);
+                        byte[] bytes = memory.ToArray();
+                        fs.Write(bytes, 0, bytes.Length);
+                    }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        public System.Drawing.Image Base64ToImage(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+            ms.Close();
+            return image;
+        }
+
+        private void CreateDirectoryIfNotExists(string filePath)
+        {
+            try
+            {
+                var directory = new FileInfo(filePath).Directory;
+                if (directory == null) throw new Exception("Directory could not be determined for the filePath");
+
+                Directory.CreateDirectory(directory.FullName);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }           
         }
     }
 }

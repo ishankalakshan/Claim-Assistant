@@ -38,7 +38,7 @@ namespace MVCS_WCF_Service
         string GetTowTruckServiceInfo(string location);
 
         [OperationContract]
-        bool InsertClaim(string claim);
+        int InsertClaim(string claim);
 
         [OperationContract]
         string GetSparepartCategories();
@@ -48,6 +48,9 @@ namespace MVCS_WCF_Service
 
         [OperationContract]
         string GetSpareparts(string manufacturer,string catergory);
+
+        [OperationContract]
+        bool UploadImages(string image64string,string name,string claimId);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

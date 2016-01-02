@@ -7,6 +7,12 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/MVCS_WCF_Service" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_AddClaimRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClaimRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddClaimRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClaimRequestResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -67,6 +73,12 @@
   <wsdl:message name="IService1_GetSpareparts_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSparepartsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_UploadImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UploadImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImagesResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -74,6 +86,10 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="AddClaimRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddClaimRequest" message="tns:IService1_AddClaimRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddClaimRequestResponse" message="tns:IService1_AddClaimRequest_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
@@ -114,6 +130,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSpareparts" message="tns:IService1_GetSpareparts_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSparepartsResponse" message="tns:IService1_GetSpareparts_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="UploadImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UploadImages" message="tns:IService1_UploadImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UploadImagesResponse" message="tns:IService1_UploadImages_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
@@ -121,6 +141,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddClaimRequest">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddClaimRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
       <wsdl:input>
@@ -204,6 +233,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetSpareparts">
       <soap:operation soapAction="http://tempuri.org/IService1/GetSpareparts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImages">
+      <soap:operation soapAction="http://tempuri.org/IService1/UploadImages" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

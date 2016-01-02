@@ -64,6 +64,9 @@ namespace ClaimAssistantApp.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddClaimRequest", ReplyAction="http://tempuri.org/IService1/AddClaimRequestResponse")]
+        System.Threading.Tasks.Task<int> AddClaimRequestAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
@@ -83,7 +86,7 @@ namespace ClaimAssistantApp.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetTowTruckServiceInfoAsync(string location);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertClaim", ReplyAction="http://tempuri.org/IService1/InsertClaimResponse")]
-        System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim);
+        System.Threading.Tasks.Task<int> InsertClaimAsync(string claim);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSparepartCategories", ReplyAction="http://tempuri.org/IService1/GetSparepartCategoriesResponse")]
         System.Threading.Tasks.Task<string> GetSparepartCategoriesAsync();
@@ -93,6 +96,9 @@ namespace ClaimAssistantApp.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSpareparts", ReplyAction="http://tempuri.org/IService1/GetSparepartsResponse")]
         System.Threading.Tasks.Task<string> GetSparepartsAsync(string manufacturer, string catergory);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UploadImages", ReplyAction="http://tempuri.org/IService1/UploadImagesResponse")]
+        System.Threading.Tasks.Task<bool> UploadImagesAsync(string image64string, string name, string claimId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite);
@@ -141,6 +147,10 @@ namespace ClaimAssistantApp.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
+        public System.Threading.Tasks.Task<int> AddClaimRequestAsync() {
+            return base.Channel.AddClaimRequestAsync();
+        }
+        
         public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
             return base.Channel.GetDataAsync(value);
         }
@@ -165,7 +175,7 @@ namespace ClaimAssistantApp.ServiceReference1 {
             return base.Channel.GetTowTruckServiceInfoAsync(location);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertClaimAsync(string claim) {
+        public System.Threading.Tasks.Task<int> InsertClaimAsync(string claim) {
             return base.Channel.InsertClaimAsync(claim);
         }
         
@@ -179,6 +189,10 @@ namespace ClaimAssistantApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetSparepartsAsync(string manufacturer, string catergory) {
             return base.Channel.GetSparepartsAsync(manufacturer, catergory);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UploadImagesAsync(string image64string, string name, string claimId) {
+            return base.Channel.UploadImagesAsync(image64string, name, claimId);
         }
         
         public System.Threading.Tasks.Task<ClaimAssistantApp.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ClaimAssistantApp.ServiceReference1.CompositeType composite) {
