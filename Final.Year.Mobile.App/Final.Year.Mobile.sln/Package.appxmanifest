@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Final.Year.Mobile.sln.App">
-      <m3:VisualElements DisplayName="Final.Year.Mobile.sln" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Final.Year.Mobile.sln" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="EasyClaiMe" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Mobile application to report accidents quickly to your insurance company." ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />

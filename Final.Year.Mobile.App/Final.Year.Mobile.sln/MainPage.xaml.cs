@@ -22,6 +22,8 @@ namespace Final.Year.Mobile.sln
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            tbDate.Text = (DateTime.Today).ToString("MM/dd/yyyy");
         }
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -48,7 +50,7 @@ namespace Final.Year.Mobile.sln
                      timeout: TimeSpan.FromSeconds(10)
                 );
 
-                geolocation.Text = "GPS:" + geoposition.Coordinate.Latitude.ToString("0.00") + ", " + geoposition.Coordinate.Longitude.ToString("0.00");
+                //geolocation.Text = "GPS:" + geoposition.Coordinate.Latitude.ToString("0.00") + ", " + geoposition.Coordinate.Longitude.ToString("0.00");
                 var  claimrequest = new ClaimRequest_ML()
                 {
                     PolicyId=Convert.ToInt32(txtPolicyId.Text),

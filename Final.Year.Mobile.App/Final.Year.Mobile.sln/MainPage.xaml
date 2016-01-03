@@ -22,14 +22,16 @@
         
         <TextBlock Grid.Row="0"
                    FontSize="45"
-                   FontFamily="Segoe UI">
-            Claimer
+                   FontFamily="Segoe UI"
+                   Foreground="White">
+            EasyClaiMe
         </TextBlock>
         
         <TextBlock Grid.Row="1"
                    FontSize="13"
-                   FontFamily="Segoe UI">
-            22nd November 2015
+                   FontFamily="Segoe UI"
+                   Name="tbDate"
+                   Foreground="White">
         </TextBlock>
         
         <StackPanel Orientation="Vertical" 
@@ -47,7 +49,7 @@
                          Width="180"
                          Margin="10,0"
                          Background="Transparent"
-                         Foreground="White"
+                         Foreground="Grey"
                          VerticalAlignment="Center">               
                 </TextBox>
                 <Button x:Name="btnSubmit"
@@ -60,11 +62,11 @@
                     Report
                 </Button>
             </StackPanel>
-            <TextBlock Name="geolocation"
+            <!--<TextBlock Name="geolocation"
                        FontSize="15"
                        FontFamily="Segoe UI">
                 
-            </TextBlock>
+            </TextBlock>-->
         </StackPanel>
     </Grid>
 </Page>
