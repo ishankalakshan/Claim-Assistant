@@ -40,6 +40,7 @@ namespace ClaimAssistantApp.Views
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
             pageTitle.Text = "Welcome " + (App.Current as App).empName;
+            tbDate.Text = String.Format("{0}/{1}/{2} , {3}", DateTime.Now.Day.ToString(), DateTime.Now.Month.ToString(),DateTime.Now.Year.ToString(),DateTime.Now.DayOfWeek.ToString());
 
         }
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)

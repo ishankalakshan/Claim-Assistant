@@ -77,18 +77,18 @@
                 <table border="0">
                     <tr>
                         <td>
-                            <dx:ASPxTextBox ID="txtNameSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
+                            <dx:ASPxTextBox ID="txtNameSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td>
-                            <dx:ASPxTextBox ID="txtBranchSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Branch to Search" Width="170px">
+                            <dx:ASPxTextBox ID="txtBranchSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Branch to Search" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridEmployees" KeyFieldName="EmpId" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView Theme="Metropolis" ID="gridEmployees" KeyFieldName="EmpId" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="EmpId" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
@@ -101,7 +101,9 @@
                         <dx:GridViewDataTextColumn FieldName="EmpBranch" HeaderStyle-HorizontalAlign="Center" VisibleIndex="4" Caption="Branch">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true"/>
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Employee Information" />
                     <SettingsBehavior AllowSelectByRowClick="true" />

@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/bg.jpg"
+            <ImageBrush ImageSource="/Assets/bg.png"
                     Stretch="UniformToFill" />
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -39,8 +39,8 @@
                     <TextBox x:Name="txtUsername" 
                     	Width="500"
                     	FontFamily="Segoe WP Light" 
-                    	Foreground="White"                           
-                    	Background="Transparent"   />
+                    	Foreground="Black"                           
+                    	Background="White"   />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
@@ -52,9 +52,9 @@
                     <PasswordBox Name="txtPassword"  
                              Width="500"
                              FontFamily="Segoe WP Light"
-                             Foreground="White"
+                             Foreground="Black"
                              IsPasswordRevealButtonEnabled="True"
-                             Background="Transparent" />
+                             Background="White" />
                 </StackPanel>
 
                 <Button x:ConnectionId='1' Content="Login"
@@ -63,8 +63,11 @@
                                               
                         HorizontalContentAlignment="Center"
                         FontSize="20"
+                        Foreground="Black"
+                        Background="White"
                         Margin="300,20,0,0"
                         />
+                <ProgressBar x:Name="LoadingBar" Visibility="Collapsed" IsEnabled="False" IsIndeterminate="true" Height="4" HorizontalAlignment="Stretch"/>
             </StackPanel>
         </Grid>
     </Grid>

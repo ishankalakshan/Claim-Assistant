@@ -90,7 +90,7 @@ namespace ClaimAssistantApp.Views
             {
                 showMessageBox("Owner name required");
                 return;
-            }*/
+            }
 
             (App.Current as App).location = txtLocation.Text;
             (App.Current as App).reason = txtReason.Text;
@@ -103,7 +103,7 @@ namespace ClaimAssistantApp.Views
             DateTimeOffset st = txt3rdRenewalDate.Date;
             (App.Current as App)._3rdRenewalDate = st.Date;
 
-            (App.Current as App)._3rdSpecialNotes = txtNotes.Text;
+            (App.Current as App)._3rdSpecialNotes = txtNotes.Text;*/
             this.Frame.Navigate(typeof(claimForm2));
         }
 

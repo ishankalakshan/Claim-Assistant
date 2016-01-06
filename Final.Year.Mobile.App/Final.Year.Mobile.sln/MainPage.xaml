@@ -67,6 +67,7 @@
                        FontFamily="Segoe UI">
                 
             </TextBlock>-->
+            <ProgressRing IsActive="False" Name="progressring"/>
         </StackPanel>
     </Grid>
 </Page>

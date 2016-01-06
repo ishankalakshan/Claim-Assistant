@@ -26,6 +26,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using ClaimAssistantApp.ServiceReference1;
+using System.Text.RegularExpressions;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace ClaimAssistantApp.Views
@@ -127,7 +128,25 @@ namespace ClaimAssistantApp.Views
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            /*var ml = new Claim_ML(
+            Regex pattern = new Regex("^[0-9]+$");
+            if (!pattern.IsMatch(txtgarageCost.Text))
+            {
+                ShowMessageBox("Please enter a valid garage cost");
+                return;
+            }
+            if (!pattern.IsMatch(txtDeductions.Text))
+            {
+                ShowMessageBox("Please enter a valid deduction value");
+                return;
+            }
+            if (!pattern.IsMatch(txtOtherCosts.Text))
+            {
+                ShowMessageBox("Please enter a valid other cost");
+                return;
+            }
+            LoadingBar.IsEnabled = true;
+            LoadingBar.Visibility = Visibility.Visible;
+            var ml = new Claim_ML(
                  (App.Current as App).policyid,
                  (App.Current as App).location,
                  (App.Current as App).reason,
@@ -160,11 +179,17 @@ namespace ClaimAssistantApp.Views
                  (App.Current as App).empid
                  );
             var result = JsonConvert.SerializeObject(ml);
-            var data = await new ServiceReference1.Service1Client().InsertClaimAsync(result);
-
-            if (data != -1)
+            var returnClaimId = await new ServiceReference1.Service1Client().InsertClaimAsync(result);
+            if (returnClaimId != -1)
             {
-                var msg = String.Format("Your claim Id reference is {0}", data.ToString());
+                UploadPhotos(returnClaimId.ToString());
+            }
+            
+            if (returnClaimId != -1)
+            {
+                LoadingBar.IsEnabled = false;
+                LoadingBar.Visibility = Visibility.Collapsed;
+                var msg = String.Format("Your claim Id reference is {0}", returnClaimId.ToString());
                 var messageDialog = new Windows.UI.Popups.MessageDialog(msg);
                 messageDialog.Title = "Successful";
                 await messageDialog.ShowAsync();
@@ -172,12 +197,14 @@ namespace ClaimAssistantApp.Views
             }
             else
             {
+                LoadingBar.IsEnabled = false;
+                LoadingBar.Visibility = Visibility.Collapsed;
                 var msg = String.Format("Claiming failed.Please re submit.");
                 var messageDialog = new Windows.UI.Popups.MessageDialog(msg);
                 messageDialog.Title = "Failed";
                 await messageDialog.ShowAsync();
-            }*/
-            UploadPhotos("4019");
+            }
+            
         }
 
         private async void btnAddPart_Click(object sender, RoutedEventArgs e)
@@ -186,9 +213,13 @@ namespace ClaimAssistantApp.Views
             {
                 if (txtQuantity.Text == "")
                 {
-                    var messageDialog = new Windows.UI.Popups.MessageDialog("Enter quantity");
-                    messageDialog.Title = "Required";
-                    await messageDialog.ShowAsync();
+                    ShowMessageBox("Quantity required");
+                    return;
+                }
+                Regex pattern = new Regex("^[0-9]+$");
+                if (!pattern.IsMatch(txtQuantity.Text))
+                {
+                    ShowMessageBox("Quantity can contain only numbers");
                     return;
                 }
 
@@ -201,8 +232,9 @@ namespace ClaimAssistantApp.Views
                 var price = (string)obj["spareUnitCost"];
                 lstboxSparelist.Items.Add(id + "- " + name + " Rs " + price + "/=  " + "  Qty: " + txtQuantity.Text);
 
-                _totalcost += Convert.ToSingle(price) * Convert.ToInt32(txtQuantity.Text);
+                _totalcost += Convert.ToSingle(price) * Convert.ToInt32(txtQuantity.Text);               
                 txtSparecost.Text = _totalcost.ToString();
+                CalculateAmountPayable(txtSparecost.Text, txtgarageCost.Text, txtOtherCosts.Text, txtDeductions.Text);
 
                 SparepartList.Add(new SparepartPayment_ML()
                 {
@@ -218,23 +250,41 @@ namespace ClaimAssistantApp.Views
             }
         }
 
+        public async void ShowMessageBox(string error)
+        {
+            var messageDialog = new Windows.UI.Popups.MessageDialog(error);
+            messageDialog.Title = "Error";
+            await messageDialog.ShowAsync();
+        }
+
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
-            var selected = lstboxSparelist.SelectedValue;
-            var id = selected.ToString().Split('-')[0];
-
-
-            var r = SparepartList.Where(n => n.SparepartId.ToString() == id).ToList();
-
-            foreach (var item in r)
+            try
             {
-                _totalcost = _totalcost - Convert.ToSingle(item.SparepartCost) * Convert.ToInt32(item.SparepartQty);
-                txtSparecost.Text = _totalcost.ToString();
-                SparepartList.Remove(item);
+                var selected = lstboxSparelist.SelectedValue;
+                if (selected==null)
+                {
+                    ShowMessageBox("Select a sparepart to remove");
+                    return;
+                }  
+                var id = selected.ToString().Split('-')[0];
+                var r = SparepartList.Where(n => n.SparepartId.ToString() == id).ToList();
+
+                foreach (var item in r)
+                {
+                    _totalcost = _totalcost - Convert.ToSingle(item.SparepartCost) * Convert.ToInt32(item.SparepartQty);
+                    txtSparecost.Text = _totalcost.ToString();
+                    SparepartList.Remove(item);
+                }
+
+                CalculateAmountPayable(txtSparecost.Text, txtgarageCost.Text, txtOtherCosts.Text, txtDeductions.Text);
+                lstboxSparelist.Items.Remove(selected);
             }
-
-
-            lstboxSparelist.Items.Remove(selected);
+            catch (Exception)
+            {
+                
+                throw;
+            }           
         }
 
         private void loadSparepartCatogoriesToCombo()
@@ -310,9 +360,13 @@ namespace ClaimAssistantApp.Views
 
         }
 
-        private double CalculateAmountPayable(double sparepartCost, double garageCost, double otherCost, double deduction, double insurancePercentage)
+        private void CalculateAmountPayable(string sparepartCost = "0", string garageCost = "0", string otherCost = "0", string deduction = "0")
         {
-            return ((sparepartCost + garageCost + otherCost) - deduction);
+            var _sparecost = Convert.ToDouble(sparepartCost);
+            var _garagecost = Convert.ToDouble(garageCost);
+            var _othercost = Convert.ToDouble(otherCost);
+            var _deductions = Convert.ToDouble(deduction);
+            txtAmountPayable.Text=((_sparecost + _garagecost +_othercost) -_deductions).ToString();
         }
 
         public ObservableDictionary DefaultViewModel
@@ -424,5 +478,54 @@ namespace ClaimAssistantApp.Views
         {
             ImageListBox.Items.Remove(ImageListBox.SelectedItem);
         }
+
+        private void txtgarageCost_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Regex pattern = new Regex("^[0-9]+$");
+            if (!pattern.IsMatch(txtgarageCost.Text))
+            {
+                ShowMessageBox("Please enter a valid garage cost");
+                txtgarageCost.Text = "0";
+                return;
+            }
+            CalculateAmountPayable(txtSparecost.Text, txtgarageCost.Text, txtOtherCosts.Text, txtDeductions.Text);
+        }
+
+        private void txtOtherCosts_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Regex pattern = new Regex("^[0-9]+$");
+            if (!pattern.IsMatch(txtOtherCosts.Text))
+            {
+                ShowMessageBox("Please enter a valid other cost");
+                txtOtherCosts.Text = "0";
+                return;
+            }
+            CalculateAmountPayable(txtSparecost.Text, txtgarageCost.Text, txtOtherCosts.Text, txtDeductions.Text);
+        }
+
+        private void txtDeductions_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Regex pattern = new Regex("^[0-9]+$");
+            if (!pattern.IsMatch(txtDeductions.Text))
+            {
+                ShowMessageBox("Please enter a valid deduction value");
+                txtDeductions.Text = "0";
+                return;
+            }
+            CalculateAmountPayable(txtSparecost.Text, txtgarageCost.Text, txtOtherCosts.Text, txtDeductions.Text);
+        }
+
+        private void txtQuantity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Regex pattern = new Regex("^[0-9]+$");
+            if (!pattern.IsMatch(txtQuantity.Text))
+            {
+                ShowMessageBox("Please enter a valid number");
+                txtQuantity.Text = "0";
+                return;
+            }
+
+        }   
+        
     }
 }

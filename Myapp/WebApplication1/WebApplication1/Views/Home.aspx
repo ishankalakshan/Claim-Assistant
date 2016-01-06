@@ -45,10 +45,10 @@
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
 
         <h2 class="tile-area-title">Online Claim Assisant&nbsp;<i class="fa fa-cog fa-spin"></i></h2>
-        <div class="tile-area-controls">
+        <form class="tile-area-controls" runat="server">
             <button class="image-button icon-right bg-transparent fg-white bg-hover-dark no-border"><span class="sub-header no-margin text-light"><%:Session["EmpName"]%></span> <span class="icon mif-user"></span></button>
-            <a href="../tiles.html" class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-switch"></span></a>
-        </div>
+            <button runat="server" id="btnLogout" onserverclick="btnLogout_ServerClick" class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-switch"></span></button>
+        </form>
 
         <div class="tile-group double">
             <span class="tile-group-title">General</span>
@@ -132,7 +132,7 @@
                     </div>
                     <span class="tile-label">Employees</span>
                 </a>
-                <div class="tile bg-darkOrange fg-white" data-role="tile">
+                <div class="tile bg-darkOrange fg-white" runat="server" id="tileUserAccount" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-key"></span>
                     </div>

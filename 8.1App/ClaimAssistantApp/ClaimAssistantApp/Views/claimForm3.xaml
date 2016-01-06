@@ -60,6 +60,8 @@
                 <Button x:Name="btnRemovePhoto" Click="btnRemovePhoto_Click" Content="Remove" Height="44" Width="147"/>
             </StackPanel>
 
+            <ProgressBar x:Name="LoadingBar" Visibility="Collapsed" IsEnabled="False" IsIndeterminate="true" Height="4" HorizontalAlignment="Stretch"/>
+            
             <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Width="650" HorizontalAlignment="Left" Margin="12,0,0,0">
                 <StackPanel Orientation="Vertical" Width="630">
 
@@ -175,6 +177,7 @@
                             	Background="Transparent"
                             	Foreground="White"
                             	FontFamily="Segoe UI Light"
+                                TextChanged="txtQuantity_TextChanged"
                             	TextWrapping="Wrap"/>
                         </StackPanel>
                     </StackPanel>
@@ -223,6 +226,7 @@
                                          Background="Transparent"
                                          Foreground="White"
                                          Text="0"
+                                         TextChanged="txtgarageCost_TextChanged"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
                         <TextBlock HorizontalAlignment="Left" 
@@ -236,6 +240,7 @@
                                          Text="0"
                                          Background="Transparent"
                                          Foreground="White"
+                                 TextChanged="txtOtherCosts_TextChanged"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
                         <TextBlock HorizontalAlignment="Left" 
@@ -248,6 +253,7 @@
                                          FontSize="16"
                                          Background="Transparent"
                                          Foreground="White"
+                                         TextChanged="txtDeductions_TextChanged"
                                          Text="0"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
@@ -266,10 +272,7 @@
                     </StackPanel>
                     <Button Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150" Click="btnSubmit_Click">Submit</Button>
                 </StackPanel>
-            </ScrollViewer>
-
-
-
+            </ScrollViewer>           
         </StackPanel>
     </Grid>
 </Page>

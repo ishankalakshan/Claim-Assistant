@@ -74,10 +74,10 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxTextBox ID="txtLocationSearch" runat="server" OnTextChanged="txtLocationSearch_TextChanged" AutoPostBack="True" Height="30px" NullText="Enter Location to Search" Width="170px">
+                <dx:ASPxTextBox ID="txtLocationSearch" Theme="Metropolis" runat="server" OnTextChanged="txtLocationSearch_TextChanged" AutoPostBack="True" Height="30px" NullText="Enter Location to Search" Width="170px">
                 </dx:ASPxTextBox>
                 <br />
-                <dx:ASPxGridView ID="gridGarages" KeyFieldName="GarageID" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView Theme="Metropolis" ID="gridGarages" KeyFieldName="GarageID" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="GarageID" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
@@ -90,7 +90,9 @@
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Email" VisibleIndex="3" Caption="Email">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Garages Information" />
                     <SettingsBehavior AllowSelectByRowClick="true" />

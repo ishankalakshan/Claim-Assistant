@@ -53,21 +53,23 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxTextBox ID="txtCategorySearch" OnTextChanged="txtCategorySearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Enter name to search" Width="170px">
+                <dx:ASPxTextBox ID="txtCategorySearch" Theme="Metropolis" OnTextChanged="txtCategorySearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Enter name to search" Width="170px">
                 </dx:ASPxTextBox>
                 <br />
-                <dx:ASPxGridView ID="gridSparepartCategories" KeyFieldName="spareCategoryId" runat="server" AutoGenerateColumns="False" Width="80%">
+                <dx:ASPxGridView ID="gridSparepartCategories" Theme="Metropolis" KeyFieldName="spareCategoryId" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="spareCategoryId" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="spareCategoryId" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="spareCategoryName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsEditing EditFormColumnCount="3" Mode="PopupEditForm" />
                     <SettingsPopup>
                         <EditForm Width="800" />
                     </SettingsPopup>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Sparepart Category Information" />
                     <SettingsBehavior AllowSelectByRowClick="true" />

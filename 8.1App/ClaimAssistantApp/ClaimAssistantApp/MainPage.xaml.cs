@@ -33,10 +33,18 @@ namespace ClaimAssistantApp
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             
-               Frame.Navigate(typeof(Views.MainMenu));    
-            /*try
+               //Frame.Navigate(typeof(Views.MainMenu));    
+            try
             {
-                
+                if (txtUsername.Text==""||txtPassword.Password=="")
+                {
+                    var messageDialog = new Windows.UI.Popups.MessageDialog("Please enter username and password.");
+                    messageDialog.Title = "Access Denied";
+                    await messageDialog.ShowAsync();
+                    return;  
+                }
+                LoadingBar.IsEnabled = true;
+                LoadingBar.Visibility = Visibility.Visible;
                 ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
                 var res = await client.AuthenticateAsync(txtUsername.Text, txtPassword.Password); 
                 if (res!="")
@@ -46,10 +54,14 @@ namespace ClaimAssistantApp
                         var type = res.Split(',')[1];
                         if (type=="agent")
                         {
+                            LoadingBar.IsEnabled = false;
+                            LoadingBar.Visibility = Visibility.Collapsed;
                             Frame.Navigate(typeof(Views.MainMenu));
                         }
                         else
                         {
+                            LoadingBar.IsEnabled = false;
+                            LoadingBar.Visibility = Visibility.Collapsed;
                             var messageDialog = new Windows.UI.Popups.MessageDialog("You dont have permissons to login");
                             messageDialog.Title = "Access Denied";
                             await messageDialog.ShowAsync();
@@ -58,6 +70,8 @@ namespace ClaimAssistantApp
                     }
                 else
                 {
+                   LoadingBar.IsEnabled = false;
+                   LoadingBar.Visibility = Visibility.Collapsed;
                    var messageDialog = new Windows.UI.Popups.MessageDialog("Username or Password entered is invalid");
                    messageDialog.Title = "Access Denied";
                    await messageDialog.ShowAsync();
@@ -73,10 +87,12 @@ namespace ClaimAssistantApp
             }
             if (networkError)
 	        {
-		     var NetworkErrorMessage = new Windows.UI.Popups.MessageDialog("Could not connect to the network");
+                LoadingBar.IsEnabled = false;
+                LoadingBar.Visibility = Visibility.Collapsed;
+		              var NetworkErrorMessage = new Windows.UI.Popups.MessageDialog("Could not connect to the network");
                       NetworkErrorMessage.Title = "Network Error";
                       await NetworkErrorMessage.ShowAsync();
-	        }*/
+	        }
         }
     }
 }

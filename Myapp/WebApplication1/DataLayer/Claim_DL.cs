@@ -126,7 +126,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@_3rdVehicleNo", ml._3rdVehicleNo);
                 cmd.Parameters.AddWithValue("@_3rdOwnerName", ml._3rdOwnerName);
                 cmd.Parameters.AddWithValue("@_3rdAddress", ml._3rdAddress);
-                cmd.Parameters.AddWithValue("@_3rdRenewalDate", ml._3rdRenewalDate);
+                cmd.Parameters.AddWithValue("@_3rdRenewalDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@_3rdSpecialNotes", ml._3rdSpecialNotes);
                 cmd.Parameters.AddWithValue("@_3rdVictimName", ml._3rdVictimName);
                 cmd.Parameters.AddWithValue("@_3rdVictimAddress", ml._3rdVictimAddress);

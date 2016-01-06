@@ -56,10 +56,12 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:ConnectionId='6' x:Name="btnChoosePhotos"                               Content="Choose Image" Height="44" Width="147"/>
-                <Button x:ConnectionId='7' x:Name="btnRemovePhoto"                              Content="Remove" Height="44" Width="147"/>
+                <Button x:ConnectionId='10' x:Name="btnChoosePhotos"                               Content="Choose Image" Height="44" Width="147"/>
+                <Button x:ConnectionId='11' x:Name="btnRemovePhoto"                              Content="Remove" Height="44" Width="147"/>
             </StackPanel>
 
+            <ProgressBar x:Name="LoadingBar" Visibility="Collapsed" IsEnabled="False" IsIndeterminate="true" Height="4" HorizontalAlignment="Stretch"/>
+            
             <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Width="650" HorizontalAlignment="Left" Margin="12,0,0,0">
                 <StackPanel Orientation="Vertical" Width="630">
 
@@ -73,7 +75,7 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                            <ComboBox x:ConnectionId='5' Name="cmbSparePartCategory"                                           
+                            <ComboBox x:ConnectionId='9' Name="cmbSparePartCategory"                                           
                                           FontSize="16" 
                                           HorizontalAlignment="Stretch"
                                           IsEnabled="True"
@@ -92,7 +94,7 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                            <ComboBox x:ConnectionId='4' Name="cmbSparepartManufacturer"                                           
+                            <ComboBox x:ConnectionId='8' Name="cmbSparepartManufacturer"                                           
                                           FontSize="16" 
                                           SelectedValue=""
                                           HorizontalAlignment="Stretch"
@@ -168,23 +170,24 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                            <TextBox x:Name="txtQuantity" 
+                            <TextBox x:ConnectionId='7' x:Name="txtQuantity" 
                             	HorizontalAlignment="Stretch"                                          
                             	FontSize="16"
                             	InputScope="Number"
                             	Background="Transparent"
                             	Foreground="White"
                             	FontFamily="Segoe UI Light"
+                                                                     
                             	TextWrapping="Wrap"/>
                         </StackPanel>
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,15,0,0">                  
-                        <Button x:ConnectionId='2' Name="btnAddPart"
+                        <Button x:ConnectionId='5' Name="btnAddPart"
                                 HorizontalAlignment="Right"
                                 Content="Add" 
                                                         />
-                        <Button x:ConnectionId='3' x:Name="btnRemove"
+                        <Button x:ConnectionId='6' x:Name="btnRemove"
                         	      HorizontalAlignment="Right"
                         	      Content="Remove" 
                                                          />
@@ -217,12 +220,13 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                        <TextBox Name="txtgarageCost" 
+                        <TextBox x:ConnectionId='2' Name="txtgarageCost" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                          Background="Transparent"
                                          Foreground="White"
                                          Text="0"
+                                                                                
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
                         <TextBlock HorizontalAlignment="Left" 
@@ -230,12 +234,13 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                        <TextBox Name="txtOtherCosts" 
+                        <TextBox x:ConnectionId='3' Name="txtOtherCosts" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                          Text="0"
                                          Background="Transparent"
                                          Foreground="White"
+                                                                        
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
                         <TextBlock HorizontalAlignment="Left" 
@@ -243,11 +248,12 @@
                                            FontSize="16"
                                            FontFamily="Segoe UI Light"
                                            TextWrapping="Wrap"/>
-                        <TextBox Name="txtDeductions" 
+                        <TextBox x:ConnectionId='4' Name="txtDeductions" 
                                          HorizontalAlignment="Stretch"                                          
                                          FontSize="16"
                                          Background="Transparent"
                                          Foreground="White"
+                                                                                
                                          Text="0"
                                          FontFamily="Segoe UI Light"
                                          TextWrapping="Wrap"/>
@@ -266,10 +272,7 @@
                     </StackPanel>
                     <Button x:ConnectionId='1' Name="btnSubmit" HorizontalAlignment="Right" Margin="0,150" Width="150"                        >Submit</Button>
                 </StackPanel>
-            </ScrollViewer>
-
-
-
+            </ScrollViewer>           
         </StackPanel>
     </Grid>
 </Page>

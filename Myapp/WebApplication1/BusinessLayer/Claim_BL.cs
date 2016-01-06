@@ -94,13 +94,13 @@ namespace BusinessLayer
             }
         }
 
-        public DataTable GetAllClaims()
+        public DataTable GetAllClaims(string client)
         {
             try
             {
                 var DataDic = new Dictionary<string, object>
                 {
-                    
+                     {"@name",client},
                 };
                 return new DBAccessController().RetriveRecordsWithPara(StoredProcedures.sp_GetAllClaims, DataDic);
             }

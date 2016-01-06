@@ -54,16 +54,18 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxGridView ID="gridVehicleTypes" KeyFieldName="VehicleTypeID" runat="server" AutoGenerateColumns="False" Width="80%">
+                <dx:ASPxGridView ID="gridVehicleTypes" Theme="Metropolis" KeyFieldName="VehicleTypeID" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="VehicleTypeID" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
+                        <dx:GridViewDataTextColumn FieldName="VehicleTypeID" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="VehicleTypeName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
+                        <dx:GridViewDataTextColumn FieldName="VehicleTypeName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowPager" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
-                    <SettingsText Title="Vehicle Types" />
+                    <SettingsText Title="Vehicle Types"/>
                     <SettingsBehavior AllowSelectByRowClick="true" AllowSelectSingleRowOnly="true" />
                 </dx:ASPxGridView>
             </div>

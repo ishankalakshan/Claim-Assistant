@@ -79,6 +79,7 @@ namespace ClaimAssistantApp.Views
 
         private async void btnPolicynoSubmit_Click(object sender, RoutedEventArgs e)
         {
+            ClearAll();
             if (txtPolicyNumber.Text == "" || txtPolicyNumber.Text == null)
             {
                 var NetworkErrorMessage = new Windows.UI.Popups.MessageDialog("Please enter policy number");
@@ -195,6 +196,47 @@ namespace ClaimAssistantApp.Views
                 await NetworkErrorMessage.ShowAsync();
                 return;   
             }      
+        }
+
+        private void ClearAll()
+        {
+            tbInsuredPerson.Text = "";
+            tbAddress.Text = "";
+            tbNic.Text = "";
+            tbPhoneNo.Text = "";
+            tbEmail.Text = "";
+
+            tbRegistrationNo.Text = "";
+            tbColor.Text = "";
+            tbEngineNo.Text = "";
+            tbChassissNo.Text = "";
+            tbManufacturer.Text = "";
+
+            tbModel.Text = "";
+            tbYear.Text = "";
+            tbEngineCapacity.Text = "";
+            tbAbsoluteOwner.Text = "";
+            tbFinancialRights.Text = "";
+
+            tbUsage.Text = "";
+            tbCurrentDamages.Text = "";
+            tbExtraFitting.Text = "";
+            tbPresentValue.Text = "";
+
+            tbPolicyId.Text = "";
+            tbExpireOn.Text = "";
+            tbCommenceOn.Text = "";
+            tbNaturalDisaster.Text = "";
+            tbPassengerCompensastion.Text = "";
+
+            tbDriverCompensastion.Text = "";
+            tbTowingCharges.Text = "";
+            tbTerrorCover.Text = "";
+            tbVandalism.Text = "";
+
+            stackHistory.Children.Clear();
+
+            IsPolicyNoEntered = false;
         }
     }
 }

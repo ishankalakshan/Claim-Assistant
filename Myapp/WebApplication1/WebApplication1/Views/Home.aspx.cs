@@ -11,7 +11,21 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["type"]!=null && Session["type"].ToString()=="admin")
+            {
+                tileUserAccount.Visible = true;
+            }
+            else
+            {
+                tileUserAccount.Visible = false;
+            }
+        }
 
+        protected void btnLogout_ServerClick(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("../login.aspx");
         }
     }
 }

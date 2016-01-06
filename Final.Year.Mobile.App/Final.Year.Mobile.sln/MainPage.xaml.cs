@@ -34,6 +34,9 @@ namespace Final.Year.Mobile.sln
                 await dialog.ShowAsync();
                 return;
             }
+            progressring.IsActive = true;
+            progressring.Height = Window.Current.Bounds.Height;
+            progressring.Width = Window.Current.Bounds.Width;
             var locationAccessDenied = false;
             var geolocator = new Geolocator { DesiredAccuracyInMeters = 50 };
            
@@ -63,21 +66,25 @@ namespace Final.Year.Mobile.sln
                 //string result = await WCFRESTServiceCall("GET", "AddClaimRequest");
                 if (result=="")
                 {
+                    progressring.IsActive = false;
                     var dialog = new MessageDialog("Network error occured.");
                     await dialog.ShowAsync();
                 }
                 else if (result=="0")
                 {
+                    progressring.IsActive = false;
                     var dialog = new MessageDialog("Reported Succussfuly.");
                     await dialog.ShowAsync();
                 }
                 else if (result=="1")
                 {
+                    progressring.IsActive = false;
                     var dialog = new MessageDialog("Invalid policy number.");
                     await dialog.ShowAsync();
                 }
                 else
                 {
+                    progressring.IsActive = false;
                     var dialog = new MessageDialog("Error occured.");
                     await dialog.ShowAsync();
                 }
@@ -86,10 +93,12 @@ namespace Final.Year.Mobile.sln
             catch (Exception ex)
             {
                 //throw ex;
+                progressring.IsActive = false;
                locationAccessDenied = true;
             }
             if (locationAccessDenied)
-            {      
+            {
+                progressring.IsActive = false;
                 var dialog = new MessageDialog("Turn on location");
                 await dialog.ShowAsync();
                 //await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));

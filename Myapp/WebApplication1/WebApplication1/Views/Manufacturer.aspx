@@ -55,17 +55,19 @@
         <ContentTemplate>
                         <div>
                 <br />
-                <dx:ASPxTextBox ID="txtNameSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
+                <dx:ASPxTextBox ID="txtNameSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
                 </dx:ASPxTextBox>
                 <br />
-                <dx:ASPxGridView ID="gridManufacturers" KeyFieldName="ManufactureId" runat="server" AutoGenerateColumns="False" Width="80%">
+                <dx:ASPxGridView ID="gridManufacturers" Theme="Metropolis" KeyFieldName="ManufactureId" runat="server" AutoGenerateColumns="False" Width="80%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="ManufactureId" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="ManufactureName" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" VisibleIndex="1" Caption="Name">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowPager" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Manufacturers" />
                     <SettingsBehavior AllowSelectByRowClick="true" AllowSelectSingleRowOnly="true" />

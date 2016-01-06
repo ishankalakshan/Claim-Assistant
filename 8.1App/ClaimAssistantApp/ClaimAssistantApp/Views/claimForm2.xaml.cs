@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -73,6 +74,30 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep3_Click(object sender, RoutedEventArgs e)
         {
+            if (txtLicense.Text=="")
+            {
+                showMessageBox("Licence required");
+                return;
+            }
+            if (txtNic.Text=="")
+            {
+               showMessageBox("Driver NIC required");
+                return; 
+            }
+            if (txtdamageNature.Text=="")
+            {
+                showMessageBox("Damage nature required");
+                return; 
+            }
+            if (txt3rdAmountClaimed.Text!="")
+            {
+                Regex pattern = new Regex("^[0-9]+$");
+                 if (!pattern.IsMatch(txt3rdAmountClaimed.Text))
+                {
+                    showMessageBox("Please enter a valid amount");
+                    return;
+                }
+            }
             if (rdbYes.IsChecked==true)
             {
                 (App.Current as App).isDriverOwner = "Yes";
@@ -114,6 +139,13 @@ namespace ClaimAssistantApp.Views
             }
 
             this.Frame.Navigate(typeof(claimForm3));
+        }
+
+        public async void showMessageBox(string error)
+        {
+            var messageDialog = new Windows.UI.Popups.MessageDialog(error);
+            messageDialog.Title = "Fill the form";
+            await messageDialog.ShowAsync();
         }
 
         private void cmbVehiclePurpose_SelectionChanged(object sender, SelectionChangedEventArgs e)

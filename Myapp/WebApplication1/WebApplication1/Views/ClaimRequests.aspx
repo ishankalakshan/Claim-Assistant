@@ -13,13 +13,13 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cpForm" runat="server">
      <asp:ScriptManager runat="server"></asp:ScriptManager>
-
+    <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="60000" />
     <div class="form-inline">
         <button type="button" runat="server" class="btn btn-primary horizontal-bar" id="btnRespond" onserverclick="btnRespond_ServerClick">
             Respond
         </button>
     </div>
-
+   
     <div class="modal fade" id="DetailsModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -85,13 +85,13 @@
                 <table border="0">
                     <tr>
                         <td>
-                            <dx:ASPxTextBox ID="txtStatusSearch" OnTextChanged="txtStatusSearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Search by status" Width="170px">
+                            <dx:ASPxTextBox Theme="Metropolis" ID="txtStatusSearch" OnTextChanged="txtStatusSearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Search by status" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%" OnHtmlDataCellPrepared="gridClaimRequests_HtmlDataCellPrepared">
+                <dx:ASPxGridView Theme="Metropolis" ID="gridClaimRequests" KeyFieldName="id" runat="server" AutoGenerateColumns="False" Width="100%" OnHtmlDataCellPrepared="gridClaimRequests_HtmlDataCellPrepared">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="id" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
@@ -103,7 +103,7 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="status" VisibleIndex="4" Caption="Status">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="submittime" VisibleIndex="5" Caption="Submit">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="submittime" VisibleIndex="5" Caption="Submit" SortOrder="Descending">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="respondtime" VisibleIndex="6" Caption="Respond">
                         </dx:GridViewDataTextColumn>
@@ -112,7 +112,9 @@
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="longitude" Visible="false" VisibleIndex="8" Caption="longitude">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowPager" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Claim Requests" />
                     <SettingsBehavior AllowSelectByRowClick="true" AllowSelectSingleRowOnly="true" />

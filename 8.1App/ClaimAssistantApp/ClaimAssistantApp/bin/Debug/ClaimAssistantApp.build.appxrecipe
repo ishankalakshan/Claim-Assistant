@@ -31,8 +31,8 @@
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\bg-menus.jpg">
       <PackagePath>Assets\bg-menus.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\bg.jpg">
-      <PackagePath>Assets\bg.jpg</PackagePath>
+    <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\bg.png">
+      <PackagePath>Assets\bg.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\KDU\Claim.Assisstant\8.1App\ClaimAssistantApp\ClaimAssistantApp\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>

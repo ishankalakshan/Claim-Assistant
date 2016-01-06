@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ModelLayer;
 using BusinessLayer;
+using System.Timers;
+using System.Threading;
 
 namespace WebApplication1.Views
 {
@@ -130,8 +132,12 @@ namespace WebApplication1.Views
         protected void txtStatusSearch_TextChanged(object sender, EventArgs e)
         {
             GetClaimRequests();
-        } 
+        }
 
-
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            GetClaimRequests();
+        }
+       
     }
 }

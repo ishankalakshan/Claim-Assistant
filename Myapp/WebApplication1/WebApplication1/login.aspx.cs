@@ -11,12 +11,12 @@ namespace WebApplication1
 {
     public partial class login : System.Web.UI.Page
     {
-        
-        private bool state;
+
+        private bool _state;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            erroralert.Visible = false;
         }
         private void UserAuthenticate()
         {
@@ -26,19 +26,39 @@ namespace WebApplication1
                 User.password = txtPassword.Value;
             };
 
-            state = new UserLogin_BL().UserAuthentication(User);
-            if (state)
+            _state = new UserLogin_BL().UserAuthentication(User);
+            if (_state)
             {
-                Response.Redirect("Views/Home.aspx");
+                switch (Session["type"].ToString())
+                {
+                    case "staff":
+                        erroralert.Visible = false;
+                        Response.Redirect("Views/Home.aspx");
+                        break;
+                    case "admin":
+                        erroralert.Visible = false;
+                        Response.Redirect("Views/Home.aspx");
+                        break;
+                    case "agent":
+                        errorMsg.InnerText = "You do not have permission to access the system. Please contact system administrator";
+                        erroralert.Visible = true;
+                        break;
+                    default:
+                        errorMsg.InnerText = "Error occured.Please contact system administrator";
+                        erroralert.Visible = true;
+                        break;
+                }
+
             }
             else
             {
-                Response.Redirect("Error.aspx");
+                errorMsg.InnerText = "Username or password you have entered is incorrect";
+                erroralert.Visible = true;
             }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            UserAuthenticate();  
+            UserAuthenticate();
         }
     }
 }

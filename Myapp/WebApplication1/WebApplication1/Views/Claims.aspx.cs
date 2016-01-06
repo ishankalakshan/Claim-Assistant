@@ -17,14 +17,14 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetAllClaimsForGrid();
+            GetAllClaimsForGrid(txtNameSearch.Text);
         }
 
-        private void GetAllClaimsForGrid()
+        private void GetAllClaimsForGrid(string client)
         {
             try
             {
-                gridClaims.DataSource = new Claim_BL().GetAllClaims();
+                gridClaims.DataSource = new Claim_BL().GetAllClaims(client);
                 gridClaims.DataBind();
             }
             catch (Exception)
@@ -53,8 +53,9 @@ namespace WebApplication1.Views
                         SetThirdPartyDetails(dt);
                         SetClaimPaymentDetails(dt);
                         SetSparepareListDetails(dt);
-                        SetImages("4019");
+                       
                     }
+                    SetImages(claimId);
                     ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#Modal').modal('show')});</script>", false);
                 }
             }
@@ -273,7 +274,7 @@ namespace WebApplication1.Views
             {
                 if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(lblClaimId.Text), "Accepted")) ;
                 {
-                    GetAllClaimsForGrid();
+                    GetAllClaimsForGrid(txtNameSearch.Text);
                 }
                
             }
@@ -282,6 +283,11 @@ namespace WebApplication1.Views
                 
                 throw;
             }
+        }
+
+        protected void txtNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            GetAllClaimsForGrid(txtNameSearch.Text);
         }
     }
 }

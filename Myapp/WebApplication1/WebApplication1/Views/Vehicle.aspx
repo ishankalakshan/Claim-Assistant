@@ -119,53 +119,55 @@
                <table border="0">
                     <tr>
                         <td>
-                            <dx:ASPxTextBox ID="txtTypeSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Type" Width="170px">
+                            <dx:ASPxTextBox ID="txtTypeSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Type" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                         <td>&nbsp;&nbsp;</td>
                         <td>
-                            <dx:ASPxTextBox ID="txtManufactureSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Manufacturer" Width="170px">
+                            <dx:ASPxTextBox ID="txtManufactureSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Manufacturer" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                         <td>&nbsp;&nbsp;</td>
                         <td>
-                            <dx:ASPxTextBox ID="txtModelSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Model" Width="170px">
+                            <dx:ASPxTextBox ID="txtModelSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Model" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                         <td>&nbsp;&nbsp;</td>
                         <td>
-                            <dx:ASPxTextBox ID="txtYearSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Year" Width="170px">
+                            <dx:ASPxTextBox ID="txtYearSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Year" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridVehicle" KeyFieldName="VehicleID" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView ID="gridVehicle" Theme="Metropolis" KeyFieldName="VehicleID" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="VehicleID" Visible="false" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="VehicleTypeName" VisibleIndex="1" Caption="Type">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="VehicleTypeName" VisibleIndex="1" Caption="Type">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer" SortOrder="Ascending">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="ManufactureName" VisibleIndex="2" Caption="Manufacturer" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="Model" VisibleIndex="3" Caption="Model">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="Model" VisibleIndex="3" Caption="Model">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="MakeYear" VisibleIndex="4" Caption="Year">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="MakeYear" VisibleIndex="4" Caption="Year">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="FuelType" VisibleIndex="5" Caption="Fuel">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="FuelType" VisibleIndex="5" Caption="Fuel">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="EngineCpacity" VisibleIndex="6" Caption="Engine">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="EngineCpacity" VisibleIndex="6" Caption="Engine">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="seatingCapacity" VisibleIndex="7" Caption="Seating">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="seatingCapacity" VisibleIndex="7" Caption="Seating">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="CarryingCapacity" VisibleIndex="8" Caption="Carrying">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="CarryingCapacity" VisibleIndex="8" Caption="Carrying">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="PresentValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="9" Caption="Present Value">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="PresentValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="9" Caption="Present Value">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="DutyFreeValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="10" Caption="Duty Free">
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="DutyFreeValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="10" Caption="Duty Free">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Vehicle Information" />
                     <SettingsBehavior AllowSelectByRowClick="true" />

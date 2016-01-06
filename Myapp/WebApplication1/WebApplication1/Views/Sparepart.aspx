@@ -82,10 +82,10 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxTextBox ID="txtSparepartName" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
+                <dx:ASPxTextBox ID="txtSparepartName" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
                 </dx:ASPxTextBox>
                 <br />
-                <dx:ASPxGridView ID="gridSpareparts" KeyFieldName="sparepartId" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView ID="gridSpareparts" Theme="Metropolis" KeyFieldName="sparepartId" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
                         <dx:GridViewDataTextColumn Visible="false" FieldName="sparepartId" VisibleIndex="0" Caption="ID">
                         </dx:GridViewDataTextColumn>
@@ -100,7 +100,9 @@
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="sparepartUnitCost" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="5" Caption="Unit Cost (Rs)">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowAllRecords" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true"/>
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Spareparts" />
                     <SettingsBehavior AllowSelectByRowClick="true" />

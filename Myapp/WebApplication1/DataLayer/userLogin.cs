@@ -42,6 +42,7 @@ namespace DataLayer
                     Session["Username"] = ml.username;
                     Session["EmpId"] = dt.Rows[0]["EmpId"].ToString();
                     Session["EmpName"] = dt.Rows[0]["EmpName"].ToString();
+                    Session["type"] = dt.Rows[0]["type"].ToString();
                     return true;
                    
                 }

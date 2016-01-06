@@ -14,5 +14,12 @@ namespace WebApplication1
 
         }
 
+        protected void btnLogout_ServerClick(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("../login.aspx");
+        }
+
     }
 }

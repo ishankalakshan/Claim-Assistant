@@ -434,18 +434,13 @@
                 <table border="0">
                     <tr>
                         <td>
-                            <dx:ASPxTextBox ID="txtNameSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
-                            </dx:ASPxTextBox>
-                        </td>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td>
-                            <dx:ASPxTextBox ID="txtBranchSearch" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Branch to Search" Width="170px">
+                            <dx:ASPxTextBox Theme="Metropolis" ID="txtNameSearch" OnTextChanged="txtNameSearch_TextChanged" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Client to Search" Width="170px">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
                 </table>
                 <br />
-                <dx:ASPxGridView ID="gridClaims" KeyFieldName="claimId" runat="server" AutoGenerateColumns="False" Width="100%">
+                <dx:ASPxGridView Theme="Metropolis" ID="gridClaims" KeyFieldName="claimId" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="claimId" HeaderStyle-HorizontalAlign="Center" VisibleIndex="0" Caption="Claim Id">
                         </dx:GridViewDataTextColumn>
@@ -455,12 +450,14 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="Mobile" HeaderStyle-HorizontalAlign="Center" VisibleIndex="3" Caption="Mobile">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="createdtime" HeaderStyle-HorizontalAlign="Center" VisibleIndex="4" Caption="Submited On">
+                        <dx:GridViewDataTextColumn FieldName="createdtime" HeaderStyle-HorizontalAlign="Center" VisibleIndex="4" Caption="Submited On" SortOrder="Descending">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="claimStatus" HeaderStyle-HorizontalAlign="Center" VisibleIndex="5" Caption="Status">
                         </dx:GridViewDataTextColumn>
                     </Columns>
-                    <SettingsPager Mode="ShowPager" />
+                    <SettingsPager Mode="ShowPager" Position="TopAndBottom">
+                        <PageSizeItemSettings Items="10, 20, 50" Visible="true" />
+                    </SettingsPager>
                     <Settings ShowTitlePanel="true" />
                     <SettingsText Title="Claims Information" />
                     <SettingsBehavior AllowSelectSingleRowOnly="true" AllowSelectByRowClick="true" />
