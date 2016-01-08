@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Garages.aspx.cs" Inherits="WebApplication1.Views.Garages" %>
+
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Garages|Online Claim Assisstant</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
     <i class="fa fa-wrench"></i>&nbsp;Garages
@@ -42,20 +44,27 @@
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input runat="server" type="email" class="form-control" id="txtEmail" />
+                                <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtLocation" class="col-sm-2 control-label">Location</label>
                             <div class="col-sm-10">
-                                <input runat="server" type="text" class="form-control" id="txtLocation" />
+                                <asp:TextBox runat="server" CssClass="form-control" ID="txtLocation" />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                    ControlToValidate="txtLastName"
+                                    ErrorMessage="Last name is a required field."
+                                    ForeColor="Red">
+                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtTp" class="col-sm-2 control-label">Telephone</label>
                             <div class="col-sm-10">
-                                <input runat="server" type="text" class="form-control" id="txtTp" />
+                                <asp:TextBox runat="server" CssClass="form-control" ID="txtTp" />
                             </div>
+                        </div>
+                        <div runat="server" class="alert alert-danger" role="alert" id="errorMsg">
                         </div>
                     </div>
                 </div>
@@ -136,4 +145,19 @@
         </div>
     </div>
 
+    <div class="modal fade" id="ErrorModal">
+        <div class="modal-dialog error">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div id="divError" name="divError" class="modal-body" runat="server">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>

@@ -64,6 +64,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@OtherCosts", ml.otherCosts);
                 cmd.Parameters.AddWithValue("@GarageCosts", ml.garageCosts);
                 cmd.Parameters.AddWithValue("@Deductions", ml.Deductions);
+                cmd.Parameters.AddWithValue("@PaymentNotes",ml.paymentNotes);
 
                 SqlParameter retval = cmd.Parameters.Add("@PaymentId", SqlDbType.Int);
                 retval.Direction = ParameterDirection.ReturnValue;

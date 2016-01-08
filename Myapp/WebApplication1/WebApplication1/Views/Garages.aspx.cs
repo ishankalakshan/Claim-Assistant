@@ -18,9 +18,13 @@ namespace WebApplication1.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnUpdate.Visible = false;
-            btnSave.Visible = true;
-            GetGarageData();
+            if (!Page.IsPostBack)
+            {
+                btnUpdate.Visible = false;
+                btnSave.Visible = true;
+                GetGarageData();
+                errorMsg.Visible = false;
+            }
         }
 
         private void GetGarageData()
@@ -45,10 +49,10 @@ namespace WebApplication1.Views
 
         private void CloseModal()
         {
-            txtEmail.Value = "";
-            txtLocation.Value = "";
+            txtEmail.Text = "";
+            txtLocation.Text = "";
             txtName.Text = "";
-            txtTp.Value = "";
+            txtTp.Text = "";
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#GaragesModal').modal('hide')});</script>", false);
         }
 
@@ -61,18 +65,26 @@ namespace WebApplication1.Views
         {
             try
             {
-                var ml = new Garage_ML()
+                if (txtName.Text == "")
                 {
-                    GarageName = txtName.Text,
-                    GarageTP = txtTp.Value,
-                    GarageLocation = txtLocation.Value,
-                    Email = txtEmail.Value
-                };
-                var result = new Garage_BL().AddGarage(ml);
-                if (result)
-                {
-                    GetGarageData();
+                    errorMsg.InnerText = "Name required";
                 }
+                else
+                {
+                    var ml = new Garage_ML()
+                    {
+                        GarageName = txtName.Text,
+                        GarageTP = txtTp.Text,
+                        GarageLocation = txtLocation.Text,
+                        Email = txtEmail.Text
+                    };
+                    var result = new Garage_BL().AddGarage(ml);
+                    if (result)
+                    {
+                        GetGarageData();
+                    }
+                }
+
             }
             catch (Exception)
             {
@@ -116,9 +128,9 @@ namespace WebApplication1.Views
                 if (gridGarages.Selection.Count > 0)
                 {
                     txtName.Text = (string)gridGarages.GetSelectedFieldValues("GarageName")[0];
-                    txtLocation.Value = (string)gridGarages.GetSelectedFieldValues("GarageLocation")[0];
-                    txtTp.Value = (string)gridGarages.GetSelectedFieldValues("GarageTP")[0];
-                    txtEmail.Value = (string)gridGarages.GetSelectedFieldValues("Email")[0];
+                    txtLocation.Text = (string)gridGarages.GetSelectedFieldValues("GarageLocation")[0];
+                    txtTp.Text = (string)gridGarages.GetSelectedFieldValues("GarageTP")[0];
+                    txtEmail.Text = (string)gridGarages.GetSelectedFieldValues("Email")[0];
                     ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#GaragesModal').modal('show')});</script>", false);
                 }
                 else
@@ -146,7 +158,7 @@ namespace WebApplication1.Views
             try
             {
                 var ml = new Garage_ML(gridGarages.GetSelectedFieldValues("GarageID")[0].ToString(),
-                                            txtLocation.Value, txtName.Text, txtTp.Value, txtEmail.Value);
+                                            txtLocation.Text, txtName.Text, txtTp.Text, txtEmail.Text);
 
                 var result = new Garage_BL().UpdateGarage(ml);
                 if (result)

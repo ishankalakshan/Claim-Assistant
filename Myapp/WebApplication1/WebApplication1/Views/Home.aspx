@@ -5,6 +5,7 @@
 <html>
 
 <head runat="server">
+    <title>Home|Online Claim Assisstant</title>
     <link rel="stylesheet" href="../css/metro.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/metro.js"></script>

@@ -3,6 +3,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Policy|Online Claim Assisstant</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
     <i class="fa fa-user"></i>&nbsp;Policy

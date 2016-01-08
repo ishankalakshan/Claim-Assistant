@@ -5,6 +5,7 @@
     <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false" type="text/javascript"></script>
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"
         type="text/javascript"></script>
+    <title>Claim Requests|Online Claim Assisstant</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
      <i class="fa fa-phone"></i>&nbsp;Claim Requests

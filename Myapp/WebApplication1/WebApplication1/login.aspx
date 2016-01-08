@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Random Login Form</title>
+    <title>Login|Online Claim Assisstant</title>
     <link rel="stylesheet" type="text/css" href="css/style-login.css">
     <script src="js/prefixfree.min.js"></script>
 </head>

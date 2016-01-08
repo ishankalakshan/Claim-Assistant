@@ -175,6 +175,7 @@ namespace ClaimAssistantApp.Views
                  SparepartList,
                  txtgarageCost.Text,
                  txtOtherCosts.Text,
+                 "nothing",
                  txtDeductions.Text,
                  (App.Current as App).empid
                  );

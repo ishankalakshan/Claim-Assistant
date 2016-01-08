@@ -10,12 +10,14 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnUpdate.Visible = false;
-            btnSave.Visible = true;
-            GetVehicles();
-            GetTypes();
-            GetManufacturers();
-
+            if (!IsPostBack)
+            {
+                btnUpdate.Visible = false;
+                btnSave.Visible = true;
+                GetVehicles();
+                GetTypes();
+                GetManufacturers();
+            }
         }
 
         protected void btnAdd_ServerClick(object sender, EventArgs e)
@@ -49,6 +51,7 @@ namespace WebApplication1.Views
         {
             btnUpdate.Visible = true;
             btnSave.Visible = false;
+
             try
             {
                 if (gridVehicle.Selection.Count>0)
@@ -114,6 +117,8 @@ namespace WebApplication1.Views
         {
             try
             {
+                var f = ddlType.SelectedValue;
+                var hj = ddlType.SelectedItem;
                 var ml = new Vehicle_ML(
                     gridVehicle.GetSelectedFieldValues("VehicleID")[0].ToString(),
                     ddlType.SelectedValue.ToString(),

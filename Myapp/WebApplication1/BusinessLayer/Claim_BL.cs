@@ -64,6 +64,7 @@ namespace BusinessLayer
                    sparelist,
                    jArray["garageCosts"].ToString(),
                    jArray["otherCosts"].ToString(),
+                   jArray["paymentNotes"].ToString(),
                    jArray["Deductions"].ToString(),
                    jArray["empid"].ToString()
                    );

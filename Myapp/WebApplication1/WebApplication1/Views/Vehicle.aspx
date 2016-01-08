@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Vehicle.aspx.cs" Inherits="WebApplication1.Views.Vehicle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Vehicle.aspx.cs" Inherits="WebApplication1.Views.Vehicle" EnableViewState="true" %>
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Vehicles|Online Claim Assisstant</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
     <i class="fa fa-automobile"></i>&nbsp;Vehicles
@@ -163,6 +164,10 @@
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="PresentValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="9" Caption="Present Value">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="DutyFreeValue" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="10" Caption="Duty Free">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="VehicleTypeID" Visible="false" Caption="Type">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" FieldName="ManufactureId" Visible="false" Caption="Manufacturer" SortOrder="Ascending">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowPager" Position="TopAndBottom">
