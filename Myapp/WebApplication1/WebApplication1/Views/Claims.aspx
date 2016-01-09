@@ -48,7 +48,13 @@
                                         <td class="col-sm-2">
                                             <label class="control-label">Name</label></td>
                                         <td class="col-sm-10">
-                                            <asp:Label Text="" CssClass="col-sm-10 control-label" ID="lblName" runat="server" /></td>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <asp:Label Text="" CssClass="control-label" ID="lblName" runat="server" />
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="col-sm-2">
@@ -284,7 +290,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="thirdparty" style="height:80%;">
+                            <div role="tabpanel" class="tab-pane" id="thirdparty" style="height: 80%;">
                                 <table>
                                     <tr>
                                         <td class="col-sm-2">
@@ -346,7 +352,7 @@
                                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox" id="slideshow" runat="server">
-                                        <div class="item active" runat="server" id="activeimage">                 
+                                        <div class="item active" runat="server" id="activeimage">
                                         </div>
                                     </div>
                                     <!-- Controls -->

@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using ModelLayer;
 using BusinessLayer;
+using System.Drawing;
 
 namespace WebApplication1.Views
 {
@@ -65,12 +66,6 @@ namespace WebApplication1.Views
         {
             try
             {
-                if (txtName.Text == "")
-                {
-                    errorMsg.InnerText = "Name required";
-                }
-                else
-                {
                     var ml = new Garage_ML()
                     {
                         GarageName = txtName.Text,
@@ -83,8 +78,6 @@ namespace WebApplication1.Views
                     {
                         GetGarageData();
                     }
-                }
-
             }
             catch (Exception)
             {
@@ -176,6 +169,11 @@ namespace WebApplication1.Views
         protected void btnClose_ServerClick(object sender, EventArgs e)
         {
             CloseModal();
+        }
+
+        protected void txtName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,31 +37,31 @@
                     <div class="form-horizontal">
                         <div class="form-group">
                             <label for="txtName" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                            <div class="col-sm-10">                             
+                                <asp:TextBox ID="txtName" runat="server" OnTextChanged="txtName_TextChanged" CssClass="form-control"></asp:TextBox>
+                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtName" ValidationGroup="save" ValidationExpression="^[a-zA-Z0-9]*$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:requiredfieldvalidator errormessage="Required field" controltovalidate="txtname" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
                                 <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" />
+                                 <asp:RegularExpressionValidator runat="server" ControlToValidate="txtEmail" ValidationGroup="save" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtLocation" class="col-sm-2 control-label">Location</label>
                             <div class="col-sm-10">
                                 <asp:TextBox runat="server" CssClass="form-control" ID="txtLocation" />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                                    ControlToValidate="txtLastName"
-                                    ErrorMessage="Last name is a required field."
-                                    ForeColor="Red">
-                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtTp" class="col-sm-2 control-label">Telephone</label>
                             <div class="col-sm-10">
                                 <asp:TextBox runat="server" CssClass="form-control" ID="txtTp" />
+                                 <asp:RegularExpressionValidator runat="server" ControlToValidate="txtTp" ValidationGroup="save" ValidationExpression="^[0-9]*$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:requiredfieldvalidator errormessage="Required field" controltovalidate="txtTp" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic"/>
                             </div>
                         </div>
                         <div runat="server" class="alert alert-danger" role="alert" id="errorMsg">
@@ -70,7 +70,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" runat="server" data-dismiss="modal" id="btnClose" onserverclick="btnClose_ServerClick">Close</button>
-                    <button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick">Save</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick" validationgroup="save">Save</button>
                     <button type="button" class="btn btn-primary" runat="server" id="btnUpdate" onserverclick="btnUpdate_ServerClick">Save changes</button>
                 </div>
             </div>

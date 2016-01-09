@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="ClaimRequest_ML.cs" />
     <Compile Include="Claim_ML.cs" />
+    <Compile Include="Customer_ML.cs" />
+    <Compile Include="Customer_Vehicle_ML.cs" />
+    <Compile Include="Customer_Vehicle_Policy_ML.cs" />
     <Compile Include="Employee_ML.cs" />
     <Compile Include="Garage_ML.cs" />
     <Compile Include="Policy_ML.cs" />
