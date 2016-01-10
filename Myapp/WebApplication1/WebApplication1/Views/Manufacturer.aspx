@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Manufacturer.aspx.cs" Inherits="WebApplication1.Manufacturers" %>
+
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Manufacturers|Online Claim Assisstant</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpPageContaintName" runat="server">
-     <i class="fa fa-trademark"></i>&nbsp;Manufacturers
+    <i class="fa fa-trademark"></i>&nbsp;Manufacturers
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpFprmContaintName" runat="server">
 </asp:Content>
@@ -37,24 +38,26 @@
                             <label for="txtName" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtName" ValidationGroup="save" ValidationExpression="^[a-zA-Z0-9]*$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:RequiredFieldValidator ErrorMessage="Required field" ControlToValidate="txtname" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" runat="server" id="btnClose" onserverclick="btnClose_ServerClick">Close</button>
-                    <button type="button" class="btn btn-primary" runat="server" id="btnSave" onserverclick="btnSave_ServerClick">Save</button>
-                    <button type="button" class="btn btn-primary" runat="server" id="btnUpdate" onserverclick="btnUpdate_ServerClick">Save changes</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnSave" validationgroup="save" onserverclick="btnSave_ServerClick">Save</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnUpdate" validationgroup="save" onserverclick="btnUpdate_ServerClick">Save changes</button>
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
+    <!-- /.modal-dialog -->
     </div>
 
     <asp:UpdatePanel ID="upManufacturers" runat="server">
         <ContentTemplate>
-                        <div>
+            <div>
                 <br />
                 <dx:ASPxTextBox ID="txtNameSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
                 </dx:ASPxTextBox>

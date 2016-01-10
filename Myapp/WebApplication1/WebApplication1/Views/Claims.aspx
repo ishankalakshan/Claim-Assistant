@@ -17,6 +17,9 @@
         <button type="button" class="btn btn-primary horizontal-bar" name="btnReview" id="btnReview" runat="server" onserverclick="btnReview_ServerClick">
             Review
         </button>
+        <button type="button" class="btn btn-danger horizontal-bar" name="btnArchive" id="btnArchive" runat="server" onserverclick="btnArchive_ServerClick">
+            Archive
+        </button>
     </div>
 
     <div class="modal fade" id="Modal">
@@ -48,12 +51,7 @@
                                         <td class="col-sm-2">
                                             <label class="control-label">Name</label></td>
                                         <td class="col-sm-10">
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Name</label>
-                                                <div class="col-sm-10">
-                                                    <asp:Label Text="" CssClass="control-label" ID="lblName" runat="server" />
-                                                </div>
-                                            </div>
+                                            <asp:Label Text="" CssClass="control-label" ID="lblName" runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -408,6 +406,12 @@
                                     </tr>
                                     <tr>
                                         <td class="col-sm-2">
+                                            <label class="control-label">Notes on Payment</label></td>
+                                        <td class="col-sm-10">
+                                            <asp:Label Text="" CssClass="control-label" ID="lblPaymentNotes" runat="server" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">
                                             <label class="control-label">Deductions</label></td>
                                         <td class="col-sm-10">
                                             <asp:Label Text="" CssClass="control-label" ID="lblDeductions" runat="server" /></td>
@@ -427,6 +431,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="btnClose" runat="server">Close</button>
                     <button type="button" class="btn btn-success" runat="server" id="btnAccepted" onserverclick="btnAccepted_ServerClick">Accept</button>
+                    <button type="button" class="btn btn-danger" runat="server" id="btnReject" onserverclick="btnReject_ServerClick">Reject</button>
                 </div>
             </div>
             <!-- /.modal-content -->

@@ -113,6 +113,7 @@ namespace WebApplication1
         {
             btnUpdate.Visible = false;
             btnSave.Visible = true;
+            txtName.Text = "";
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#ManufacturerModal').modal('show')});</script>", false);
         }
 

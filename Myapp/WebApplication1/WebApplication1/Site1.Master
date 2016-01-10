@@ -67,7 +67,7 @@
                     <ul class="nav" id="side-menu">                        
                         <li>
                             <a href="../Views/Home.aspx"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a>
-                            <a href=""><i class="mif-folder-plus"></i>&nbsp;&nbsp;New Policy</a>
+                            <a href="../Views/Policy.aspx"><i class="mif-folder-plus"></i>&nbsp;&nbsp;Policy</a>
                             <a href="../Views/Claims.aspx"><i class="mif-file-text"></i>&nbsp;&nbsp;Claims</a>
                             <a href="../Views/ClaimRequests.aspx"><i class="mif-perm-phone-msg"></i>&nbsp;&nbsp;Claim Requests</a>
                             <a href="../Views/Vehicle.aspx"><i class="icon mif-automobile"></i>&nbsp;&nbsp;Vehicles</a>

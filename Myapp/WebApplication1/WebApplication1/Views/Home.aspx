@@ -55,11 +55,11 @@
             <span class="tile-group-title">General</span>
             <div class="tile-container">
 
-                <a href="#" class="tile-wide bg-darkBlue fg-white" data-role="tile">
+                <a href="Policy.aspx" class="tile-wide bg-darkBlue fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-folder-plus"></span>
                     </div>
-                    <span class="tile-label">New Policy</span>
+                    <span class="tile-label">Policy</span>
                 </a>
                 <a href="Claims.aspx" class="tile bg-Blue fg-white" data-role="tile">
                     <div class="tile-content iconic">

@@ -143,6 +143,7 @@ namespace WebApplication1.Views
         {
             btnUpdate.Visible = false;
             btnSave.Visible = true;
+            ClearForm();
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#GaragesModal').modal('show')});</script>", false);
         }
 
@@ -174,6 +175,14 @@ namespace WebApplication1.Views
         protected void txtName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClearForm()
+        {
+             txtName.Text="";
+             txtTp.Text="";
+             txtLocation.Text="";
+             txtEmail.Text = "";
         }
     }
 }

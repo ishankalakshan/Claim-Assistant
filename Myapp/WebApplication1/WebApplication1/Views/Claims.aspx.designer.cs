@@ -22,6 +22,15 @@ namespace WebApplication1.Views {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnReview;
         
         /// <summary>
+        /// btnArchive control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnArchive;
+        
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -499,6 +508,15 @@ namespace WebApplication1.Views {
         protected global::System.Web.UI.WebControls.Label lblOtherCosts;
         
         /// <summary>
+        /// lblPaymentNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPaymentNotes;
+        
+        /// <summary>
         /// lblDeductions control.
         /// </summary>
         /// <remarks>
@@ -533,6 +551,15 @@ namespace WebApplication1.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnAccepted;
+        
+        /// <summary>
+        /// btnReject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnReject;
         
         /// <summary>
         /// UpdatePanel2 control.

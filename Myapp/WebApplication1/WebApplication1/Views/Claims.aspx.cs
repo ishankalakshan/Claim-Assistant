@@ -53,7 +53,7 @@ namespace WebApplication1.Views
                         SetThirdPartyDetails(dt);
                         SetClaimPaymentDetails(dt);
                         SetSparepareListDetails(dt);
-                       
+
                     }
                     SetImages(claimId);
                     ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#Modal').modal('show')});</script>", false);
@@ -92,18 +92,22 @@ namespace WebApplication1.Views
         {
             try
             {
+                var cultureInfo = new CultureInfo("hi-IN");
+                var numberFormatInfo = (NumberFormatInfo)cultureInfo.NumberFormat.Clone();
+                numberFormatInfo.CurrencySymbol = "Rs";
+
                 lblManufacturer.Text = dt.Rows[0]["ManufactureName"].ToString();
                 lblModel.Text = dt.Rows[0]["Model"].ToString();
                 lblYear.Text = dt.Rows[0]["MakeYear"].ToString();
-                lblPresentValue.Text = dt.Rows[0]["PresentValue"].ToString();
-                lblDutyFreeValue.Text = dt.Rows[0]["DutyFreeValue"].ToString();
+                lblPresentValue.Text = Convert.ToDecimal(dt.Rows[0]["PresentValue"].ToString()).ToString("C", numberFormatInfo); ;
+                lblDutyFreeValue.Text = Convert.ToDecimal(dt.Rows[0]["DutyFreeValue"].ToString()).ToString("C", numberFormatInfo);
                 lblRegistrationNo.Text = dt.Rows[0]["RegistrationNo"].ToString();
                 lblFinancialRights.Text = dt.Rows[0]["FinancialRights"].ToString();
-                lblUsage.Text = dt.Rows[0]["Usage"].ToString();     
+                lblUsage.Text = dt.Rows[0]["Usage"].ToString();
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -126,7 +130,7 @@ namespace WebApplication1.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -147,7 +151,7 @@ namespace WebApplication1.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -169,7 +173,7 @@ namespace WebApplication1.Views
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -185,10 +189,11 @@ namespace WebApplication1.Views
                 lblGarageCosts.Text = Convert.ToDecimal(dt.Rows[0]["garageCost"]).ToString("C", numberFormatInfo);
                 lblOtherCosts.Text = Convert.ToDecimal(dt.Rows[0]["otherCosts"].ToString()).ToString("C", numberFormatInfo);
                 lblDeductions.Text = Convert.ToDecimal(dt.Rows[0]["deductions"].ToString()).ToString("C", numberFormatInfo);
+                lblPaymentNotes.Text = dt.Rows[0]["notes"].ToString();
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -200,7 +205,7 @@ namespace WebApplication1.Views
             numberFormatInfo.CurrencySymbol = "Rs";
 
             try
-            {               
+            {
                 gridSpareparts.DataSource = dt;
                 gridSpareparts.DataBind();
                 double totalsparecost = 0;
@@ -209,11 +214,11 @@ namespace WebApplication1.Views
                 double OtherCosts = 0;
                 double Deductions = 0;
 
-                if (dt.Rows[0]["garageCost"]!=null)
+                if (dt.Rows[0]["garageCost"] != null)
                 {
                     GarageCosts = Convert.ToDouble(dt.Rows[0]["garageCost"].ToString());
                 }
-                if (dt.Rows[0]["otherCosts"]!=null)
+                if (dt.Rows[0]["otherCosts"] != null)
                 {
                     OtherCosts = Convert.ToDouble(dt.Rows[0]["otherCosts"].ToString());
                 }
@@ -226,14 +231,14 @@ namespace WebApplication1.Views
                     var unitPrice = Convert.ToDouble(dt.Rows[i]["sparePartCost"].ToString());
                     var Qty = Convert.ToInt32(dt.Rows[i]["sparepartQty"].ToString());
 
-                    totalsparecost += (unitPrice * Qty);      
+                    totalsparecost += (unitPrice * Qty);
                 }
                 totalcost = totalsparecost + GarageCosts + OtherCosts - Deductions;
-                lblPayable.Text = Convert.ToDecimal(totalcost).ToString("C", numberFormatInfo); 
+                lblPayable.Text = Convert.ToDecimal(totalcost).ToString("C", numberFormatInfo);
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -242,7 +247,7 @@ namespace WebApplication1.Views
         {
             string directory = "E:\\KDU\\Claim.Assisstant\\Myapp\\WebApplication1\\WebApplication1\\ClaimImages\\" + claimId + "\\";
             string[] images = Directory.GetFiles(directory, "*.png");
-            string path = String.Format("..\\ClaimImages\\{0}\\{1}",claimId,System.IO.Path.GetFileName(images[0]));
+            string path = String.Format("..\\ClaimImages\\{0}\\{1}", claimId, System.IO.Path.GetFileName(images[0]));
             activeimage.Controls.Add(new HtmlImage()
                 {
                     Width = 500,
@@ -253,15 +258,15 @@ namespace WebApplication1.Views
             for (int i = 1; i < images.Length; i++)
             {
                 HtmlGenericControl div = new HtmlGenericControl();
-                div.TagName = "div"; 
+                div.TagName = "div";
                 div.Attributes["class"] = "item";
-                div.Attributes["id"] = "photo"+i;
+                div.Attributes["id"] = "photo" + i;
                 div.Attributes["runat"] = "server";
                 div.Controls.Add(new HtmlImage()
                 {
-                    Width=500,
-                    Height=400,
-                    Src=String.Format("..\\ClaimImages\\{0}\\{1}",claimId,System.IO.Path.GetFileName(images[i]))
+                    Width = 500,
+                    Height = 400,
+                    Src = String.Format("..\\ClaimImages\\{0}\\{1}", claimId, System.IO.Path.GetFileName(images[i]))
                 });
                 slideshow.Controls.Add(div);
             }
@@ -272,15 +277,15 @@ namespace WebApplication1.Views
         {
             try
             {
-                if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(lblClaimId.Text), "Accepted")) ;
+                if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(lblClaimId.Text), "Accepted"))
                 {
                     GetAllClaimsForGrid(txtNameSearch.Text);
                 }
-               
+
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -288,6 +293,44 @@ namespace WebApplication1.Views
         protected void txtNameSearch_TextChanged(object sender, EventArgs e)
         {
             GetAllClaimsForGrid(txtNameSearch.Text);
+        }
+
+        protected void btnReject_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(lblClaimId.Text), "Rejected"))
+                {
+                    GetAllClaimsForGrid(txtNameSearch.Text);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        protected void btnArchive_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var claimId = "";
+                if (gridClaims.Selection.Count > 0)
+                {
+                    claimId = gridClaims.GetSelectedFieldValues("claimId")[0].ToString();
+                    if (new Claim_BL().UpdateClaimStatus(Convert.ToInt32(claimId), "Archive"))
+                    {
+                        GetAllClaimsForGrid(txtNameSearch.Text);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
