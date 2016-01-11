@@ -17,6 +17,11 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["EmpId"] == null)
+            {
+                Response.Redirect("../login.aspx");
+                return;
+            }
             GetAllClaimsForGrid(txtNameSearch.Text);
         }
 
@@ -331,6 +336,11 @@ namespace WebApplication1.Views
 
                 throw;
             }
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            GetAllClaimsForGrid(txtNameSearch.Text);
         }
     }
 }

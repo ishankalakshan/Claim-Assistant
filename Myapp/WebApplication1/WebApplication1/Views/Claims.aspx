@@ -13,6 +13,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cpForm" runat="server">
     <asp:ScriptManager runat="server"></asp:ScriptManager>
+    <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="60000" />
     <div class="form-inline">
         <button type="button" class="btn btn-primary horizontal-bar" name="btnReview" id="btnReview" runat="server" onserverclick="btnReview_ServerClick">
             Review

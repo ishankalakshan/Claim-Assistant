@@ -64,7 +64,7 @@ namespace WebApplication1.Views {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtYear;
+        protected global::System.Web.UI.WebControls.TextBox txtYear;
         
         /// <summary>
         /// txtUnitCost control.
@@ -73,7 +73,7 @@ namespace WebApplication1.Views {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUnitCost;
+        protected global::System.Web.UI.WebControls.TextBox txtUnitCost;
         
         /// <summary>
         /// btnSave control.
@@ -110,6 +110,15 @@ namespace WebApplication1.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtSparepartName;
+        
+        /// <summary>
+        /// txtManuName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtManuName;
         
         /// <summary>
         /// gridSpareparts control.

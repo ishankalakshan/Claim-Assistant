@@ -48,8 +48,7 @@
                          FontSize="15"
                          Width="180"
                          Margin="10,0"
-                         Background="Transparent"
-                         Foreground="Grey"
+                         Foreground="Black"
                          VerticalAlignment="Center">               
                 </TextBox>
                 <Button x:Name="btnSubmit"

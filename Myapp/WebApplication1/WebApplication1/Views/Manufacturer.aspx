@@ -38,7 +38,7 @@
                             <label for="txtName" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
-                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtName" ValidationGroup="save" ValidationExpression="^[a-zA-Z0-9]*$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtName" ValidationGroup="save" ValidationExpression="^[a-zA-Z0-9 ]*$" ErrorMessage="Name required" ForeColor="#ff0000" Display="Dynamic" />
                                 <asp:RequiredFieldValidator ErrorMessage="Required field" ControlToValidate="txtname" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic" />
                             </div>
                         </div>

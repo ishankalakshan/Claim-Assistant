@@ -124,7 +124,7 @@ namespace ClaimAssistantApp.Views
                     tbExtraFitting.Text = policyInformation[0]["ExtraFittins"].ToString();
                     tbPresentValue.Text = policyInformation[0]["PresentValue"].ToString();
 
-                    tbPolicyId.Text = tbPolicyId.Text + " " + "4";
+                    tbPolicyId.Text = tbPolicyId.Text + " " + txtPolicyNumber.Text;
                     tbExpireOn.Text = tbExpireOn.Text + " " + policyInformation[0]["ExpireOn"].ToString();
                     tbCommenceOn.Text = tbCommenceOn.Text + " " + policyInformation[0]["commenceOn"].ToString();
                     tbNaturalDisaster.Text = tbNaturalDisaster.Text + " " + policyInformation[0]["natural_disaster"].ToString();

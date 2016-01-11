@@ -11,11 +11,19 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnUpdate.Visible = false;
-            btnSave.Visible = true;
-            GetSpareparts();
-            GetManufacturerList();
-            GetCategoryList();
+            if (Session["EmpId"] == null)
+            {
+                Response.Redirect("../login.aspx");
+                return;
+            }
+            if (!IsPostBack)
+            {
+                btnUpdate.Visible = false;
+                btnSave.Visible = true;
+                GetSpareparts();
+                GetManufacturerList();
+                GetCategoryList();
+            }
         }
 
         protected void btnClose_ServerClick(object sender, EventArgs e)
@@ -32,10 +40,10 @@ namespace WebApplication1.Views
                 if (gridSpareparts.Selection.Count > 0)
                 {
                     txtName.Text = (string)gridSpareparts.GetSelectedFieldValues("sparepartName")[0];
-                    ddlCatogaries.SelectedValue = gridSpareparts.GetSelectedFieldValues("sparepartCategory")[0].ToString();
-                    ddlManufacturers.SelectedValue = gridSpareparts.GetSelectedFieldValues("sparepartManufacturer")[0].ToString();
-                    txtUnitCost.Value = gridSpareparts.GetSelectedFieldValues("sparepartUnitCost")[0].ToString();
-                    txtYear.Value = (string)gridSpareparts.GetSelectedFieldValues("spareparManufacYear")[0];
+                    ddlCatogaries.SelectedValue = gridSpareparts.GetSelectedFieldValues("spareCategoryId")[0].ToString();
+                    ddlManufacturers.SelectedValue = gridSpareparts.GetSelectedFieldValues("ManufactureId")[0].ToString();
+                    txtUnitCost.Text = gridSpareparts.GetSelectedFieldValues("sparepartUnitCost")[0].ToString();
+                    txtYear.Text = (string)gridSpareparts.GetSelectedFieldValues("spareparManufacYear")[0];
                     ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#SparepartModal').modal('show')});</script>", false);
                 }
                 else
@@ -58,9 +66,9 @@ namespace WebApplication1.Views
                 var ml = new Sparepart_ML();
                 {
                     ml.sparepartModel = string.IsNullOrEmpty(txtSparepartName.Text) ? "" : txtSparepartName.Text;
-                    ml.sparepartCategoryName = string.IsNullOrEmpty(txtSparepartName.Text) ? "" : txtSparepartName.Text;
-                    ml.spareManufacturerName = string.IsNullOrEmpty(txtSparepartName.Text) ? "" : txtSparepartName.Text;
-                    ml.spareManufacYear = string.IsNullOrEmpty(txtSparepartName.Text) ? "" : txtSparepartName.Text;
+                    ml.sparepartCategoryName = "";
+                    ml.spareManufacturerName = string.IsNullOrEmpty(txtManuName.Text) ? "" : txtManuName.Text;
+                    ml.spareManufacYear = "";
                 };
                 gridSpareparts.DataSource = new Sparepart_BL().GetSpareparts(ml);
                 gridSpareparts.DataBind();
@@ -75,8 +83,8 @@ namespace WebApplication1.Views
         private void CloseModal()
         {
             txtName.Text = "";
-            txtUnitCost.Value = "";
-            txtYear.Value ="";
+            txtUnitCost.Text = "";
+            txtYear.Text = "";
             ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "script", "<script type='text/javascript'>$( document ).ready(function() { $('#SparepartModal').modal('hide')});</script>", false);
         }
 
@@ -168,8 +176,8 @@ namespace WebApplication1.Views
                     sparepartModel=txtName.Text,
                     sparepartCategory = Convert.ToInt32(ddlCatogaries.SelectedValue),
                     spareManufacturer = Convert.ToInt32(ddlManufacturers.SelectedValue),
-                    spareManufacYear = txtYear.Value,
-                    spareUnitCost = Convert.ToSingle(txtUnitCost.Value)
+                    spareManufacYear = txtYear.Text,
+                    spareUnitCost = Convert.ToSingle(txtUnitCost.Text)
                 };
                 var result = new Sparepart_BL().AddSparepart(ml);
                 if (result)
@@ -194,8 +202,8 @@ namespace WebApplication1.Views
                     sparepartModel = txtName.Text,
                     sparepartCategory = Convert.ToInt32(ddlCatogaries.SelectedValue),
                     spareManufacturer = Convert.ToInt32(ddlManufacturers.SelectedValue),
-                    spareManufacYear = txtYear.Value,
-                    spareUnitCost = Convert.ToSingle(txtUnitCost.Value)
+                    spareManufacYear = txtYear.Text,
+                    spareUnitCost = Convert.ToSingle(txtUnitCost.Text)
                 };
 
                 var result = new Sparepart_BL().UpdateSparepart(ml);
@@ -209,6 +217,11 @@ namespace WebApplication1.Views
                 
                 throw;
             }
+        }
+
+        protected void txtSparepartName_TextChanged(object sender, EventArgs e)
+        {
+            GetSpareparts();
         }
     }
 }

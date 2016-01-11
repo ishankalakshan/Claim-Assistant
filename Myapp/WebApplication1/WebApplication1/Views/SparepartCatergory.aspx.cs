@@ -9,6 +9,11 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["EmpId"] == null)
+            {
+                Response.Redirect("../login.aspx");
+                return;
+            }
             btnUpdate.Visible = false;
             btnSave.Visible = true;
             GetSparepartCatogoriesData();

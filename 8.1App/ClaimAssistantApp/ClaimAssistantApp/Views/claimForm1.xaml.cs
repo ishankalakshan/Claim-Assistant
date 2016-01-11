@@ -66,7 +66,7 @@ namespace ClaimAssistantApp.Views
 
         private void btnNextStep2_Click(object sender, RoutedEventArgs e)
         {
-            /*if (txtLocation.Text=="")
+            if (txtLocation.Text=="")
             {
                 showMessageBox("Location required");
                 return;
@@ -103,7 +103,7 @@ namespace ClaimAssistantApp.Views
             DateTimeOffset st = txt3rdRenewalDate.Date;
             (App.Current as App)._3rdRenewalDate = st.Date;
 
-            (App.Current as App)._3rdSpecialNotes = txtNotes.Text;*/
+            (App.Current as App)._3rdSpecialNotes = txtNotes.Text;
             this.Frame.Navigate(typeof(claimForm2));
         }
 

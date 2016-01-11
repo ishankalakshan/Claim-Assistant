@@ -18,19 +18,19 @@
         <button type="button" class="btn btn-primary horizontal-bar" data-toggle="modal" data-target="#PolicyModal">
             Add
         </button>
-        <button type="button" runat="server" class="btn btn-warning horizontal-bar" id="btnEdit">
+        <%--<button type="button" runat="server" class="btn btn-warning horizontal-bar" id="btnEdit">
             Update
         </button>
         <button type="button" class="btn btn-danger horizontal-bar" data-toggle="modal" data-target="#DeleteModal">
             Remove
-        </button>
+        </button>--%>
     </div>
 
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
             <div>
                 <br />
-                <table border="0">
+                <%--<table border="0">
                     <tr>
                         <td>
                             <dx:ASPxTextBox ID="txtNameSearch" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
@@ -42,7 +42,7 @@
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
-                </table>
+                </table>--%>
                 <br />
                 <dx:ASPxGridView ID="gridPolicy" Theme="Metropolis" KeyFieldName="Policy_ID" runat="server" AutoGenerateCloumns="False" Width="100%">
                     <Columns>

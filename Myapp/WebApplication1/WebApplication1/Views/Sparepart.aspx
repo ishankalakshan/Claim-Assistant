@@ -35,9 +35,11 @@
                 <div class="modal-body">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <label for="txtName" class="col-sm-2 control-label">Name</label>
+                            <label for="txtName" class="col-sm-2 control-label">Model</label>
                             <div class="col-sm-10">
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtName" ValidationGroup="save" ValidationExpression="^[a-zA-Z0-9 ]*$" ErrorMessage="Invalid" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:requiredfieldvalidator errormessage="Required field" controltovalidate="txtname" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -57,13 +59,16 @@
                         <div class="form-group">
                             <label for="txtTp" class="col-sm-2 control-label">Year</label>
                             <div class="col-sm-10">
-                                <input runat="server" type="text" class="form-control" id="txtYear" />
+                                <asp:TextBox runat="server" CssClass="form-control" id="txtYear" />
+                                <asp:requiredfieldvalidator errormessage="Required field" controltovalidate="txtYear" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="txtTp" class="col-sm-2 control-label">Unit Cost(Rs)</label>
                             <div class="col-sm-10">
-                                <input runat="server" type="text" class="form-control" id="txtUnitCost" />
+                                <asp:TextBox runat="server" CssClass="form-control" id="txtUnitCost" />
+                                <asp:RegularExpressionValidator runat="server" ControlToValidate="txtUnitCost" ValidationGroup="save" ValidationExpression="^[0-9]*$" ErrorMessage="Invalid" ForeColor="#ff0000" Display="Dynamic" />
+                                <asp:requiredfieldvalidator errormessage="Required field" controltovalidate="txtUnitCost" runat="server" ValidationGroup="save" ForeColor="#ff0000" Display="Dynamic"/>
                             </div>
                         </div>
                     </div>
@@ -83,8 +88,17 @@
         <ContentTemplate>
             <div>
                 <br />
-                <dx:ASPxTextBox ID="txtSparepartName" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter Name to Search" Width="170px">
-                </dx:ASPxTextBox>
+                <table>
+                    <tr>
+                        <td><dx:ASPxTextBox ID="txtSparepartName" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter a model" Width="170px" OnTextChanged="txtSparepartName_TextChanged">
+                </dx:ASPxTextBox></td>
+                        <td>&nbsp;</td>
+                        <td><dx:ASPxTextBox ID="txtManuName" Theme="Metropolis" runat="server" AutoPostBack="True" Height="30px" NullText="Enter a manufacturer" Width="170px" OnTextChanged="txtSparepartName_TextChanged">
+                </dx:ASPxTextBox></td>        
+                    </tr>
+                </table>
+                
+                
                 <br />
                 <dx:ASPxGridView ID="gridSpareparts" Theme="Metropolis" KeyFieldName="sparepartId" runat="server" AutoGenerateColumns="False" Width="100%">
                     <Columns>
@@ -99,6 +113,10 @@
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="spareparManufacYear" VisibleIndex="4" Caption=" Model Year">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn HeaderStyle-HorizontalAlign="Center" FieldName="sparepartUnitCost" PropertiesTextEdit-DisplayFormatString="n2" VisibleIndex="5" Caption="Unit Cost (Rs)">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn  FieldName="spareCategoryId" Visible="false" Caption="">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn  FieldName="ManufactureId" Visible="false"  Caption="">
                         </dx:GridViewDataTextColumn>
                     </Columns>
                     <SettingsPager Mode="ShowPager" Position="TopAndBottom">

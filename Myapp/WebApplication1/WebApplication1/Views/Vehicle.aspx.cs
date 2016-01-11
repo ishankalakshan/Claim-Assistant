@@ -10,6 +10,11 @@ namespace WebApplication1.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["EmpId"] == null)
+            {
+                Response.Redirect("../login.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 btnUpdate.Visible = false;
