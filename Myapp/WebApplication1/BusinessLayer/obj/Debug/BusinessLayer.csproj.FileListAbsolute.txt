@@ -50,7 +50,6 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.pdb
-K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\BusinessLayer.dll
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\BusinessLayer.pdb
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\DataLayer.dll
@@ -59,5 +58,6 @@ K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newton
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\DataLayer.pdb
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\ModelLayer.pdb
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.dll
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\BusinessLayer\obj\Debug\BusinessLayer.pdb

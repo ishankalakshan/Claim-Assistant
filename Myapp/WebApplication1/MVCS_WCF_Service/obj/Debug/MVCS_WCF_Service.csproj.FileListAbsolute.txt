@@ -40,7 +40,6 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\DataLay
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.csprojResolveAssemblyReference.cache
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.pdb
-K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.csprojResolveAssemblyReference.cache
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.dll.config
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.dll
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\MVCS_WCF_Service.pdb
@@ -52,5 +51,6 @@ K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\Bus
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\ModelLayer.pdb
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\Newtonsoft.Json.xml
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\bin\Debug\DataLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.csprojResolveAssemblyReference.cache
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.dll
 K:\Projects\Claim-Assistant\Myapp\WebApplication1\MVCS_WCF_Service\obj\Debug\MVCS_WCF_Service.pdb

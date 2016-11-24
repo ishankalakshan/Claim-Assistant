@@ -90,5 +90,3 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\bin\Newtonsoft.Jso
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\bin\DataLayer.pdb
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
-K:\Projects\Claim-Assistant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
-K:\Projects\Claim-Assistant\Myapp\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll.licenses
