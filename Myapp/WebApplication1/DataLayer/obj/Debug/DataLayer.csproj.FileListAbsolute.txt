@@ -45,3 +45,12 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Jso
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\DataLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\ModelLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\bin\Debug\Newtonsoft.Json.xml
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\DataLayer\obj\Debug\DataLayer.pdb

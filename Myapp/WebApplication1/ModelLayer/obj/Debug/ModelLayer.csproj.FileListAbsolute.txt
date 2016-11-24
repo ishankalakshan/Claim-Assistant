@@ -28,3 +28,9 @@ E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Js
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.xml
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.dll
 E:\KDU\Claim.Assisstant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\bin\Debug\ModelLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\obj\Debug\ModelLayer.pdb
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.dll
+K:\Projects\Claim-Assistant\Myapp\WebApplication1\ModelLayer\bin\Debug\Newtonsoft.Json.xml
