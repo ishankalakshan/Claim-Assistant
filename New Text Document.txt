@@ -1,2 +1,4 @@
 AND VehicleTypeID =IIF(@VehicleTypeID IS NULL, VehicleTypeID, @VehicleTypeID )
 	AND ManufactureId=IIF(@ManufactureId IS NULL, ManufactureId, @ManufactureId )
+	
+	changed
